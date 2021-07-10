@@ -1,13 +1,15 @@
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
 from PIL import ImageGrab
-import win32gui
+#import win32gui
 import time
 from tkinter import *
 from tkinter import ttk, filedialog
 import os
 import threading
 import configparser
+import numpy as np
+import cv2
 
 logSavingLocation = os.path.expanduser('~/Documents/Guild Wars 2/Chatlogs') # max 120
 filename = ''
@@ -71,10 +73,10 @@ def doLogging():
 
             # TODO: optimize text
 
-           # f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8', errors="ignore")
-           # f.write(string)
-           # f.close()
-            #time.sleep(1 / (spm / 60))  # in seconds
+            # f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8', errors="ignore")
+            # f.write(string)
+            # f.close()
+            # time.sleep(1 / (spm / 60))  # in seconds
             infoMsg.configure(text='Chat is logging')
         else:
             infoMsg.configure(text='GW2 is not the active and focused window')
@@ -105,9 +107,31 @@ def tryLogging():
 
 
 def drawArea():
-    canvas = Canvas(root)
-    a = canvas.create_rectangle(50, 0, 50, 0, fill='red')
-    canvas.move(a, 20, 20)
+    global ScreenAreaX1
+    global ScreenAreaY1
+    global ScreenAreaX2
+    global ScreenAreaY2
+
+    image = ImageGrab.grab()
+    image = np.array(image)
+    image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+    x, y, w, h = cv2.selectROI(image)
+    ScreenAreaX1 = x
+    ScreenAreaY1 = y
+    ScreenAreaX2 = x + w
+    ScreenAreaY2 = y + h
+    cv2.destroyAllWindows()
+
+    config = configparser.ConfigParser()
+    config.read(os.path.join(logSavingLocation, "settings" + ".ini"))
+    config.set('recording', 'x1', str(ScreenAreaX1))
+    config.set('recording', 'y1', str(ScreenAreaY1))
+    config.set('recording', 'x2', str(ScreenAreaX2))
+    config.set('recording', 'y2', str(ScreenAreaY2))
+    cfgFile = open(os.path.join(logSavingLocation, "settings" + ".ini"), "w")
+    config.write(cfgFile)
+    cfgFile.close()
+    updateGUI()
     return
 
 
@@ -457,5 +481,5 @@ if not os.path.isfile(os.path.join(logSavingLocation, "settings" + ".ini")):
 readSettings()
 
 root.title("GW2-Chatlogger")
-root.geometry("600x600")
+root.geometry("500x500")
 root.mainloop()
