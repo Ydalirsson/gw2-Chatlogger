@@ -1,7 +1,8 @@
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 from PIL import ImageGrab
-#import win32gui
+import win32gui
+import pyautogui
 import time
 from tkinter import *
 from tkinter import ttk, filedialog
@@ -68,15 +69,14 @@ def doLogging():
             clear()
             image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                          ScreenAreaX2, ScreenAreaY2))
-            string = pytesseract.image_to_string(image, config=r'--psm 1 --oem 1', lang=ocrLanguages)
-            print(string)
+            string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
 
             # TODO: optimize text
 
-            # f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8', errors="ignore")
-            # f.write(string)
-            # f.close()
-            # time.sleep(1 / (spm / 60))  # in seconds
+            f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8')
+            f.write(string)
+            f.close()
+            time.sleep(1 / (spm / 60))  # in seconds
             infoMsg.configure(text='Chat is logging')
         else:
             infoMsg.configure(text='GW2 is not the active and focused window')
@@ -99,7 +99,24 @@ def tryLogging():
     startTimer = time.time()
     image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                      ScreenAreaX2, ScreenAreaY2))
+
+    f = open(os.path.join(logSavingLocation, "20210711_232325" + ".txt"), "r", encoding='utf8')
+    filetext = f.read().split('\n')
+
+
     string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+    picText = string.split('\n')
+    newArray = []
+    print(filetext)
+    print(picText)
+    for row in filetext:
+        for msg in picText:
+            if row == msg:
+                continue
+            else:
+                newArray.append(msg)
+    print(newArray)
+
     endTimer = time.time()
     logEntryView.configure(text=string + "\ntime to convert: " + str(endTimer-startTimer) + 's')
     infoMsg.configure(text='check "Logger view"-tab ' + str(ocrLanguages))
@@ -112,10 +129,10 @@ def drawArea():
     global ScreenAreaX2
     global ScreenAreaY2
 
-    image = ImageGrab.grab()
+    image = pyautogui.screenshot()
     image = np.array(image)
     image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-    x, y, w, h = cv2.selectROI(image)
+    x, y, w, h = cv2.selectROI(windowName="Select chatbox", img=image)
     ScreenAreaX1 = x
     ScreenAreaY1 = y
     ScreenAreaX2 = x + w
@@ -481,5 +498,5 @@ if not os.path.isfile(os.path.join(logSavingLocation, "settings" + ".ini")):
 readSettings()
 
 root.title("GW2-Chatlogger")
-root.geometry("500x500")
+root.geometry("600x600")
 root.mainloop()
