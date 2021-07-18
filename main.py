@@ -40,7 +40,9 @@ def createNewSessionLogFile():
     global logSavingLocation
     filename = time.strftime("%Y%m%d_%H%M%S")
     with open(os.path.join(logSavingLocation, filename + ".txt"), 'w') as fp:
+        fp.close()
         pass
+    fp.close()
     return
 
 
@@ -60,6 +62,34 @@ def prepareLogging():
     threadLogging = threading.Thread(target=doLogging)
     threadLogging.start()
 
+def removeAlreadyExistingMsg(stringOfPicture):
+    f = open(os.path.join(logSavingLocation, filename + ".txt"), "r", encoding='utf8')
+    fileMsgs = f.read().split('\n')
+    f.close()
+    pictureMsgs = stringOfPicture.split('\n')
+    newMsgs = []
+
+    for word in fileMsgs:
+        if word == '':
+                fileMsgs.remove(word)
+
+    for word in pictureMsgs:
+        if word == '':
+                pictureMsgs.remove(word)
+
+    for msg in pictureMsgs:
+        if not msg in fileMsgs:
+            newMsgs.append(msg)
+
+    msgToWrite = ''
+    for singleMsg in newMsgs:
+        msgToWrite = msgToWrite + singleMsg + '\n'
+
+    if msgToWrite == '':
+        print('No new message')
+
+    return msgToWrite
+
 
 def doLogging():
     global threadStopped
@@ -71,10 +101,11 @@ def doLogging():
                                          ScreenAreaX2, ScreenAreaY2))
             string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
 
-            # TODO: optimize text
+            # optimize text
+            msgToWrite = removeAlreadyExistingMsg(string)
 
             f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8')
-            f.write(string)
+            f.write(msgToWrite)
             f.close()
             time.sleep(1 / (spm / 60))  # in seconds
             infoMsg.configure(text='Chat is logging')
@@ -99,24 +130,7 @@ def tryLogging():
     startTimer = time.time()
     image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                      ScreenAreaX2, ScreenAreaY2))
-
-    f = open(os.path.join(logSavingLocation, "20210711_232325" + ".txt"), "r", encoding='utf8')
-    filetext = f.read().split('\n')
-
-
     string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
-    picText = string.split('\n')
-    newArray = []
-    print(filetext)
-    print(picText)
-    for row in filetext:
-        for msg in picText:
-            if row == msg:
-                continue
-            else:
-                newArray.append(msg)
-    print(newArray)
-
     endTimer = time.time()
     logEntryView.configure(text=string + "\ntime to convert: " + str(endTimer-startTimer) + 's')
     infoMsg.configure(text='check "Logger view"-tab ' + str(ocrLanguages))
