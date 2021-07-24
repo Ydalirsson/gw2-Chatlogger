@@ -12,6 +12,7 @@ import configparser
 import numpy as np
 import cv2
 
+# default settings
 logSavingLocation = os.path.expanduser('~/Documents/Guild Wars 2/Chatlogs') # max 120
 filename = ''
 threadStopped = False   # flag for thread execution
@@ -26,9 +27,6 @@ checkedES = False
 checkedFR = False
 
 ocrLanguages = ''
-
-
-clear = lambda: os.system('cls')
 
 def checkActiveWindow():
     foregroundWindowName = win32gui.GetWindowText(win32gui.GetForegroundWindow())
@@ -62,6 +60,7 @@ def prepareLogging():
     threadLogging = threading.Thread(target=doLogging)
     threadLogging.start()
 
+
 def removeAlreadyExistingMsg(stringOfPicture):
     f = open(os.path.join(logSavingLocation, filename + ".txt"), "r", encoding='utf8')
     fileMsgs = f.read().split('\n')
@@ -86,7 +85,8 @@ def removeAlreadyExistingMsg(stringOfPicture):
         msgToWrite = msgToWrite + singleMsg + '\n'
 
     if msgToWrite == '':
-        print('No new message')
+        # do nothing
+        pass
 
     return msgToWrite
 
@@ -96,7 +96,8 @@ def doLogging():
     global filename
     while not threadStopped:
         if checkActiveWindow():
-            clear()
+            infoMsg.configure(text='Chat is logging')
+
             image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                          ScreenAreaX2, ScreenAreaY2))
             string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
@@ -104,11 +105,12 @@ def doLogging():
             # optimize text
             msgToWrite = removeAlreadyExistingMsg(string)
 
-            f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8')
-            f.write(msgToWrite)
-            f.close()
+            if not msgToWrite == '':
+                f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8')
+                f.write(str(msgToWrite))
+                f.close()
+
             time.sleep(1 / (spm / 60))  # in seconds
-            infoMsg.configure(text='Chat is logging')
         else:
             infoMsg.configure(text='GW2 is not the active and focused window')
     infoMsg.configure(text='Chat logging stopped')
@@ -127,13 +129,18 @@ def stopLogging():
 
 def tryLogging():
     infoMsg.configure(text='start recording area (' + str(ScreenAreaX1) + ' | ' + str(ScreenAreaY1) + ')' + ' to (' + str(ScreenAreaX2) + ' | ' + str(ScreenAreaY2) + ')' )
+
     startTimer = time.time()
     image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                      ScreenAreaX2, ScreenAreaY2))
+
+    image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
     string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+    #print(string)
     endTimer = time.time()
+
     logEntryView.configure(text=string + "\ntime to convert: " + str(endTimer-startTimer) + 's')
-    infoMsg.configure(text='check "Logger view"-tab ' + str(ocrLanguages))
+    infoMsg.configure(text='check "Logger view"-tab\nselected languages: ' + str(ocrLanguages))
     return
 
 
@@ -246,7 +253,7 @@ def updateLanguageStr():
                 ocrLanguages = arrStr[0]
             else:
                 ocrLanguages = ocrLanguages + '+' + aStr
-        print(ocrLanguages)
+        #print(ocrLanguages)
     return
 
 def setActiveLanguage():
