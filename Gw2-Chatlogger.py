@@ -12,7 +12,7 @@ import configparser
 import numpy as np
 import cv2
 
-# default settings
+# default settings for 4k monitor
 logSavingLocation = os.path.expanduser('~/Documents/Guild Wars 2/Chatlogs') # max 120
 filename = ''
 threadStopped = False   # flag for thread execution
@@ -20,7 +20,7 @@ ScreenAreaX1 = 30
 ScreenAreaY1 = 1620
 ScreenAreaX2 = 825
 ScreenAreaY2 = 2070
-spm = 60          # chat scans per minutes
+spm = 4          # chat scans per minutes
 checkedEN = True
 checkedDE = False
 checkedES = False
@@ -109,10 +109,9 @@ def doLogging():
                 f = open(os.path.join(logSavingLocation, filename + ".txt"), "a", encoding='utf8')
                 f.write(str(msgToWrite))
                 f.close()
-
-            time.sleep(1 / (spm / 60))  # in seconds
         else:
             infoMsg.configure(text='GW2 is not the active and focused window')
+        time.sleep(1 / (spm / 60))  # in seconds
     infoMsg.configure(text='Chat logging stopped')
 
 
@@ -150,10 +149,11 @@ def drawArea():
     global ScreenAreaX2
     global ScreenAreaY2
 
+    infoMsg.configure(text='Set a white rectangle. Confirm it with SPACE or ENTER. Press C to cancel this process.')
     image = pyautogui.screenshot()
     image = np.array(image)
     image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-    x, y, w, h = cv2.selectROI(windowName="Select chatbox", img=image)
+    x, y, w, h = cv2.selectROI(windowName="Select text of chatbox", img=image)
     ScreenAreaX1 = x
     ScreenAreaY1 = y
     ScreenAreaX2 = x + w
@@ -169,6 +169,7 @@ def drawArea():
     cfgFile = open(os.path.join(logSavingLocation, "settings" + ".ini"), "w")
     config.write(cfgFile)
     cfgFile.close()
+    infoMsg.configure(text='')
     updateGUI()
     return
 
@@ -520,4 +521,5 @@ readSettings()
 
 root.title("GW2-Chatlogger")
 root.geometry("600x600")
+root.iconbitmap('icon.ico')
 root.mainloop()

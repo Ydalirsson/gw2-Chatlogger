@@ -16,6 +16,8 @@ This application is still in development!
 ## Accuracy problems
 The OCR engine converts the text from the screens into text and tries to deliver the best possible result depending on the settings and optimizations. During the conversion, the engine includes the training data from the tessdata folder and uses neural net (LSTM). It can happen that letters are interpreted differently even if the text remains the same.
 The new chatlines are currently being compared with the saved chatlines in order to avoid repetitions. A different interpretation of a character / letter has the consequence that the line is written again with its deviations. 
+Accuracy depends on resolution, font size in chat, selected language, included training datas and preprocessing screens of the text.
+Sometimes the lines are still misinterpreted.
 
 # Manual - How to use it 
 ## Control tab
@@ -28,17 +30,23 @@ Ends the taking of screenshots and the logging, which were started with the reco
 Takes a single screenshot of the chat and extracts the text. The text is not saved, but is displayed in the Logger view tab. This can be used to check whether the options for the chat are set correctly and the limits of the chat area are set correctly. Also how long a single image-to-text conversion takes and whether the correct languages ​​are selected.
 ### Set chat box area button
 Take a screenshot of the entire primary monitor. Guild Wars 2 does not have to be the active window. Then another window opens, in which you left-click and draw a rectangle. This rectangle defines the boundaries of the area that was recorded. To start the chat, the rectangle must be drawn over the chat box (see example). You can confirm the result with the SPACE or ENTER key. To cancel the process and close the window, press the C key.
+
+Don't drag the rectangle across the entire chat box. There are three zones in the chat box that negatively affect the result. Make sure you don't select these zones. These three zones are marked as red zones: tab bar, scrolling bar and writing bar.<br>
+<img src="readme_assets/setChatboxArea_wrong.jpg" alt="set chatbox area wrong" width="350"/> <br><br>
+The rectangle enclosing the text of the chat is white. Draw the edges between the red zones and the beginning of the text. The following picture shows how the white rectangle is set correctly.<br>
+<img src="readme_assets/setChatboxArea_right.jpg" alt="set chatbox area right" width="350"/><br>
+
 ### New log session button
 Manually creates a new .txt file that is used for logging. (not recommended to use)
 ## Logger view tab
 Currently it only shows the result of the try button. 
 ## Options tab
-In this tab there are various options with which you can set the optimization of text recognition and logging. All options are saved in a settings file. 
- * X1, Y1, X2, Y2 - Are the pixel coordination of the rectangle in which the recording area is located. Here you can set it manually. It is recommended to set the coordinates via the Set chat box area button. 
+In this tab there are various options with which you can set the optimization of text recognition and logging. All options are saved in a settings file. Tab can only be used, if there is no recording active.
+ * X1, Y1, X2, Y2 - Are the pixel coordinates of the rectangle in which the recording area is located. Here you can set it manually. It is recommended to set the coordinates via the Set chat box area button. 
 	 * X1: X of the upper left corner of the rectangle
 	 * Y1: Y of the upper left corner of the rectangle
 	 * X2: X of the lower right corner of the rectangle
 	 * Y2: Y of the lower right corner of the rectangle 
- * Screenshots per minute (short term: spm): Recording speed
+ * Screenshots per minute (short term: spm): Recording speed. Determines how often the chat is evaluated and new messages are saved in one minute. A higher setting consumes more CPU capacity.
  * Languages: Here you can select the languages ​​to be extracted from the chat. Choosing multiple languages ​​increases the time it takes to convert image to text, but it can increase accuracy.
  * log file location: storage location of the log files.
