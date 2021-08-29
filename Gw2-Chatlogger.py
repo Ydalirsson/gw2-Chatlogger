@@ -100,7 +100,11 @@ def doLogging():
 
             image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                          ScreenAreaX2, ScreenAreaY2))
-            string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+
+            image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
+            thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
+
+            string = pytesseract.image_to_string(blackAndWhiteImage, config=r'--psm 6 --oem 3', lang=ocrLanguages)
 
             # optimize text
             msgToWrite = removeAlreadyExistingMsg(string)
@@ -134,7 +138,9 @@ def tryLogging():
                                      ScreenAreaX2, ScreenAreaY2))
 
     image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
-    string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+    thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
+    string = pytesseract.image_to_string(blackAndWhiteImage, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+    #cv2.imshow('image', blackAndWhiteImage)
     #print(string)
     endTimer = time.time()
 
