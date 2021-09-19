@@ -12,6 +12,7 @@ This application is still in development!
 - use GW2 on your primary monitor
 - use timestamps in your GW2 chat box
 - a bigger font size in the chat may be improve the accuracy
+- also a higher resolution improves the accuracy
 
 ## Accuracy problems
 The OCR engine converts the text from the screens into text and tries to deliver the best possible result depending on the settings and optimizations. During the conversion, the engine includes the training data from the tessdata folder and uses neural net (LSTM). It can happen that letters are interpreted differently even if the text remains the same.

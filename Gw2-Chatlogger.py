@@ -1,5 +1,5 @@
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR_best\tesseract.exe'
 from PIL import ImageGrab
 import win32gui
 import pyautogui
@@ -101,10 +101,12 @@ def doLogging():
             image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                          ScreenAreaX2, ScreenAreaY2))
 
-            image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
-            thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
-
-            string = pytesseract.image_to_string(blackAndWhiteImage, config=r'--psm 6 --oem 3', lang=ocrLanguages)
+            image = cv2.resize(np.array(image), None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+            image = cv2.blur(image, (5, 5))
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            # thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
+            string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 1 -c tessedit_char_blacklist=|',
+                                                 lang=ocrLanguages)
 
             # optimize text
             msgToWrite = removeAlreadyExistingMsg(string)
@@ -137,11 +139,13 @@ def tryLogging():
     image = ImageGrab.grab(bbox=(ScreenAreaX1, ScreenAreaY1,
                                      ScreenAreaX2, ScreenAreaY2))
 
-    image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
-    thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
-    string = pytesseract.image_to_string(blackAndWhiteImage, config=r'--psm 6 --oem 3', lang=ocrLanguages)
-    #cv2.imshow('image', blackAndWhiteImage)
-    #print(string)
+    image = cv2.resize(np.array(image), None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+    image = cv2.blur(image, (5, 5))
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    #thresh, blackAndWhiteImage = cv2.threshold(image, 127, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
+    string = pytesseract.image_to_string(image, config=r'--psm 6 --oem 1 -c tessedit_char_blacklist=|', lang=ocrLanguages)
+    cv2.imshow('image', image)
+    print(string)
     endTimer = time.time()
 
     logEntryView.configure(text=string + "\ntime to convert: " + str(endTimer-startTimer) + 's')
