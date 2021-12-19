@@ -50,28 +50,28 @@
         <number>4</number>
        </property>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="recordBtn">
          <property name="text">
           <string>Record</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="StopBtn">
          <property name="text">
           <string>Stop</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="TryBtn">
          <property name="text">
           <string>Try</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="SetAreaBtn">
          <property name="text">
           <string>Set chat box area</string>
          </property>
@@ -79,7 +79,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="infoBoxLbl">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -92,7 +92,7 @@
        <string>Info box:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="infoMsgLbl">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -110,7 +110,7 @@
      <attribute name="title">
       <string>Logger view</string>
      </attribute>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="currentLogLbl">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -123,7 +123,7 @@
        <string>Current log:</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser">
+     <widget class="QTextBrowser" name="logBrowserLbl">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -152,47 +152,47 @@
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="x1Lbl">
          <property name="text">
           <string>X1:</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_8">
+        <widget class="QLabel" name="x2Lbl">
          <property name="text">
           <string>X2:</string>
          </property>
         </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="y2Lbl">
          <property name="text">
           <string>Y2:</string>
          </property>
         </widget>
        </item>
        <item row="2" column="4">
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="newY1Edit"/>
        </item>
        <item row="4" column="4">
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="savePointsBtn">
          <property name="text">
           <string>Save points</string>
          </property>
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="x2CurrentLbl">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QLabel" name="label_15">
+        <widget class="QLabel" name="newY2Lbl">
          <property name="text">
-          <string>New Y1:</string>
+          <string>New Y2:</string>
          </property>
         </widget>
        </item>
@@ -200,7 +200,7 @@
         <widget class="QLineEdit" name="lineEdit_5"/>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_17">
+        <widget class="QLabel" name="spmLbl">
          <property name="text">
           <string>Screenshots/minute</string>
          </property>
@@ -210,79 +210,79 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="newX1Edit"/>
        </item>
        <item row="3" column="0">
-        <widget class="QLabel" name="label_14">
+        <widget class="QLabel" name="newX2Lbl">
          <property name="text">
           <string>New X2:</string>
          </property>
         </widget>
        </item>
        <item row="0" column="4">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="y1CurrentLbl">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="y1Lbl">
          <property name="text">
           <string>Y1:</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="newX1Lbl">
          <property name="text">
           <string>New X1:</string>
          </property>
         </widget>
        </item>
        <item row="5" column="3">
-        <widget class="QLabel" name="label_19">
+        <widget class="QLabel" name="spmNewLbl">
          <property name="text">
           <string>New:</string>
          </property>
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="newX2Edit"/>
        </item>
        <item row="3" column="4">
-        <widget class="QLineEdit" name="lineEdit_4"/>
+        <widget class="QLineEdit" name="newY2Edit"/>
        </item>
        <item row="1" column="4">
-        <widget class="QLabel" name="label_11">
+        <widget class="QLabel" name="y2CurrentLbl">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
        <item row="5" column="2">
-        <widget class="QLabel" name="label_18">
+        <widget class="QLabel" name="spmCurrentLbl">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="newY1Lbl">
          <property name="text">
           <string>New Y1:</string>
          </property>
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="x1CurrentLbl">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
        <item row="6" column="4">
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="saveSpmBtn">
          <property name="text">
           <string>Save</string>
          </property>
@@ -290,13 +290,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="langCheckBoxGroup">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>230</y>
         <width>171</width>
-        <height>101</height>
+        <height>111</height>
        </rect>
       </property>
       <property name="title">
@@ -308,33 +308,33 @@
          <x>9</x>
          <y>20</y>
          <width>161</width>
-         <height>80</height>
+         <height>91</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="1">
-         <widget class="QCheckBox" name="checkBox_2">
+         <widget class="QCheckBox" name="gerCheckBox">
           <property name="text">
            <string>Deutsch</string>
           </property>
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QCheckBox" name="checkBox">
+         <widget class="QCheckBox" name="engCheckBox">
           <property name="text">
            <string>English</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QCheckBox" name="checkBox_3">
+         <widget class="QCheckBox" name="espCheckbox">
           <property name="text">
            <string>Espanol</string>
           </property>
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QCheckBox" name="checkBox_4">
+         <widget class="QCheckBox" name="fraCheckBox">
           <property name="text">
            <string>Francais</string>
           </property>
@@ -354,14 +354,14 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_16">
+        <widget class="QLabel" name="logFileLocationLbl">
          <property name="text">
           <string>Log file locaton:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_20">
+        <widget class="QLabel" name="logFileLocationCurrentLbl">
          <property name="text">
           <string>---</string>
          </property>
@@ -371,7 +371,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="changeSaveLocBtn">
          <property name="text">
           <string>Change save location</string>
          </property>
