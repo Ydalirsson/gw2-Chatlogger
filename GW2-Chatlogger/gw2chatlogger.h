@@ -9,6 +9,10 @@ class GW2Chatlogger : public QMainWindow
 
 public:
     GW2Chatlogger(QWidget *parent = Q_NULLPTR);
+    ~GW2Chatlogger();
+
+public slots:
+    void display();
 
 private:
     Ui::GW2ChatloggerClass ui;
