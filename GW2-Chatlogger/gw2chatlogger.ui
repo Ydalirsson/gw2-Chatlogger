@@ -29,10 +29,16 @@
       <height>550</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabControl">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <attribute name="title">
       <string>Control</string>
      </attribute>
@@ -107,6 +113,9 @@
      </widget>
     </widget>
     <widget class="QWidget" name="tabLoggerView">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <attribute name="title">
       <string>Logger view</string>
      </attribute>
@@ -138,6 +147,9 @@
      </widget>
     </widget>
     <widget class="QWidget" name="tabOption">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <attribute name="title">
       <string>Options</string>
      </attribute>
