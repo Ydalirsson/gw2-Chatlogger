@@ -55,8 +55,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>D:\tesseractInclude\leptonica;D:\tesseractInclude\tesseract;D:\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\tesseractInclude\tesseract41.lib;D:\tesseractInclude\leptonica-1.81.1.lib;D:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\tesseractInclude\leptonica;D:\tesseractInclude\tesseract;D:\opencv_453_extra\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\tesseractInclude\tesseract41.lib;D:\tesseractInclude\leptonica-1.81.1.lib;D:\opencv_453_extra\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>

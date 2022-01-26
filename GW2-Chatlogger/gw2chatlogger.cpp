@@ -3,6 +3,7 @@
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
 
+using namespace std;
 using namespace cv;
 
 GW2Chatlogger::GW2Chatlogger(QWidget *parent)
@@ -11,6 +12,7 @@ GW2Chatlogger::GW2Chatlogger(QWidget *parent)
     ui.setupUi(this);
 
     connect(ui.TryBtn, &QPushButton::pressed, this, &GW2Chatlogger::display);
+	connect(ui.SetAreaBtn, &QPushButton::pressed, this, &GW2Chatlogger::selectChatBoxArea);
 }
 
 GW2Chatlogger::~GW2Chatlogger()
@@ -45,15 +47,33 @@ void GW2Chatlogger::display()
 
 void GW2Chatlogger::selectChatBoxArea()
 {
+		// Read image
+		Mat im = imread("D:\\text.jpg");
+
+		// Select ROI
+		bool showCrosshair = false;
+		bool fromCenter = false;
+		Rect2d r = selectROI("Image", im, fromCenter, showCrosshair);
+
+		// Crop image
+		Mat imCrop = im(r);
+
+		// Display Cropped Image
+		imshow("Image", imCrop);
+
+		waitKey(0);
+
+	/*
 	HWND hwnd = GetDesktopWindow();
 	Mat src = captureScreenMat(hwnd);
 
 
 	bool showCrosshair = false;
 	bool fromCenter = false;
-	Rect2d r = selectROI("Image", src, fromCenter, showCrosshair);
+	Rect2d r = selectROI("Image", src, fromCenter, showCrosshair);*/
 }
 
+/*
 BITMAPINFOHEADER createBitmapHeader(int width, int height)
 {
 	BITMAPINFOHEADER  bi;
@@ -74,13 +94,13 @@ BITMAPINFOHEADER createBitmapHeader(int width, int height)
 	return bi;
 }
 
-/**
+/*
  * Capture a screen window as a matrix.
  *
  * @param hwnd : window handle.
  *
  * @return Mat (Mat of the captured image)
- */
+
 Mat captureScreenMat(HWND hwnd)
 {
 	Mat src;
@@ -117,4 +137,4 @@ Mat captureScreenMat(HWND hwnd)
 	ReleaseDC(hwnd, hwindowDC);
 
 	return src;
-}
+} */

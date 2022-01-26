@@ -6,7 +6,7 @@
 #include <Windows.h>
 #include <opencv2/core.hpp>
 #include <opencv2/opencv.hpp>
-
+#include <opencv2/video/tracking.hpp>
 
 class GW2Chatlogger : public QMainWindow
 {
@@ -23,6 +23,6 @@ public slots:
 private:
     Ui::GW2ChatloggerClass ui;
 
-    BITMAPINFOHEADER createBitmapHeader(int width, int height);
-    Mat captureScreenMat(HWND hwnd);
+   // BITMAPINFOHEADER createBitmapHeader(int width, int height);
+    // Mat captureScreenMat(HWND hwnd);
 };
