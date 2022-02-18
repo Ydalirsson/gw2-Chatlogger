@@ -33,7 +33,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabControl">
      <property name="autoFillBackground">
@@ -109,6 +109,9 @@
       </property>
       <property name="text">
        <string>TextLabel</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
