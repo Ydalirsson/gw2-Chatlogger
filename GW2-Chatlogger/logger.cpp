@@ -34,8 +34,3 @@ void Logger::reset()
 {
     this->haltFlag = false;
 }
-
-void Logger::reset()
-{
-    this->haltFlag = false;
-}
