@@ -33,7 +33,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabControl">
      <property name="autoFillBackground">
@@ -188,7 +188,11 @@
         </widget>
        </item>
        <item row="2" column="4">
-        <widget class="QLineEdit" name="newY1Edit"/>
+        <widget class="QSpinBox" name="newY1Edit">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
        </item>
        <item row="4" column="4">
         <widget class="QPushButton" name="savePointsBtn">
@@ -212,7 +216,11 @@
         </widget>
        </item>
        <item row="5" column="4">
-        <widget class="QLineEdit" name="newSpmEdit"/>
+        <widget class="QSpinBox" name="newSpmEdit">
+         <property name="maximum">
+          <number>240</number>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="spmLbl">
@@ -225,7 +233,11 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLineEdit" name="newX1Edit"/>
+        <widget class="QSpinBox" name="newX1Edit">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="newX2Lbl">
@@ -263,10 +275,18 @@
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QLineEdit" name="newX2Edit"/>
+        <widget class="QSpinBox" name="newX2Edit">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
        </item>
        <item row="3" column="4">
-        <widget class="QLineEdit" name="newY2Edit"/>
+        <widget class="QSpinBox" name="newY2Edit">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
        </item>
        <item row="1" column="4">
         <widget class="QLabel" name="y2CurrentLbl">
