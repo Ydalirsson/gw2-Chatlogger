@@ -61,16 +61,15 @@ Mat Logger::singleShot()
 	return resized_up;
 }
 
-QString Logger::convertPicToText(Mat pic)
+convertInfo Logger::convertPicToText(Mat pic)
 {
-	clock_t t;
+	convertInfo convertInfo;
+	convertInfo.usedLanguages = config.getLanguagesStr();
 	char* outText;
 
-	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
-
 	// Initialize tesseract-ocr with English, without specifying tessdata path
-	// TODO: init with variable languages
-	if (api->Init("D:\\VisualProjects\\gw2-Chatlogger\\tessdata", config.getLanguagesStr().c_str(), tesseract::OEM_LSTM_ONLY))
+	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
+	if (api->Init("D:\\VisualProjects\\gw2-Chatlogger\\tessdata", convertInfo.usedLanguages.c_str(), tesseract::OEM_LSTM_ONLY))
 	{
 		fprintf(stderr, "Could not initialize tesseract.\n");
 		exit(1);
@@ -78,19 +77,15 @@ QString Logger::convertPicToText(Mat pic)
 	api->SetPageSegMode(tesseract::PSM_SINGLE_BLOCK);
 	api->SetVariable("tessedit_char_blacklist", "|");
 	api->SetImage((uchar*)pic.data, pic.size().width, pic.size().height, pic.channels(), pic.step1());
-	t = clock();
+	clock_t t = clock();
 	api->Recognize(0);
 	t = clock() - t;
+	convertInfo.timeNeeded = ((double)t) / CLOCKS_PER_SEC; // in seconds
 
 	// Get OCR result
 	outText = api->GetUTF8Text();
-	QString outString = QString::fromUtf8(outText);
+	convertInfo.outString = QString::fromUtf8(outText);
 
-
-	/*imshow("image", resized_up);
-	waitKey();
-
-	cv::destroyWindow("image"); */
 	// Destroy used object and release memory
 	api->End();
 	delete api;
@@ -98,7 +93,7 @@ QString Logger::convertPicToText(Mat pic)
 
 	pic.release();
 
-	return outString;
+	return convertInfo;
 }
 
 BITMAPINFOHEADER Logger::createBitmapHeader(int width, int height)

@@ -19,6 +19,12 @@
 using namespace std;
 using namespace cv;
 
+struct convertInfo {
+    QString outString;
+    double timeNeeded;
+    string usedLanguages;
+};
+
 class Logger : public QThread
 {
     Q_OBJECT
@@ -33,7 +39,7 @@ public:
 
     Mat fullscreenShot();
     Mat singleShot();
-    QString convertPicToText(Mat);
+    convertInfo convertPicToText(Mat);
 
     Configurator config;
    

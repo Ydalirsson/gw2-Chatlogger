@@ -49,10 +49,12 @@ void GW2Chatlogger::stopLogging()
 
 void GW2Chatlogger::tryOutConvert()
 {
+	ui.infoMsgLbl->setText(QString("Converting screenshot to text. Don't panic, if this program don't react during this process. Please wait 1 min.."));
+	ui.infoMsgLbl->repaint();
 	Mat screen = log.singleShot();
-	ui.infoMsgLbl->setText(QString("Converting Screenshot to text- "));
-	QString newString = log.convertPicToText(screen);
-	ui.logBrowserLbl->setText(newString);
+	convertInfo info = log.convertPicToText(screen);
+	ui.logBrowserLbl->setText(info.outString);
+	ui.infoMsgLbl->setText(QString("Time needed: %1s, Used languages: %2\nPlease check tab Logger view for result text.").arg(info.timeNeeded).arg(QString::fromStdString(info.usedLanguages)));
 }
 
 void GW2Chatlogger::selectChatBoxArea()

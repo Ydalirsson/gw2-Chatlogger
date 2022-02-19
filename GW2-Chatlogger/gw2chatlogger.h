@@ -3,8 +3,8 @@
 #include <QtWidgets/QMainWindow>
 #include <QFileDialog>
 #include <QDateTime>
-#include "ui_gw2chatlogger.h"
 
+#include "ui_gw2chatlogger.h"
 #include "logger.h"
 
 using namespace std;
