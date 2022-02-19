@@ -70,7 +70,7 @@ QString Logger::convertPicToText(Mat pic)
 
 	// Initialize tesseract-ocr with English, without specifying tessdata path
 	// TODO: init with variable languages
-	if (api->Init("D:\\VisualProjects\\gw2-Chatlogger\\tessdata", "eng+deu", tesseract::OEM_LSTM_ONLY))
+	if (api->Init("D:\\VisualProjects\\gw2-Chatlogger\\tessdata", config.getLanguagesStr().c_str(), tesseract::OEM_LSTM_ONLY))
 	{
 		fprintf(stderr, "Could not initialize tesseract.\n");
 		exit(1);

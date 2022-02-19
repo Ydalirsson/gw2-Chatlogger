@@ -154,10 +154,45 @@ unsigned int Configurator::getSPM()
 	return this->settings.spm;
 }
 
-unsigned int Configurator::getLanguages()
+Qt::CheckState Configurator::getLanguagesCheckState(unsigned int nmbLang)
+{
+	unsigned int langChecked[4] = { this->settings.checkedEN, this->settings.checkedDE, this->settings.checkedES, this->settings.checkedFR };
+	if (langChecked[nmbLang]) { return Qt::CheckState::Checked; }
+	else { return Qt::CheckState::Unchecked; }
+}
+
+string Configurator::getLanguagesStr()
 {
 	// TODO: build lang string 
-	return this->settings.checkedDE;
+	unsigned int langChecked[4] = { this->settings.checkedEN, this->settings.checkedDE, this->settings.checkedES, this->settings.checkedFR };
+	unsigned int langCounter = this->settings.checkedEN + this->settings.checkedDE + this->settings.checkedES + this->settings.checkedFR;
+	string activatedLanguages = "eng";
+
+	if (langCounter == 0)
+	{
+		return "eng";
+	}
+	else if (langCounter == 1)
+	{
+		if (langChecked[0] == 1) { return "eng";}
+		if (langChecked[1] == 1) { return "deu"; }
+		if (langChecked[2] == 1) { return "spa"; }
+		if (langChecked[3] == 1) { return "fra"; }
+	}
+	else if (langCounter > 1)
+	{
+		activatedLanguages = "";
+
+		if (langChecked[0] == 1) { activatedLanguages.append("eng+"); }
+		if (langChecked[1] == 1) { activatedLanguages.append("deu+"); }
+		if (langChecked[2] == 1) { activatedLanguages.append("spa+"); }
+		if (langChecked[3] == 1) { activatedLanguages.append("fra+"); }
+
+		activatedLanguages = activatedLanguages.substr(0, activatedLanguages.size() - 1);
+		return activatedLanguages;
+	}
+
+	return activatedLanguages;
 }
 
 string Configurator::getLogSavingLocation()

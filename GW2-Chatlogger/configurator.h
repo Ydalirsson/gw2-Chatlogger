@@ -40,7 +40,8 @@ public:
 	unsigned int getAreaX2();
 	unsigned int getAreaY2();
 	unsigned int getSPM();
-	unsigned int getLanguages();
+	Qt::CheckState getLanguagesCheckState(unsigned int);
+	string getLanguagesStr();
 	string getLogSavingLocation();
 
 private:
