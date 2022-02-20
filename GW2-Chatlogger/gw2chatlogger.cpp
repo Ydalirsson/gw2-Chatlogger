@@ -31,15 +31,21 @@ void GW2Chatlogger::startLogging()
 {
 	// TODO: log in right file -- input
 	QString newChatLogFile = QString::fromStdString(log.config.getLogSavingLocation());
-	newChatLogFile.append("\\test213.txt");
+	QDir dir(newChatLogFile);
+	if (!dir.exists()) dir.mkdir(newChatLogFile);
+	QDateTime date = QDateTime::currentDateTime();
+	QString formattedTime = date.toString("yyyyMMdd_hhmmss");
+	newChatLogFile.append("\\");
+	newChatLogFile.append(formattedTime);
+	newChatLogFile.append(".txt");
+
 	QFile file(newChatLogFile);
 	file.open(QFile::ReadWrite | QFile::Text);
-	QTextStream stream(&file);
-	stream << "dfgdfgdfg";
 	file.close();
-
-	//log.reset();
-	//log.start();
+	/*
+	log.reset();
+	log.setFilename(newChatLogFile);
+	log.start(); */
 }
 
 void GW2Chatlogger::stopLogging()
@@ -98,6 +104,7 @@ void GW2Chatlogger::savePath()
 	char const* userProfile = getenv("USERPROFILE");
 	QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
 		userProfile, QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog);
+	dir = dir.replace('/', '\\');
 	log.config.setLogSavingLocation(dir.toStdString());
 	updateUISettings();
 }

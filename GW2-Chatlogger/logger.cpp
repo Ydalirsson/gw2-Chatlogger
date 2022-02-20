@@ -37,6 +37,16 @@ void Logger::reset()
     this->haltFlag = false;
 }
 
+void Logger::setFilename(QString chatLogFile)
+{
+	this->filename = chatLogFile;
+}
+
+QString Logger::getFilename()
+{
+	return this->filename;
+}
+
 Mat Logger::fullscreenShot()
 {
 	HWND hwnd = GetDesktopWindow();

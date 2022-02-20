@@ -36,6 +36,8 @@ public:
     void run() Q_DECL_OVERRIDE;
     void stop();
     void reset();
+    void setFilename(QString chatLogFile);
+    QString getFilename();
 
     Mat fullscreenShot();
     Mat singleShot();
@@ -45,6 +47,7 @@ public:
    
 private:
     bool haltFlag = false;
+    QString filename;
 
     BITMAPINFOHEADER createBitmapHeader(int width, int height);
     Mat captureScreenMat(HWND hwnd, unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
