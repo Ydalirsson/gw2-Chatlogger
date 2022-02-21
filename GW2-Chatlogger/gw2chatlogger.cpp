@@ -21,6 +21,8 @@ GW2Chatlogger::GW2Chatlogger(QWidget *parent)
 	connect(ui.fraCheckBox, &QCheckBox::clicked, this, &GW2Chatlogger::selectLanguages);
 
 	updateUISettings();
+
+	ui.tabWidget->setCurrentIndex(0);
 }
 
 GW2Chatlogger::~GW2Chatlogger()
@@ -42,15 +44,20 @@ void GW2Chatlogger::startLogging()
 	QFile file(newChatLogFile);
 	file.open(QFile::ReadWrite | QFile::Text);
 	file.close();
-	/*
+	
 	log.reset();
 	log.setFilename(newChatLogFile);
-	log.start(); */
+	ui.infoMsgLbl->setText(QString("Logging is starting.."));
+	ui.infoMsgLbl->repaint();
+	log.start();
 }
 
 void GW2Chatlogger::stopLogging()
 {
+	ui.infoMsgLbl->setText(QString("Logging is stopping.."));
+	ui.infoMsgLbl->repaint();
 	log.stop();
+	ui.infoMsgLbl->setText(QString("Logging stopped!"));
 }
 
 void GW2Chatlogger::tryOutConvert()

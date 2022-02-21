@@ -54,6 +54,7 @@ Configurator::Configurator()
 		settings.y1 = configFile->value("y1").toInt();
 		settings.x2 = configFile->value("x2").toInt();
 		settings.y2 = configFile->value("y2").toInt();
+		settings.spm = configFile->value("spm").toInt();
 		configFile->endGroup();
 		configFile->beginGroup("/languages");
 		settings.checkedEN = configFile->value("en").toBool();

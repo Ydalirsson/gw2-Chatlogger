@@ -59,6 +59,8 @@
     <LibraryPath>D:\tesseractInclude\tesseract41.lib;D:\tesseractInclude\leptonica-1.81.1.lib;D:\opencv_453_extra\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>D:\tesseractInclude\tesseract\leptonica;D:\tesseractInclude\tesseract\tesseract;D:\opencv_453_extra\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\tesseractInclude\tesseract41.lib;D:\tesseractInclude\leptonica-1.8.1.1.lib;D:\opencv_453_extra\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
@@ -68,6 +70,11 @@
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>opencv_world453.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>

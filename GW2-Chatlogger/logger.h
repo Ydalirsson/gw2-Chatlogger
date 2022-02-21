@@ -14,6 +14,8 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
+#include <chrono>
+
 #include "configurator.h"
 
 using namespace std;
@@ -42,6 +44,8 @@ public:
     Mat fullscreenShot();
     Mat singleShot();
     convertInfo convertPicToText(Mat);
+    bool checkActiveWindow();
+    QString removeAlreadyExistingMsg(QString convertedText);
 
     Configurator config;
    
