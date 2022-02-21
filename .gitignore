@@ -1,6 +1,7 @@
 OpenCL/
 tessdata/
 tesseract-include/
+Tesseract-OCR/
 x64/
 
 ## Ignore Visual Studio temporary files, build results, and
