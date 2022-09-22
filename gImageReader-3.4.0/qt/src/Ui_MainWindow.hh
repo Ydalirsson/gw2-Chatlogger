@@ -6,6 +6,8 @@
 #include <QDoubleSpinBox>
 #include <QMenu>
 #include <QWidgetAction>
+#include <QComboBox>
+#include <QToolButton>
 
 class UI_MainWindow : public Ui_MainWindow {
 public:

@@ -378,8 +378,7 @@ bool MainWindow::setOutputMode(OutputMode mode) {
 		if(mode == OutputModeText) {
 			m_displayerTool = new DisplayerToolSelect(m_displayer);
 			m_outputEditor = new OutputEditorText();
-		} else { /*if(mode == OutputModeHOCR)*/
-		}
+        } /* else { if(mode == OutputModeHOCR)} */
 		ui.actionAutodetectLayout->setVisible(m_displayerTool->allowAutodetectOCRAreas());
 		m_displayer->setTool(m_displayerTool);
 		m_outputEditor->setLanguage(m_recognitionMenu->getRecognitionLanguage());
