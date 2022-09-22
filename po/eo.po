@@ -1,0 +1,2484 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 23:16+0100\n"
+"PO-Revision-Date: 2021-03-10 17:03+0000\n"
+"Last-Translator: phlostically <phlostically@mailinator.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/gimagereader/"
+"translations/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2-dev\n"
+
+#: ../data/gimagereader.desktop.in.h:1
+msgid "OCR application"
+msgstr "Tekstlegilo"
+
+#: ../gtk/data/appmenu.ui.h:1 ../qt/src/Ui_MainWindow.hh:169
+msgid "Redetect Languages"
+msgstr "Rediveni Lingvojn"
+
+#: ../gtk/data/appmenu.ui.h:2 ../qt/src/Ui_MainWindow.hh:172
+msgid "Manage Languages"
+msgstr "Administri Lingvojn"
+
+#: ../gtk/data/appmenu.ui.h:3 ../gtk/data/ConfigDialog.ui.h:1
+#: ../qt/data/ConfigDialog.ui.h:1 ../qt/src/Ui_MainWindow.hh:175
+msgid "Preferences"
+msgstr "Preferoj"
+
+#: ../gtk/data/appmenu.ui.h:4 ../gtk/data/ConfigDialog.ui.h:2
+#: ../gtk/src/MainWindow.cc:523 ../qt/src/MainWindow.cc:522
+#: ../qt/src/Ui_MainWindow.hh:180
+msgid "Help"
+msgstr "Helpo"
+
+#: ../gtk/data/appmenu.ui.h:5 ../qt/data/AboutDialog.ui.h:2
+#: ../qt/src/Ui_MainWindow.hh:183
+msgid "About"
+msgstr "Pri"
+
+#: ../gtk/data/appmenu.ui.h:6
+msgid "Quit"
+msgstr "Forlasi"
+
+#: ../gtk/data/CharacterListDialog.ui.h:1 ../qt/data/CharacterListDialog.ui.h:1
+msgid "Character whitelist / blacklist"
+msgstr "Akceptolisto / rifuzolisto de signoj"
+
+#: ../gtk/data/CharacterListDialog.ui.h:2 ../qt/data/CharacterListDialog.ui.h:2
+msgid "Exclude these characters from being recognized (blacklist):"
+msgstr "Ne permesi rekonadon de la jenaj signoj (rifuzolisto):"
+
+#: ../gtk/data/CharacterListDialog.ui.h:3 ../qt/data/CharacterListDialog.ui.h:3
+msgid "Enter a string of characters..."
+msgstr "Entajpu ĉenon de signoj…"
+
+#: ../gtk/data/CharacterListDialog.ui.h:4 ../qt/data/CharacterListDialog.ui.h:4
+msgid "Only allow the following characters to be recognized (whitelist):"
+msgstr "Permesi rekonadon nur de la jenaj signoj (akceptolisto):"
+
+#: ../gtk/data/ConfigDialog.ui.h:3 ../gtk/data/MainWindow.ui.h:49
+#: ../gtk/data/OutputEditorHOCR.ui.h:3 ../gtk/src/FileDialogs.cc:179
+#: ../gtk/src/FileDialogs.cc:194 ../gtk/src/hocr/HOCRPdfExporter.cc:547
+#: ../gtk/src/Utils.cc:124 ../qt/data/ConfigDialog.ui.h:26
+msgid "OK"
+msgstr "Bone"
+
+#: ../gtk/data/ConfigDialog.ui.h:4
+msgid "Output pane orientation:"
+msgstr "Orientiĝo de eligpanelo:"
+
+#: ../gtk/data/ConfigDialog.ui.h:5
+msgid "Horizontal"
+msgstr "Horizontala"
+
+#: ../gtk/data/ConfigDialog.ui.h:6
+msgid "Vertical"
+msgstr "Vertikala"
+
+#: ../gtk/data/ConfigDialog.ui.h:7 ../qt/data/ConfigDialog.ui.h:18
+msgid "Query to install missing spellcheck dictionaries"
+msgstr "Demando pri instalado de mankantaj literumvortaroj"
+
+#: ../gtk/data/ConfigDialog.ui.h:8 ../qt/data/ConfigDialog.ui.h:4
+msgid "Automatically check for new program versions"
+msgstr "Aŭtomate kontroli novajn versiojn de la programaro"
+
+#: ../gtk/data/ConfigDialog.ui.h:9 ../qt/data/ConfigDialog.ui.h:3
+msgid "Predefined language definitions:"
+msgstr "Antaŭdifinitaj lingvodifinoj:"
+
+#: ../gtk/data/ConfigDialog.ui.h:10 ../qt/data/ConfigDialog.ui.h:12
+msgid "Additional language definitions:"
+msgstr "Pliaj lingvodifinoj:"
+
+#: ../gtk/data/ConfigDialog.ui.h:11 ../qt/data/ConfigDialog.ui.h:20
+msgid "The prefix of the tesseract language data file"
+msgstr "Prefikso de la dosiero de lingvaj datenoj de tesseract"
+
+#: ../gtk/data/ConfigDialog.ui.h:12 ../qt/data/ConfigDialog.ui.h:21
+msgid "Prefix"
+msgstr "Prefikso"
+
+#: ../gtk/data/ConfigDialog.ui.h:13 ../qt/data/ConfigDialog.ui.h:22
+msgid "The ISO 639-1 language code followed by the country code"
+msgstr "La lingvokodo laŭ ISO 639-1 sekvita de la landokodo"
+
+#: ../gtk/data/ConfigDialog.ui.h:14 ../qt/data/ConfigDialog.ui.h:23
+msgid "ISO Code"
+msgstr "ISO-Kodo"
+
+#: ../gtk/data/ConfigDialog.ui.h:15 ../qt/data/ConfigDialog.ui.h:24
+msgid "The name of the language"
+msgstr "La nomo de la lingvo"
+
+#: ../gtk/data/ConfigDialog.ui.h:16 ../qt/data/ConfigDialog.ui.h:25
+msgid "Name"
+msgstr "Nomo"
+
+#: ../gtk/data/ConfigDialog.ui.h:17 ../gtk/data/MainWindow.ui.h:48
+#: ../gtk/data/OutputEditorHOCR.ui.h:2 ../gtk/src/Acquirer.cc:34
+#: ../gtk/src/FileDialogs.cc:178 ../gtk/src/FileDialogs.cc:193
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:548 ../gtk/src/Utils.cc:154
+#: ../qt/data/ConfigDialog.ui.h:27 ../qt/data/MainWindow.ui.h:13
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: ../gtk/data/ConfigDialog.ui.h:18 ../qt/data/ConfigDialog.ui.h:5
+msgid "Output pane font:"
+msgstr "Tiparo de eligpanelo:"
+
+#: ../gtk/data/ConfigDialog.ui.h:19 ../qt/data/ConfigDialog.ui.h:2
+msgid "Default"
+msgstr "Apriora"
+
+#: ../gtk/data/ConfigDialog.ui.h:20 ../qt/data/ConfigDialog.ui.h:6
+msgid "Language data locations:"
+msgstr "Lokoj de lingva dateno:"
+
+#: ../gtk/data/ConfigDialog.ui.h:21 ../qt/data/ConfigDialog.ui.h:13
+msgid "Language definitions path:"
+msgstr "Dosierindiko de lingvodifinoj:"
+
+#: ../gtk/data/ConfigDialog.ui.h:22 ../qt/data/ConfigDialog.ui.h:28
+msgid "Spelling dictionaries path:"
+msgstr "Dosierindiko de literumvortaroj:"
+
+#: ../gtk/data/ConfigDialog.ui.h:23 ../qt/data/ConfigDialog.ui.h:10
+msgid "System-wide paths"
+msgstr "Tutsistemaj dosierindikoj"
+
+#: ../gtk/data/ConfigDialog.ui.h:24 ../qt/data/ConfigDialog.ui.h:11
+msgid "User paths"
+msgstr "Uzanto-agordiaj dosierindikoj"
+
+#: ../gtk/data/ConfigDialog.ui.h:25 ../qt/data/ConfigDialog.ui.h:29
+msgid "Automatically open exported documents with default application"
+msgstr "Aŭtomate malfermi elportitajn dokumentojn per implicita aplikaĵo"
+
+#: ../gtk/data/CrashHandler.ui.h:1 ../qt/src/CrashHandler.cc:38
+msgid "Regenerate backtrace"
+msgstr "Refari retrospuron"
+
+#: ../gtk/data/CrashHandler.ui.h:3
+#, no-c-format
+msgid ""
+"<b>The application has crashed</b>\n"
+"\n"
+"Apologies for the inconvenience. To help improve the application, please "
+"consider reporting the issue to <a href=\"mailto:manisandro@gmail.com?"
+"subject=gImageReader%20Crash\">manisandro@gmail.com</a>. Please try to "
+"describe what you were doing before the application crashed. Also, include "
+"the information below. Thank you."
+msgstr ""
+"<b>La aplikaĵo kolapsis</b>\n"
+"\n"
+"Pardonpeton pro la ĝeno. Por helpi plibonigi la aplikaĵon, bonvolu raporti "
+"la problemon al <a href=\"mailto:manisandro@gmail.com?"
+"subject=gImageReader%20Crash\">manisandro@gmail.com</a>. Bonvolu priskribi "
+"tion, kion vi estis faranta antaŭ ol la kolapso. Krome, inkluzivu la ĉi-"
+"subajn informojn. Dankon."
+
+#: ../gtk/data/CrashHandler.ui.h:6
+msgid ""
+"<b>Tesseract has aborted</b>\n"
+"\n"
+"Tesseract (the OCR engine) has aborted while recognizing text. This may "
+"occur if the used traineddatas are corrupt or incomplatible with the version "
+"of tesseract in use, or due to a bug in tesseract.\n"
+"\n"
+"The stacktrace below may provide additional information about where the "
+"crash occurred.\n"
+msgstr ""
+"<b>Tesseract kolapsis</b>\n"
+"\n"
+"Tesseract (la tekstlegila modulo) kolapsis dum rekonado de teksto. Tio povas "
+"okazi se la trejnaj datenoj estas koruptitaj aŭ ne kongruaj kun la versio de "
+"tesseract, aŭ pro cimo en tesseract.\n"
+"\n"
+"La jena stakspuro eble donas pliajn informojn pri la kolapso.\n"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:1
+#: ../qt/data/HOCRBatchExportDialog.ui.h:1
+msgid "HOCR Batch Export"
+msgstr ""
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:2
+#: ../gtk/data/SubstitutionsManager.ui.h:7 ../gtk/data/TessdataManager.ui.h:2
+msgid "Apply"
+msgstr "Efektivigi"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:3
+#: ../gtk/data/SubstitutionsManager.ui.h:8 ../gtk/data/TessdataManager.ui.h:3
+msgid "Close"
+msgstr "Fermi"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:4
+#: ../qt/data/HOCRBatchExportDialog.ui.h:6
+#, fuzzy
+msgid "Select source folder:"
+msgstr "Elektu dosierujon…"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:5 ../gtk/data/PdfExportWidget.ui.h:5
+#: ../qt/data/HOCRBatchExportDialog.ui.h:7 ../qt/data/PdfExportDialog.ui.h:16
+#: ../qt/data/PdfExportWidget.ui.h:15
+msgid "Format:"
+msgstr "Dosierformo:"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:6
+#: ../qt/data/HOCRBatchExportDialog.ui.h:5
+msgid "Group outputs of N lowest levels:"
+msgstr ""
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:7
+#: ../qt/data/HOCRBatchExportDialog.ui.h:3
+#, fuzzy
+msgid "Input:"
+msgstr "Eligo:"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:8
+#: ../qt/data/HOCRBatchExportDialog.ui.h:4
+#, fuzzy
+msgid "Output preview:"
+msgstr "Eliga reĝimo:"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:9
+#: ../qt/data/HOCRBatchExportDialog.ui.h:2
+#, fuzzy
+msgid "Input files"
+msgstr "Neniu ĵusa dosiero"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:10
+#: ../qt/data/HOCRBatchExportDialog.ui.h:8
+#, fuzzy
+msgid "Export options"
+msgstr "Aliaj opcioj"
+
+#: ../gtk/data/MainWindow.ui.h:1 ../qt/data/MainWindow.ui.h:40
+msgid "Toggle output pane"
+msgstr "Baskuligi eligpanelon"
+
+#: ../gtk/data/MainWindow.ui.h:2 ../qt/src/Ui_MainWindow.hh:66
+msgid "Rotate current page"
+msgstr "Turni aktualan paĝon"
+
+#: ../gtk/data/MainWindow.ui.h:3 ../qt/src/Ui_MainWindow.hh:67
+msgid "Rotate all pages"
+msgstr "Turni ĉiujn paĝojn"
+
+#. Remove & from some labels which designer insists in adding
+#: ../gtk/data/MainWindow.ui.h:4 ../qt/data/MainWindow.ui.h:22
+#: ../qt/src/Ui_MainWindow.hh:49
+msgid "Sources"
+msgstr "Fontoj"
+
+#: ../gtk/data/MainWindow.ui.h:5 ../qt/src/Ui_MainWindow.hh:201
+msgid "Add images"
+msgstr "Aldoni bildojn"
+
+#: ../gtk/data/MainWindow.ui.h:6 ../qt/src/Ui_MainWindow.hh:200
+msgid "Add Images"
+msgstr "Aldoni Bildojn"
+
+#: ../gtk/data/MainWindow.ui.h:7 ../qt/src/Ui_MainWindow.hh:205
+msgid "Remove image from list"
+msgstr "Forigi bildon el listo"
+
+#: ../gtk/data/MainWindow.ui.h:8 ../qt/src/Ui_MainWindow.hh:208
+msgid "Delete image"
+msgstr "Forviŝi bildon"
+
+#: ../gtk/data/MainWindow.ui.h:9 ../qt/src/Ui_MainWindow.hh:211
+msgid "Clear list"
+msgstr "Malplenigi liston"
+
+#: ../gtk/data/MainWindow.ui.h:10 ../qt/data/MainWindow.ui.h:6
+msgid "Thumbnails"
+msgstr "Miniaturoj"
+
+#: ../gtk/data/MainWindow.ui.h:11 ../qt/data/MainWindow.ui.h:5
+msgid "Files"
+msgstr "Dosieroj"
+
+#: ../gtk/data/MainWindow.ui.h:12 ../qt/data/MainWindow.ui.h:9
+msgid "Device:"
+msgstr "Aparato:"
+
+#: ../gtk/data/MainWindow.ui.h:13 ../gtk/data/TessdataManager.ui.h:4
+#: ../qt/data/MainWindow.ui.h:8 ../qt/src/TessdataManager.cc:55
+msgid "Refresh"
+msgstr "Reŝargi"
+
+#: ../gtk/data/MainWindow.ui.h:14 ../qt/data/MainWindow.ui.h:10
+msgid "Output:"
+msgstr "Eligo:"
+
+#: ../gtk/data/MainWindow.ui.h:15 ../qt/data/MainWindow.ui.h:14
+msgid "Mode:"
+msgstr "Reĝimo:"
+
+#: ../gtk/data/MainWindow.ui.h:16 ../gtk/src/hocr/HOCRPdfExportWidget.cc:49
+#: ../qt/data/MainWindow.ui.h:16 ../qt/src/hocr/HOCRPdfExportWidget.cc:60
+msgid "Color"
+msgstr "Koloro"
+
+#: ../gtk/data/MainWindow.ui.h:17 ../gtk/src/hocr/HOCRPdfExportWidget.cc:52
+#: ../qt/data/MainWindow.ui.h:15 ../qt/src/hocr/HOCRPdfExportWidget.cc:61
+msgid "Grayscale"
+msgstr "Grizoskalo"
+
+#: ../gtk/data/MainWindow.ui.h:18 ../qt/data/MainWindow.ui.h:11
+msgid "Resolution:"
+msgstr "Distingivo:"
+
+#: ../gtk/data/MainWindow.ui.h:19 ../qt/data/MainWindow.ui.h:12
+msgid "Scan"
+msgstr "Skani"
+
+#: ../gtk/data/MainWindow.ui.h:20 ../qt/data/MainWindow.ui.h:17
+msgid "Source:"
+msgstr "Fonto:"
+
+#: ../gtk/data/MainWindow.ui.h:21 ../qt/data/MainWindow.ui.h:7
+msgid "Acquire"
+msgstr "Akiri"
+
+#: ../gtk/data/MainWindow.ui.h:22 ../qt/data/MainWindow.ui.h:1
+msgid "Brightness"
+msgstr "Helo"
+
+#: ../gtk/data/MainWindow.ui.h:23 ../qt/data/MainWindow.ui.h:2
+msgid "Contrast"
+msgstr "Kontrasto"
+
+#: ../gtk/data/MainWindow.ui.h:24 ../qt/data/MainWindow.ui.h:3
+msgid "Resolution"
+msgstr "Distingivo"
+
+#: ../gtk/data/MainWindow.ui.h:25 ../qt/data/MainWindow.ui.h:4
+msgid "Invert colors"
+msgstr "Inversigi kolorojn"
+
+#: ../gtk/data/MainWindow.ui.h:26 ../qt/data/MainWindow.ui.h:24
+msgid "Zoom in"
+msgstr "Enzomi"
+
+#: ../gtk/data/MainWindow.ui.h:27 ../qt/data/MainWindow.ui.h:26
+msgid "Zoom out"
+msgstr "Elzomi"
+
+#: ../gtk/data/MainWindow.ui.h:28 ../qt/data/MainWindow.ui.h:28
+msgid "Normal size"
+msgstr "Normala grando"
+
+#: ../gtk/data/MainWindow.ui.h:29 ../qt/data/MainWindow.ui.h:30
+msgid "Best fit"
+msgstr "Aŭtomata adapto"
+
+#: ../gtk/data/MainWindow.ui.h:30 ../qt/src/Ui_MainWindow.hh:60
+msgid "Rotate page"
+msgstr "Turni paĝon"
+
+#: ../gtk/data/MainWindow.ui.h:31 ../qt/src/Ui_MainWindow.hh:75
+msgid "Select rotation mode"
+msgstr "Elekti reĝimon de turnado"
+
+#: ../gtk/data/MainWindow.ui.h:32 ../gtk/data/OutputEditorHOCR.ui.h:12
+#: ../gtk/data/OutputEditorText.ui.h:15
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:72
+#: ../qt/src/Ui_OutputEditorText.hh:104
+msgid "Select insert mode"
+msgstr "Elekti reĝimon de enmetado"
+
+#: ../gtk/data/MainWindow.ui.h:33 ../qt/src/Ui_MainWindow.hh:102
+msgid "Select page"
+msgstr "Elekti paĝon"
+
+#: ../gtk/data/MainWindow.ui.h:34 ../qt/data/MainWindow.ui.h:36
+msgid "Image controls"
+msgstr "Bildoregiloj"
+
+#: ../gtk/data/MainWindow.ui.h:35 ../gtk/src/hocr/HOCRBatchExportDialog.cc:51
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:42 ../qt/src/MainWindow.cc:166
+msgid "Plain text"
+msgstr "Plata teksto"
+
+#: ../gtk/data/MainWindow.ui.h:36 ../qt/src/MainWindow.cc:167
+msgid "hOCR, PDF"
+msgstr "hOCR, PDF"
+
+#: ../gtk/data/MainWindow.ui.h:37 ../qt/data/MainWindow.ui.h:38
+msgid "Autodetect layout"
+msgstr "Aŭtomate diveni aranĝon"
+
+#: ../gtk/data/MainWindow.ui.h:38
+msgid "<small>Recognize all</small>"
+msgstr "<small>Rekoni ĉion</small>"
+
+#: ../gtk/data/MainWindow.ui.h:39
+msgid "Select language"
+msgstr "Elekti lingvon"
+
+#: ../gtk/data/MainWindow.ui.h:40 ../qt/data/MainWindow.ui.h:41
+#, fuzzy
+msgid "Batch Export"
+msgstr "Elporti"
+
+#: ../gtk/data/MainWindow.ui.h:41
+msgid "A graphical frontend to tesseract-ocr"
+msgstr "Grafika fasado por tesseract-ocr"
+
+#: ../gtk/data/MainWindow.ui.h:42 ../qt/data/BatchModeDialog.ui.h:1
+msgid "Batch Mode"
+msgstr "Amasreĝimo"
+
+#: ../gtk/data/MainWindow.ui.h:43
+#, fuzzy
+msgid ""
+"<i>In batch mode, each input source is processed separately and the output "
+"saved side-by-side to the input file.</i>"
+msgstr ""
+"En amasreĝimo, ĉiu eniga fonto estos traktata aparte, kaj la eligo estos "
+"konservita apud al la eniga dosiero."
+
+#: ../gtk/data/MainWindow.ui.h:44 ../qt/data/BatchModeDialog.ui.h:3
+msgid "Existing output:"
+msgstr "Ekzistanta eligo:"
+
+#: ../gtk/data/MainWindow.ui.h:45 ../qt/data/BatchModeDialog.ui.h:2
+msgid "Prepend page numbers to output text"
+msgstr "Antaŭmeti paĝajn numerojn antaŭ eliga teksto"
+
+#: ../gtk/data/MainWindow.ui.h:46 ../qt/data/BatchModeDialog.ui.h:5
+msgid "Autodetect page layout"
+msgstr "Aŭtomate diveni paĝan aranĝon"
+
+#: ../gtk/data/MainWindow.ui.h:47 ../qt/data/PageRangeDialog.ui.h:1
+msgid "Page Range"
+msgstr "Paĝa Intervalo"
+
+#: ../gtk/data/MainWindow.ui.h:50 ../qt/data/PageRangeDialog.ui.h:2
+msgid "Page range:"
+msgstr "Paĝa intervalo:"
+
+#: ../gtk/data/MainWindow.ui.h:51 ../qt/data/PageRangeDialog.ui.h:3
+msgid "<small><b>Example:</b> 1-10, 13, 14-18</small>"
+msgstr "<small><b>Ekzemple:</b> 1-10, 13, 14-18</small>"
+
+#: ../gtk/data/MainWindow.ui.h:52 ../qt/data/PageRangeDialog.ui.h:4
+msgid "Recognition area:"
+msgstr "Rekonota areo:"
+
+#: ../gtk/data/MainWindow.ui.h:53 ../gtk/src/Recognizer.cc:121
+#: ../qt/data/PageRangeDialog.ui.h:5 ../qt/src/Recognizer.cc:137
+msgid "Entire page"
+msgstr "Tuta paĝo"
+
+#: ../gtk/data/MainWindow.ui.h:54 ../qt/data/PageRangeDialog.ui.h:6
+msgid "Autodetect"
+msgstr "Aŭtomate trovi"
+
+#: ../gtk/data/MainWindow.ui.h:55 ../qt/data/PageRangeDialog.ui.h:7
+msgid "Prepend to output text:"
+msgstr "Antaŭmeti antaŭ aktuala teksto:"
+
+#: ../gtk/data/MainWindow.ui.h:56 ../qt/data/PageRangeDialog.ui.h:8
+msgid "Source filename"
+msgstr "Fonta dosiernomo"
+
+#: ../gtk/data/MainWindow.ui.h:57 ../qt/data/PageRangeDialog.ui.h:9
+msgid "Source page"
+msgstr "Fonta paĝo"
+
+#: ../gtk/data/MainWindow.ui.h:58 ../qt/src/SourceManager.cc:172
+msgid "Protected PDF"
+msgstr "Protektata PDF"
+
+#: ../gtk/data/MainWindow.ui.h:59 ../qt/src/Recognizer.cc:71
+msgid "Current Page"
+msgstr "Aktuala Paĝo"
+
+#: ../gtk/data/MainWindow.ui.h:60 ../qt/src/Recognizer.cc:74
+msgid "Multiple Pages..."
+msgstr "Pluraj Paĝoj…"
+
+#: ../gtk/data/MainWindow.ui.h:61 ../qt/src/Recognizer.cc:77
+msgid "Batch mode..."
+msgstr "Amasreĝimo…"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:1 ../qt/src/hocr/OutputEditorHOCR.cc:720
+msgid "Add Word"
+msgstr "Aldoni Vorton"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:4 ../qt/src/hocr/OutputEditorHOCR.cc:720
+msgid "Enter word:"
+msgstr "Entajpu vorton:"
+
+#. Output toolbar
+#: ../gtk/data/OutputEditorHOCR.ui.h:5 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:63
+msgid "Append new output after last page"
+msgstr "Enmeti novan eligon post lasta paĝo"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:6 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:64
+msgid "Insert new output before current page"
+msgstr "Enmeti novan eligon antaŭ aktuala paĝo"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:7 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:94
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:95
+msgid "Export to plain text"
+msgstr "Elporti plattekste"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:8 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:97
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:98
+msgid "Export to PDF"
+msgstr "Elporti kiel PDF-dosieron"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:9
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:100
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:101
+msgid "Export to ODT"
+msgstr "Elporti kiel ODF-dosieron"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:10
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:76
+msgid "Append document after last page"
+msgstr "Enmeti dokumenton post lasta paĝo"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:11
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:77
+msgid "Insert document before current page"
+msgstr "Enmeti dokumenton antaŭ aktuala paĝo"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:13
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:85
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:86
+msgid "Open hOCR file"
+msgstr "Malfermi hOCR-dosieron"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:14 ../gtk/data/OutputEditorText.ui.h:14
+#: ../qt/src/Ui_OutputEditorText.hh:125
+msgid "Save output"
+msgstr "Konservi eligon"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:15
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:105
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:106
+msgid "Export"
+msgstr "Elporti"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:16 ../gtk/data/OutputEditorText.ui.h:20
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:110
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:111
+#: ../qt/src/Ui_OutputEditorText.hh:127
+msgid "Clear output"
+msgstr "Forviŝi eligon"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:17 ../gtk/data/OutputEditorText.ui.h:17
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:113
+#: ../qt/src/Ui_OutputEditorText.hh:116
+msgid "Find and replace"
+msgstr "Serĉi kaj anstataŭigi"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:18
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:115
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:116
+msgid "Show confidence values"
+msgstr "Montri konfidvalorojn"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:19 ../gtk/data/PdfExportWidget.ui.h:1
+#: ../qt/data/PdfExportDialog.ui.h:2 ../qt/data/PdfExportWidget.ui.h:1
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:121
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:122
+msgid "Show preview"
+msgstr "Antaŭrigardi"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:20
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:160
+msgid "Next (F3)"
+msgstr "Sekven (F3)"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:21
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:161
+msgid "Previous (Shift+F3)"
+msgstr "Antaŭen (Maj+F3)"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:22 ../gtk/src/hocr/OutputEditorHOCR.cc:978
+#: ../qt/src/hocr/OutputEditorHOCR.cc:852
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:165
+msgid "Expand all"
+msgstr "Etendi ĉion"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:23 ../gtk/src/hocr/OutputEditorHOCR.cc:981
+#: ../qt/src/hocr/OutputEditorHOCR.cc:853
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:166
+msgid "Collapse all"
+msgstr "Maletendi ĉion"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:24
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:187
+msgid "Properties"
+msgstr "Atributoj"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:25
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:191
+msgid "Source"
+msgstr "Fonto"
+
+#. Output insert mode
+#: ../gtk/data/OutputEditorText.ui.h:1 ../qt/src/Ui_OutputEditorText.hh:61
+msgid "Append to current text"
+msgstr "Postmeti post aktuala teksto"
+
+#: ../gtk/data/OutputEditorText.ui.h:2 ../qt/src/Ui_OutputEditorText.hh:62
+msgid "Insert at cursor"
+msgstr "Enmeti ĉe kursoro"
+
+#: ../gtk/data/OutputEditorText.ui.h:3 ../qt/src/Ui_OutputEditorText.hh:63
+msgid "Replace current text"
+msgstr "Anstataŭigi aktualan tekston"
+
+#. Output postprocessing
+#: ../gtk/data/OutputEditorText.ui.h:4 ../qt/src/Ui_OutputEditorText.hh:71
+msgid "Keep line break if..."
+msgstr "Konservi linifinon se…"
+
+#: ../gtk/data/OutputEditorText.ui.h:5 ../qt/src/Ui_OutputEditorText.hh:73
+msgid "Preceded by end mark (.?!)"
+msgstr "Antaŭita de fina interpunkcio (.?!)"
+
+#: ../gtk/data/OutputEditorText.ui.h:6 ../qt/src/Ui_OutputEditorText.hh:75
+msgid "Preceded or succeeded by quote"
+msgstr "Antaŭita aŭ sekvita de citilo"
+
+#: ../gtk/data/OutputEditorText.ui.h:7 ../qt/src/Ui_OutputEditorText.hh:77
+msgid "Other options"
+msgstr "Aliaj opcioj"
+
+#: ../gtk/data/OutputEditorText.ui.h:8 ../qt/src/Ui_OutputEditorText.hh:79
+msgid "Join hyphenated words"
+msgstr "Kunigi vortojn dividitajn per streketoj"
+
+#: ../gtk/data/OutputEditorText.ui.h:9 ../qt/src/Ui_OutputEditorText.hh:81
+msgid "Collapse whitespace"
+msgstr "Kunigi spacetojn"
+
+#: ../gtk/data/OutputEditorText.ui.h:10 ../qt/src/Ui_OutputEditorText.hh:83
+msgid "Preserve paragraphs"
+msgstr "Konservi alineojn"
+
+#: ../gtk/data/OutputEditorText.ui.h:11 ../qt/src/Ui_OutputEditorText.hh:85
+msgid "Visual aids"
+msgstr "Vidaj helpiloj"
+
+#: ../gtk/data/OutputEditorText.ui.h:12 ../qt/src/Ui_OutputEditorText.hh:87
+msgid "Draw whitespace"
+msgstr "Videbligi spacetojn"
+
+#: ../gtk/data/OutputEditorText.ui.h:13
+#, fuzzy
+msgid "Open file"
+msgstr "Malfermi hOCR-dosieron"
+
+#: ../gtk/data/OutputEditorText.ui.h:16 ../qt/src/Ui_OutputEditorText.hh:111
+msgid "Strip line breaks on selected text"
+msgstr "Forigi linifinojn en elektita teksto"
+
+#: ../gtk/data/OutputEditorText.ui.h:18 ../qt/src/Ui_OutputEditorText.hh:118
+#: ../qt/src/Ui_OutputEditorText.hh:119
+msgid "Undo"
+msgstr "Malfari"
+
+#: ../gtk/data/OutputEditorText.ui.h:19 ../qt/src/Ui_OutputEditorText.hh:121
+#: ../qt/src/Ui_OutputEditorText.hh:122
+msgid "Redo"
+msgstr "Refari"
+
+#: ../gtk/data/OutputEditorText.ui.h:21
+msgid "New tab"
+msgstr ""
+
+#: ../gtk/data/PdfExportWidget.ui.h:2 ../qt/data/PdfExportDialog.ui.h:4
+#: ../qt/data/PdfExportWidget.ui.h:3
+msgid "Output mode:"
+msgstr "Eliga reĝimo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:3
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:45
+#: ../qt/data/PdfExportDialog.ui.h:6 ../qt/data/PdfExportWidget.ui.h:5
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:40
+msgid "PDF"
+msgstr "PDF"
+
+#: ../gtk/data/PdfExportWidget.ui.h:4 ../qt/data/PdfExportDialog.ui.h:7
+#: ../qt/data/PdfExportWidget.ui.h:6
+msgid "PDF with invisible text overlay"
+msgstr "PDF kun nevidebla teksta surmeto"
+
+#: ../gtk/data/PdfExportWidget.ui.h:6 ../qt/data/PdfExportDialog.ui.h:17
+#: ../qt/data/PdfExportWidget.ui.h:16
+msgid "Compression:"
+msgstr "Densigo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:7 ../qt/data/PdfExportDialog.ui.h:14
+#: ../qt/data/PdfExportWidget.ui.h:13
+msgid "Compression quality:"
+msgstr "Densiga kvalito:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:8 ../qt/data/PdfExportDialog.ui.h:15
+#: ../qt/data/PdfExportWidget.ui.h:14
+msgid "DPI:"
+msgstr "Punktoj en colo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:9 ../qt/data/PdfExportDialog.ui.h:18
+#: ../qt/data/PdfExportWidget.ui.h:17
+msgid "Dithering algorithm:"
+msgstr "Punktiga algoritmo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:10 ../qt/data/PdfExportDialog.ui.h:13
+#: ../qt/data/PdfExportWidget.ui.h:12
+msgid "Image settings:"
+msgstr "Bildaj agordoj:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:11 ../qt/data/PdfExportDialog.ui.h:25
+#: ../qt/data/PdfExportWidget.ui.h:24
+msgid "Uniformize line and word spacing"
+msgstr "Kongruigi interliniajn kaj intervortajn spacojn"
+
+#: ../gtk/data/PdfExportWidget.ui.h:12 ../qt/data/PdfExportDialog.ui.h:21
+#: ../qt/data/PdfExportWidget.ui.h:20
+msgid "Override font family:"
+msgstr "Devigi tiparfamilion:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:13 ../qt/data/PdfExportDialog.ui.h:27
+#: ../qt/data/PdfExportWidget.ui.h:26
+msgid "Fallback font family:"
+msgstr "Apriora tiparfamilio:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:14 ../qt/data/PdfExportDialog.ui.h:20
+#: ../qt/data/PdfExportWidget.ui.h:19
+msgid "Override font size:"
+msgstr "Devigi tiparan grandon:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:15 ../qt/data/PdfExportDialog.ui.h:23
+#: ../qt/data/PdfExportWidget.ui.h:22
+msgid "Font scaling:"
+msgstr "Aligrandigo de tiparo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:16 ../qt/data/PdfExportDialog.ui.h:26
+#: ../qt/data/PdfExportWidget.ui.h:25
+msgid "pt"
+msgstr "pt"
+
+#: ../gtk/data/PdfExportWidget.ui.h:17 ../qt/data/PdfExportDialog.ui.h:22
+#: ../qt/data/PdfExportWidget.ui.h:21
+msgid "Preserve spaces wider than:"
+msgstr "Konservu spacetojn pli larĝajn ol:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:18 ../qt/data/PdfExportDialog.ui.h:24
+#: ../qt/data/PdfExportWidget.ui.h:23
+msgid "characters"
+msgstr "signojn"
+
+#: ../gtk/data/PdfExportWidget.ui.h:19 ../qt/data/PdfExportDialog.ui.h:28
+#: ../qt/data/PdfExportWidget.ui.h:27
+msgid "Sanitize hyphens before line breaks"
+msgstr "Trakti streketojn antaŭ linifinoj"
+
+#: ../gtk/data/PdfExportWidget.ui.h:20 ../qt/data/PdfExportDialog.ui.h:19
+#: ../qt/data/PdfExportWidget.ui.h:18
+msgid "Text settings:"
+msgstr "Agordoj pri teksto:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:21 ../qt/data/PdfExportDialog.ui.h:10
+#: ../qt/data/PdfExportWidget.ui.h:9
+msgid "Paper size:"
+msgstr "Formato:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:22 ../qt/data/PdfExportDialog.ui.h:11
+#: ../qt/data/PdfExportWidget.ui.h:10
+msgid "Width"
+msgstr "Larĝo"
+
+#: ../gtk/data/PdfExportWidget.ui.h:23 ../qt/data/PdfExportDialog.ui.h:12
+#: ../qt/data/PdfExportWidget.ui.h:11
+msgid "Height"
+msgstr "Alto"
+
+#: ../gtk/data/PdfExportWidget.ui.h:24 ../qt/data/PdfExportDialog.ui.h:29
+#: ../qt/data/PdfExportWidget.ui.h:28
+msgid "Treat image sources as having true DPI:"
+msgstr "Supozi, ke bildaj fontoj havas ĝustan nombron de punktoj en colo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:25 ../qt/data/PdfExportDialog.ui.h:3
+#: ../qt/data/PdfExportWidget.ui.h:2
+msgid "Basic"
+msgstr "Baza"
+
+#: ../gtk/data/PdfExportWidget.ui.h:26 ../qt/data/PdfExportDialog.ui.h:31
+#: ../qt/data/PdfExportWidget.ui.h:30
+msgid "PDF version:"
+msgstr "Versio de PDF:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:27 ../qt/data/PdfExportDialog.ui.h:33
+#: ../qt/data/PdfExportWidget.ui.h:32
+msgid "Password:"
+msgstr "Pasvorto:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:28 ../qt/data/PdfExportDialog.ui.h:34
+#: ../qt/data/PdfExportWidget.ui.h:33
+msgid "Confirm password:"
+msgstr "Konfirmu pasvorton:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:29 ../qt/data/PdfExportDialog.ui.h:32
+#: ../qt/data/PdfExportWidget.ui.h:31
+msgid "Encryption (optional):"
+msgstr "Ĉifrado (ne deviga):"
+
+#: ../gtk/data/PdfExportWidget.ui.h:30 ../qt/data/PdfExportDialog.ui.h:36
+#: ../qt/data/PdfExportWidget.ui.h:35
+msgid "Author:"
+msgstr "Aŭtoro:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:31 ../qt/data/PdfExportDialog.ui.h:38
+#: ../qt/data/PdfExportWidget.ui.h:37
+msgid "Title:"
+msgstr "Titolo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:32 ../qt/data/PdfExportDialog.ui.h:40
+#: ../qt/data/PdfExportWidget.ui.h:39
+msgid "Subject:"
+msgstr "Temo:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:33 ../qt/data/PdfExportDialog.ui.h:37
+#: ../qt/data/PdfExportWidget.ui.h:36
+msgid "Creator:"
+msgstr "Kreinto:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:34 ../qt/data/PdfExportDialog.ui.h:39
+#: ../qt/data/PdfExportWidget.ui.h:38
+msgid "Producer:"
+msgstr "Produktinto:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:35 ../qt/data/PdfExportDialog.ui.h:41
+#: ../qt/data/PdfExportWidget.ui.h:40
+msgid "Keywords:"
+msgstr "Ĉefvortoj:"
+
+#: ../gtk/data/PdfExportWidget.ui.h:36 ../qt/data/PdfExportDialog.ui.h:35
+#: ../qt/data/PdfExportWidget.ui.h:34
+msgid "Additional information (optional):"
+msgstr "Pliaj informoj (ne devigaj):"
+
+#: ../gtk/data/PdfExportWidget.ui.h:37 ../qt/data/PdfExportDialog.ui.h:42
+#: ../qt/data/PdfExportWidget.ui.h:41
+msgid "Import from current source"
+msgstr "Enporti el aktuala fonto"
+
+#: ../gtk/data/PdfExportWidget.ui.h:38 ../qt/data/PdfExportDialog.ui.h:30
+#: ../qt/data/PdfExportWidget.ui.h:29
+msgid "Advanced"
+msgstr "Altnivela"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:1 ../qt/data/SearchReplaceFrame.ui.h:4
+msgid "Find"
+msgstr "Serĉi"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:2 ../qt/data/SearchReplaceFrame.ui.h:2
+msgid "Replace"
+msgstr "Anstataŭigi"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:3 ../qt/data/SearchReplaceFrame.ui.h:3
+msgid "Replace all"
+msgstr "Anstataŭigi ĉiujn"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:4 ../qt/data/SearchReplaceFrame.ui.h:5
+msgid "Find previous"
+msgstr "Trovi antaŭan"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:5 ../qt/data/SearchReplaceFrame.ui.h:6
+msgid "Find next"
+msgstr "Trovi postan"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:6 ../qt/data/SearchReplaceFrame.ui.h:7
+msgid "Match case"
+msgstr "Kongruigi usklecon"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:7
+#: ../gtk/data/SubstitutionsManager.ui.h:1 ../qt/data/SearchReplaceFrame.ui.h:1
+#: ../qt/src/SubstitutionsManager.cc:36
+msgid "Substitutions"
+msgstr "Anstataŭigoj"
+
+#: ../gtk/data/SelectionMenu.ui.h:1 ../qt/src/DisplayerToolSelect.cc:239
+msgid "Delete"
+msgstr "Forviŝi"
+
+#: ../gtk/data/SelectionMenu.ui.h:2 ../qt/src/DisplayerToolSelect.cc:225
+msgid "Order:"
+msgstr "Ordo:"
+
+#: ../gtk/data/SelectionMenu.ui.h:3 ../gtk/src/hocr/DisplayerToolHOCR.cc:29
+#: ../qt/src/DisplayerToolSelect.cc:240 ../qt/src/hocr/DisplayerToolHOCR.cc:31
+msgid "Recognize"
+msgstr "Rekoni"
+
+#: ../gtk/data/SelectionMenu.ui.h:4 ../qt/src/DisplayerToolSelect.cc:241
+msgid "Recognize to clipboard"
+msgstr "Rekoni en tondujon"
+
+#: ../gtk/data/SelectionMenu.ui.h:5 ../qt/src/DisplayerToolSelect.cc:242
+msgid "Save as image"
+msgstr "Konservi kiel bildon"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:2 ../qt/src/SubstitutionsManager.cc:38
+#: ../qt/src/SubstitutionsManager.cc:39 ../qt/src/Ui_OutputEditorText.hh:57
+msgid "Open"
+msgstr "Malfermi"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:3 ../gtk/src/Utils.cc:133
+#: ../qt/src/SubstitutionsManager.cc:41 ../qt/src/SubstitutionsManager.cc:42
+msgid "Save"
+msgstr "Konservi"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:4 ../qt/src/SubstitutionsManager.cc:44
+#: ../qt/src/SubstitutionsManager.cc:45
+msgid "Clear"
+msgstr "Malplenigi"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:5 ../qt/data/ConfigDialog.ui.h:16
+#: ../qt/src/SubstitutionsManager.cc:47 ../qt/src/SubstitutionsManager.cc:48
+msgid "Add"
+msgstr "Aldoni"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:6
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:974 ../qt/data/ConfigDialog.ui.h:17
+#: ../qt/src/hocr/OutputEditorHOCR.cc:849 ../qt/src/SubstitutionsManager.cc:50
+#: ../qt/src/SubstitutionsManager.cc:51
+msgid "Remove"
+msgstr "Forigi"
+
+#: ../gtk/data/TessdataManager.ui.h:1 ../qt/src/TessdataManager.cc:45
+msgid "Tessdata Manager"
+msgstr "Administrilo de datenoj de tesseract"
+
+#: ../gtk/data/TessdataManager.ui.h:5 ../qt/src/TessdataManager.cc:47
+msgid "Manage installed languages:"
+msgstr "Administri instalitajn lingvojn:"
+
+#: ../gtk/src/Acquirer.cc:79 ../qt/src/Acquirer.cc:70
+msgid "scan.png"
+msgstr "skano.png"
+
+#: ../gtk/src/Acquirer.cc:91 ../qt/src/Acquirer.cc:85
+msgid "Images"
+msgstr "Bildoj"
+
+#: ../gtk/src/Acquirer.cc:92 ../qt/src/Acquirer.cc:86
+msgid "Choose Output Filename..."
+msgstr "Elektu Eligan Dosiernomon…"
+
+#: ../gtk/src/Acquirer.cc:106 ../qt/src/Acquirer.cc:100
+msgid "Failed to initialize the scanning backend."
+msgstr "Malsukcesis startigo de interna modulo por skanado."
+
+#: ../gtk/src/Acquirer.cc:115 ../qt/src/Acquirer.cc:106
+msgid "Scan failed"
+msgstr "Malsukcesis skanado"
+
+#: ../gtk/src/Acquirer.cc:133 ../qt/src/Acquirer.cc:122
+msgid "No scanners were detected."
+msgstr "Neniu skanilo trovita."
+
+#: ../gtk/src/Acquirer.cc:150 ../gtk/src/Acquirer.cc:167
+#: ../qt/src/Acquirer.cc:136 ../qt/src/Acquirer.cc:153
+msgid "Starting scan..."
+msgstr "Ekskanante…"
+
+#: ../gtk/src/Acquirer.cc:163 ../qt/src/Acquirer.cc:149
+msgid "Opening device..."
+msgstr "Malfermante aparaton…"
+
+#: ../gtk/src/Acquirer.cc:165 ../qt/src/Acquirer.cc:151
+msgid "Setting options..."
+msgstr "Agordante…"
+
+#: ../gtk/src/Acquirer.cc:169 ../qt/src/Acquirer.cc:155
+msgid "Getting parameters..."
+msgstr "Akirante parametrojn…"
+
+#: ../gtk/src/Acquirer.cc:171 ../qt/src/Acquirer.cc:157
+msgid "Transferring data..."
+msgstr "Transigante datenojn…"
+
+#: ../gtk/src/Acquirer.cc:178 ../qt/src/Acquirer.cc:164
+msgid "Canceling scan..."
+msgstr "Ĉesigante skanon…"
+
+#: ../gtk/src/Config.cc:50 ../gtk/src/Config.cc:60
+#: ../qt/data/ConfigDialog.ui.h:7
+msgid "Filename prefix"
+msgstr "Prefikso de dosiernomo"
+
+#: ../gtk/src/Config.cc:51 ../gtk/src/Config.cc:61
+#: ../qt/data/ConfigDialog.ui.h:8
+msgid "Code"
+msgstr "Kodo"
+
+#: ../gtk/src/Config.cc:52 ../gtk/src/Config.cc:62
+#: ../qt/data/ConfigDialog.ui.h:9
+msgid "Native name"
+msgstr "Indiĝena nomo"
+
+#: ../gtk/src/Config.cc:119 ../qt/src/Config.cc:104
+msgid "Script"
+msgstr "Skribsistemo"
+
+#: ../gtk/src/CrashHandler.cc:25 ../gtk/src/CrashHandler.cc:41
+#: ../qt/src/CrashHandler.cc:36
+msgid "Crash Handler"
+msgstr "Kolapso-Traktilo"
+
+#: ../gtk/src/CrashHandler.cc:43 ../qt/src/CrashHandler.cc:31
+msgid "Your work has been saved under <b>%1</b>."
+msgstr "Via laboro konserviĝis ĉe <b>%1</b>."
+
+#: ../gtk/src/CrashHandler.cc:45 ../qt/src/CrashHandler.cc:33
+msgid "There was no unsaved work."
+msgstr "Ne ekzistis nekonservitan laboron."
+
+#: ../gtk/src/CrashHandler.cc:106 ../qt/src/CrashHandler.cc:62
+msgid "Failed to obtain backtrace. Is GDB installed?"
+msgstr "Ne povis akiri retrospuron. Ĉu GDB estas instalita?"
+
+#: ../gtk/src/Displayer.cc:254 ../qt/src/Displayer.cc:200
+msgid "Failed to load image"
+msgstr "Malsukcesis ŝargado de bildo"
+
+#: ../gtk/src/Displayer.cc:254 ../qt/src/Displayer.cc:200
+msgid ""
+"The file might not be an image or be corrupt:\n"
+"%1"
+msgstr ""
+"La dosiero estas eble nebilda aŭ koruptita:\n"
+"%1"
+
+#: ../gtk/src/Displayer.cc:770 ../qt/src/Displayer.cc:605
+msgid "Page %1"
+msgstr "Paĝo %1"
+
+#: ../gtk/src/DisplayerToolSelect.cc:138 ../qt/src/DisplayerToolSelect.cc:135
+msgid "PNG Images"
+msgstr "PNG-Bildoj"
+
+#: ../gtk/src/DisplayerToolSelect.cc:139 ../qt/src/DisplayerToolSelect.cc:135
+msgid "Save Selection Image"
+msgstr "Konservi Elektitan Bildon"
+
+#: ../gtk/src/DisplayerToolSelect.cc:139 ../qt/src/DisplayerToolSelect.cc:135
+msgid "selection.png"
+msgstr "elekto.png"
+
+#: ../gtk/src/DisplayerToolSelect.cc:146 ../qt/src/DisplayerToolSelect.cc:142
+msgid "Recognize all"
+msgstr "Rekoni ĉion"
+
+#: ../gtk/src/DisplayerToolSelect.cc:146 ../qt/src/DisplayerToolSelect.cc:142
+msgid "Recognize selection"
+msgstr "Rekoni elektitaĵon"
+
+#: ../gtk/src/DisplayerToolSelect.cc:186 ../qt/src/DisplayerToolSelect.cc:182
+msgid "Performing layout analysis"
+msgstr "Analizante tekstan aranĝon"
+
+#: ../gtk/src/FileTreeModel.cc:62 ../qt/src/FileTreeModel.cc:49
+msgid "Temporary files"
+msgstr ""
+
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:48
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:41
+msgid "ODT"
+msgstr ""
+
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:106 ../gtk/src/SourceManager.cc:268
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:73 ../qt/src/SourceManager.cc:279
+msgid "Select folder..."
+msgstr "Elektu dosierujon…"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:68 ../qt/src/hocr/HOCRDocument.cc:71
+msgid "No suggestions"
+msgstr "Neniu sugesto"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:74 ../qt/src/hocr/HOCRDocument.cc:75
+msgid "Add to dictionary"
+msgstr "Aldoni en vortaron"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:80 ../qt/src/hocr/HOCRDocument.cc:79
+msgid "Ignore word"
+msgstr "Ignori vorton"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:800 ../gtk/src/hocr/HOCRDocument.cc:839
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:351 ../qt/src/hocr/HOCRDocument.cc:692
+#: ../qt/src/hocr/HOCRDocument.cc:729 ../qt/src/hocr/OutputEditorHOCR.cc:312
+msgid "Page"
+msgstr "Paĝo"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:802 ../qt/src/hocr/HOCRDocument.cc:694
+msgid "Text block"
+msgstr "Teksta bloko"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:804 ../gtk/src/hocr/OutputEditorHOCR.cc:357
+#: ../qt/src/hocr/HOCRDocument.cc:696 ../qt/src/hocr/OutputEditorHOCR.cc:314
+msgid "Paragraph"
+msgstr "Alineo"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:806 ../qt/src/hocr/HOCRDocument.cc:698
+msgid "Textline"
+msgstr "Tekstlinio"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:810 ../qt/src/hocr/HOCRDocument.cc:702
+msgid "Graphic"
+msgstr "Grafikaĵo"
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:63 ../gtk/src/hocr/HOCROdtExporter.cc:328
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:129
+#: ../gtk/src/hocr/HOCRTextExporter.cc:31 ../qt/src/hocr/HOCROdtExporter.cc:49
+#: ../qt/src/hocr/HOCRPdfExporter.cc:137 ../qt/src/hocr/HOCRTextExporter.cc:34
+msgid "Export failed"
+msgstr "Malsukcesis elportado"
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:63 ../gtk/src/hocr/HOCROdtExporter.cc:328
+#: ../qt/src/hocr/HOCROdtExporter.cc:49
+msgid "The ODT export failed: unable to write output file."
+msgstr "Malsukcesis elportado al ODT: ne povis skribi sur eligan dosieron."
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:322 ../qt/src/hocr/HOCROdtExporter.cc:242
+msgid "Exporting to ODT..."
+msgstr "Elportante al ODT…"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:70 ../qt/src/hocr/HOCRPdfExporter.cc:80
+msgid "The operation was cancelled"
+msgstr "Nuligis la operacion"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:117 ../qt/src/hocr/HOCRPdfExporter.cc:126
+msgid "Failed to render page %1"
+msgstr "Malsukcesis bildigo de paĝo %1"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:124 ../qt/src/hocr/HOCRPdfExporter.cc:133
+msgid "Exporting to PDF..."
+msgstr "Elportante al PDF…"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:129 ../qt/src/hocr/HOCRPdfExporter.cc:137
+msgid "The PDF export failed: %1."
+msgstr "Elportado al PDF malsukcesis: %1."
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:397 ../qt/src/hocr/HOCRPdfExporter.cc:428
+msgid "The PDF library could not load the font '%1'."
+msgstr "La PDF-biblioteko ne povis ŝargi la tiparon '%1'."
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:55
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:62
+msgid "Monochrome"
+msgstr "Unukolora"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:64
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:64
+msgid "Threshold (closest color)"
+msgstr "Sojlo (plej proksima koloro)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:67
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:65
+msgid "Diffuse"
+msgstr "Difuza"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:76
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:66
+msgid "Zip (lossless)"
+msgstr "ZIP (senperda)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:80
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:67
+msgid "CCITT Group 4 (lossless)"
+msgstr "CCITT Grupo 4 (senperda)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:84
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:68
+msgid "Jpeg (lossy)"
+msgstr "JPEG (perdema)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:97
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:74
+msgid "Same as source"
+msgstr "Same kiel fonto"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:100
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:75
+msgid "Custom"
+msgstr "Alia"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:114
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:71
+msgid "cm"
+msgstr "cm"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:117
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:72
+msgid "in"
+msgstr "colo(j)"
+
+#: ../gtk/src/hocr/HOCRTextExporter.cc:31 ../qt/src/hocr/HOCRTextExporter.cc:34
+msgid "The text export failed: unable to write output file."
+msgstr ""
+"Malsulcesis elporto kiel teksodosiero: ne povis skribi sur eligan dosieron."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:354
+#: ../qt/src/hocr/OutputEditorHOCR.cc:313
+msgid "Block"
+msgstr "Bloko"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:360
+#: ../qt/src/hocr/OutputEditorHOCR.cc:315
+msgid "Line"
+msgstr "Linio"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:363
+#: ../qt/src/hocr/OutputEditorHOCR.cc:316
+msgid "Word"
+msgstr "Vorto"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:366
+#: ../qt/src/hocr/OutputEditorHOCR.cc:317
+msgid "Misspelled word"
+msgstr "Misliterumita vorto"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:369
+#: ../qt/src/hocr/OutputEditorHOCR.cc:318
+#, fuzzy
+msgid "Low confidence word"
+msgstr "Montri konfidvalorojn"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:538
+#: ../qt/src/hocr/OutputEditorHOCR.cc:420
+msgid ""
+"The following pages could not be processed:\n"
+"%1"
+msgstr ""
+"La jenaj paĝoj ne estis trakteblaj:\n"
+"% 1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:421
+msgid "Recognition errors"
+msgstr "Eraroj pri rekonado"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:706
+#: ../qt/src/hocr/OutputEditorHOCR.cc:180
+#: ../qt/src/hocr/OutputEditorHOCR.cc:621
+#: ../qt/src/hocr/OutputEditorHOCR.cc:633
+msgid "Multiple values"
+msgstr "Pluraj valoroj"
+
+#. Merging allowed
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:901
+#: ../qt/src/hocr/OutputEditorHOCR.cc:781
+msgid "Merge"
+msgstr "Kunfandi"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:908
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:966
+#: ../qt/src/hocr/OutputEditorHOCR.cc:783
+#: ../qt/src/hocr/OutputEditorHOCR.cc:847
+msgid "Split from parent"
+msgstr "Disigi disde patro"
+
+#. Swapping allowed
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:918
+#: ../qt/src/hocr/OutputEditorHOCR.cc:787
+msgid "Swap"
+msgstr "Interŝanĝi"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:941
+#: ../qt/src/hocr/OutputEditorHOCR.cc:832
+msgid "Add graphic region"
+msgstr "Aldoni grafikan regionon"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:944
+#: ../qt/src/hocr/OutputEditorHOCR.cc:833
+msgid "Add text block"
+msgstr "Aldoni tekstan blokon"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:948
+#: ../qt/src/hocr/OutputEditorHOCR.cc:835
+msgid "Add paragraph"
+msgstr "Aldoni alineon"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:952
+#: ../qt/src/hocr/OutputEditorHOCR.cc:837
+msgid "Add line"
+msgstr "Aldoni linion"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:956
+#: ../qt/src/hocr/OutputEditorHOCR.cc:839
+msgid "Add word"
+msgstr "Aldoni vorton"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1015
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1098
+#: ../qt/src/hocr/OutputEditorHOCR.cc:914
+#: ../qt/src/hocr/OutputEditorHOCR.cc:990
+msgid "hOCR HTML Files"
+msgstr "HTML-dosieroj de hOCR"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1016
+#: ../qt/src/hocr/OutputEditorHOCR.cc:914
+msgid "Open hOCR File"
+msgstr "Malfermi hOCR-Dosieron"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1064 ../gtk/src/OutputEditorText.cc:466
+#: ../gtk/src/OutputEditorText.cc:516 ../gtk/src/SourceManager.cc:170
+#: ../qt/src/hocr/OutputEditorHOCR.cc:954 ../qt/src/OutputEditorText.cc:394
+#: ../qt/src/SourceManager.cc:154
+msgid ""
+"The following files could not be opened:\n"
+"%1"
+msgstr ""
+"La jenaj dosieroj ne estis malfermeblaj:\n"
+"% 1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1067
+#: ../qt/src/hocr/OutputEditorHOCR.cc:957
+msgid ""
+"The following files are not valid hOCR HTML:\n"
+"%1"
+msgstr ""
+"La jenaj dosieroj ne validas kiel hOCR-HTML-dosieroj:\n"
+"%1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1070 ../gtk/src/OutputEditorText.cc:467
+#: ../gtk/src/OutputEditorText.cc:517 ../gtk/src/SourceManager.cc:170
+#: ../qt/src/hocr/OutputEditorHOCR.cc:960 ../qt/src/OutputEditorText.cc:394
+#: ../qt/src/SourceManager.cc:154
+msgid "Unable to open files"
+msgstr "Ne povis malfermi dosierojn"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1095
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1161
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1197
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1227
+#: ../qt/src/hocr/OutputEditorHOCR.cc:987
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1049
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1083
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1112
+msgid "output"
+msgstr "eligo"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1099
+#: ../qt/src/hocr/OutputEditorHOCR.cc:990
+msgid "Save hOCR Output..."
+msgstr "Konservi hOCR-Eligon…"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1106 ../gtk/src/OutputEditorText.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:997 ../qt/src/OutputEditorText.cc:417
+msgid "Failed to save output"
+msgstr "Malsukcesis konservado de eligo"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1106 ../gtk/src/OutputEditorText.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:997 ../qt/src/OutputEditorText.cc:417
+msgid "Check that you have writing permissions in the selected folder."
+msgstr "Kontrolu, ĉu vi havas skribajn permesojn en la elektita dosierujo."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1164
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1052
+msgid "OpenDocument Text Documents"
+msgstr "Tekstaj dokumentoj de OpenDocument"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1165
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1052
+msgid "Save ODT Output..."
+msgstr "Konservi ODT-Eligon…"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1202
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1088
+msgid "PDF Files"
+msgstr "PDF-Dosieroj"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1203
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1088
+msgid "Save PDF Output..."
+msgstr "Konservi PDF-Eligon…"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1208
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1093
+msgid "Invalid Output"
+msgstr "Nevalida Eligo"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1208
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1093
+msgid "Cannot overwrite a file which is a source image of this document."
+msgstr ""
+"Ne povas anstataŭigi dosieron, kiu estas fonta bildo de ĉi tiu dokumento."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1230 ../gtk/src/OutputEditorText.cc:457
+#: ../gtk/src/OutputEditorText.cc:531 ../qt/src/hocr/OutputEditorHOCR.cc:1115
+#: ../qt/src/OutputEditorText.cc:342 ../qt/src/OutputEditorText.cc:410
+msgid "Text Files"
+msgstr "Tekstaj Dosieroj"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1231
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1115
+msgid "Save Text Output..."
+msgstr "Konservi Tekstan Eligon…"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1247
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1134
+msgid "Output not saved"
+msgstr "Eligo ne konservita"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1247
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1134
+msgid "Save output before proceeding?"
+msgstr "Ĉu konservi eligon antaŭ ol daŭrigado?"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1367 ../gtk/src/OutputEditorText.cc:357
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1232 ../qt/src/OutputEditorText.cc:253
+msgid "Replacing..."
+msgstr "Anstataŭigante…"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1392 ../gtk/src/OutputEditorText.cc:373
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1255 ../qt/src/OutputEditorText.cc:265
+msgid "Applying substitutions..."
+msgstr "Anstataŭigante…"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:243
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:230
+msgid "Keyboard shortcuts"
+msgstr "Fulmoklavoj"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:264
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:242
+msgid "Lines before:"
+msgstr "Linioj antaŭ:"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:272
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:256
+msgid "Lines after:"
+msgstr "Linioj post:"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:529
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:457
+msgid ""
+"<table><tr><td>Tab</td><td>Next field</td></tr><tr><td>Shift+Tab</"
+"td><td>Previous field</td></tr><tr><td>Down</td><td>Next line</td></"
+"tr><tr><td>Up</td><td>Previous line</td></tr><tr><td>Ctrl+Space</"
+"td><td>Spelling suggestions</td></tr><tr><td>Ctrl+Enter</td><td>Add word to "
+"dictionary</td></tr><tr><td>Ctrl+B</td><td>Toggle bold</td></"
+"tr><tr><td>Ctrl+I</td><td>Toggle italic</td></tr><tr><td>Ctrl+D</"
+"td><td>Divide word at cursor position</td></tr><tr><td>Ctrl+M</td><td>Merge "
+"with previous word</td></tr><tr><td>Ctrl+Shift+M</td><td>Merge with next "
+"word</td></tr><tr><td>Ctrl+Delete</td><td>Delete word</td></"
+"tr><tr><td>Ctrl+{Left,Right}</td><td>Adjust left bounding box edge</td></"
+"tr><tr><td>Ctrl+Shift+{Left,Right}</td><td>Adjust right bounding box edge</"
+"td></tr><tr><td>Ctrl+{Up,Down}</td><td>Adjust top bounding box edge</td></"
+"tr><tr><td>Ctrl+Shift+{Up,Down}</td><td>Adjust bottom bounding box edge</"
+"td></tr><tr><td>Ctrl++</td><td>Increase font size</td></tr><tr><td>Ctrl+-</"
+"td><td>Decrease font size</td></tr></table>"
+msgstr ""
+"<table><tr><td>Tab</td><td>Postakampen</td></tr><tr><td>Maj+Tab</"
+"td><td>Antaŭakampen</td></tr><tr><td>Sub</td><td>Postalinien</td></"
+"tr><tr><td>Supr</td><td>Antaŭalinien</td></tr><tr><td>Stir+Spac</"
+"td><td>Sugestoj pri literumado</td></tr><tr><td>Stir+Enig</td><td>Aldoni "
+"vorton en vortaron</td></tr><tr><td>Stir+B</td><td>Baskuligi grasecon</td></"
+"tr><tr><td>Stir+I</td><td>Baskuligi kursivecon</td></tr><tr><td>Stir+D</"
+"td><td>Dividi vorton ĉe kursoro</td></tr><tr><td>Stir+M</td><td>Kunigi kun "
+"antaŭa vorto</td></tr><tr><td>Stir+Maj+M</td><td>Kunigi kun posta vorto</"
+"td></tr><tr><td>Stir+Forig</td><td>Forigi vorton</td></"
+"tr><tr><td>Stir+{Dekstr,Maldekstr}</td><td>Alĝustigi maldekstran randon de "
+"limiga kvarangulo</td></tr><tr><td>Stir+Maj+{Dekstr,Maldekstr}</"
+"td><td>Alĝustigi dekstran randon de limiga kvarangulo</td></"
+"tr><tr><td>Stir+{Supr,Sub}</td><td>Alĝustigi supran randon de limiga "
+"kvarangulo</td></tr><tr><td>Stir+Maj+{Supr,Sub}</td><td>Alĝustigi malsupran "
+"randon de limiga kvarangulo</td></tr><tr><td>Stir++</td><td>Pligrandigi "
+"tiparon</td></tr><tr><td>Stir+-</td><td>Malpligrandigi tiparon</td></tr></"
+"table>"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:556
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:478
+msgid "Keyboard Shortcuts"
+msgstr "Fulmoklavoj"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:571
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:493
+msgid "Confidence: %1"
+msgstr "Konfidvaloro: %1"
+
+#: ../gtk/src/MainWindow.cc:135 ../qt/src/MainWindow.cc:342
+msgid "Using tesseract"
+msgstr "Uzado de tesseract"
+
+#: ../gtk/src/MainWindow.cc:184 ../qt/src/MainWindow.cc:209
+msgid "Select an image to begin..."
+msgstr "Elektu bildon por komenci…"
+
+#: ../gtk/src/MainWindow.cc:329 ../qt/src/MainWindow.cc:325
+msgid "Multiple sources (%1)"
+msgstr "Pluraj fontoj (%1)"
+
+#: ../gtk/src/MainWindow.cc:331 ../qt/src/MainWindow.cc:327
+msgid "Ready"
+msgstr "Preta"
+
+#: ../gtk/src/MainWindow.cc:483 ../qt/src/MainWindow.cc:464
+msgid "New version"
+msgstr "Nova versio"
+
+#: ../gtk/src/MainWindow.cc:483 ../qt/src/MainWindow.cc:464
+msgid "gImageReader %1 is available"
+msgstr "gImageReader %1 estas havebla"
+
+#: ../gtk/src/MainWindow.cc:484 ../qt/src/MainWindow.cc:465
+msgid "Download"
+msgstr "Elŝuti"
+
+#: ../gtk/src/MainWindow.cc:485 ../qt/src/MainWindow.cc:466
+msgid "Changelog"
+msgstr "Listo de ŝanĝoj"
+
+#: ../gtk/src/MainWindow.cc:486 ../qt/src/MainWindow.cc:467
+msgid "Don't notify again"
+msgstr "Ne sciigi denove"
+
+#: ../gtk/src/MainWindow.cc:507 ../qt/src/MainWindow.cc:515
+msgid "Don't show again"
+msgstr "Ne montri denove"
+
+#: ../gtk/src/MainWindow.cc:508 ../gtk/src/MainWindow.cc:521
+#: ../qt/src/MainWindow.cc:516
+msgid "Install"
+msgstr "Instali"
+
+#: ../gtk/src/MainWindow.cc:528 ../qt/src/MainWindow.cc:528
+msgid "Spelling dictionary missing"
+msgstr "Mankas literumvortaro"
+
+#: ../gtk/src/MainWindow.cc:528 ../qt/src/MainWindow.cc:528
+msgid "The spellcheck dictionary for %1 is not installed"
+msgstr "La literumvortaro pri %1 ne estas instalita"
+
+#: ../gtk/src/MainWindow.cc:535 ../gtk/src/MainWindow.cc:564
+#: ../qt/src/MainWindow.cc:534
+msgid "Installing spelling dictionary for '%1'"
+msgstr "Instalante literumvortaron pri '%1'"
+
+#: ../gtk/src/MainWindow.cc:556 ../gtk/src/MainWindow.cc:577
+#: ../gtk/src/MainWindow.cc:585 ../gtk/src/MainWindow.cc:633
+#: ../gtk/src/MainWindow.cc:638 ../gtk/src/TessdataManager.cc:60
+#: ../gtk/src/TessdataManager.cc:70 ../gtk/src/TessdataManager.cc:339
+#: ../qt/src/MainWindow.cc:553 ../qt/src/MainWindow.cc:566
+#: ../qt/src/MainWindow.cc:575 ../qt/src/MainWindow.cc:621
+#: ../qt/src/MainWindow.cc:626 ../qt/src/TessdataManager.cc:70
+#: ../qt/src/TessdataManager.cc:80 ../qt/src/TessdataManager.cc:288
+msgid "Error"
+msgstr "Eraro"
+
+#: ../gtk/src/MainWindow.cc:556 ../qt/src/MainWindow.cc:553
+msgid "Failed to install spelling dictionary: %1"
+msgstr "Malsukcesis instalado de literumvortaro: %1"
+
+#: ../gtk/src/MainWindow.cc:577 ../qt/src/MainWindow.cc:566
+msgid "Failed to create directory for spelling dictionaries."
+msgstr "Malsukcesis kreo de dosierujo por literumvortaroj."
+
+#: ../gtk/src/MainWindow.cc:585 ../qt/src/MainWindow.cc:575
+msgid "Could not read %1: %2."
+msgstr "Ne povis legi %1: %2."
+
+#: ../gtk/src/MainWindow.cc:612 ../qt/src/MainWindow.cc:601
+msgid "Downloading '%1'..."
+msgstr "Elŝutante '%1'…"
+
+#: ../gtk/src/MainWindow.cc:633 ../qt/src/MainWindow.cc:621
+msgid ""
+"The following dictionaries could not be downloaded:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"La jenaj vortaroj ne estis elŝuteblaj:\n"
+"%1\n"
+"\n"
+"Kontrolu la konekton kaj dosierujajn permesojn.\n"
+"Konsilo: Se vi ne havas skribajn permesojn en sistemaj dosierujoj, vi povas "
+"ŝanĝi al dosierujoj de la uzanto per la agorda dialogo."
+
+#: ../gtk/src/MainWindow.cc:636 ../qt/src/MainWindow.cc:624
+msgid "Dictionaries installed"
+msgstr "Vortaroj instalitaj"
+
+#: ../gtk/src/MainWindow.cc:636
+msgid ""
+"The following dictionaries were installed:\n"
+"%1"
+msgstr ""
+"La jenaj vortaroj estis instalitaj:\n"
+"%1"
+
+#: ../gtk/src/MainWindow.cc:638 ../qt/src/MainWindow.cc:626
+msgid "No spelling dictionaries found for '%1'."
+msgstr "Neniu literumvortaro trovita pri '%1'."
+
+#: ../gtk/src/OutputEditorText.cc:38 ../qt/src/OutputEditorText.cc:42
+msgid "Page: %1\n"
+msgstr "Paĝo: %1\n"
+
+#: ../gtk/src/OutputEditorText.cc:129
+msgid "Close document"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:133
+#, fuzzy
+msgid "Untitled %1"
+msgstr "Algluis %1"
+
+#: ../gtk/src/OutputEditorText.cc:188 ../qt/src/OutputEditorText.cc:156
+#, fuzzy
+msgid "Document not saved"
+msgstr "Eligo ne konservita"
+
+#: ../gtk/src/OutputEditorText.cc:188 ../qt/src/OutputEditorText.cc:156
+#, fuzzy
+msgid "Save document before proceeding?"
+msgstr "Ĉu konservi eligon antaŭ ol daŭrigado?"
+
+#: ../gtk/src/OutputEditorText.cc:298 ../qt/src/OutputEditorText.cc:238
+msgid "Stripping line breaks..."
+msgstr "Forigante linifinojn…"
+
+#: ../gtk/src/OutputEditorText.cc:309
+msgid "No highlight"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:329
+msgid "Highlight mode"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:334
+msgid "Check spelling"
+msgstr "Kontroli literumadon"
+
+#: ../gtk/src/OutputEditorText.cc:364 ../qt/src/OutputEditorText.cc:256
+msgid "%1 occurrences replaced"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:412 ../qt/src/OutputEditorText.cc:301
+msgid "File: %1"
+msgstr "Dosiero: %1"
+
+#: ../gtk/src/OutputEditorText.cc:415 ../qt/src/OutputEditorText.cc:304
+msgid "Page: %1"
+msgstr "Paĝo: %1"
+
+#: ../gtk/src/OutputEditorText.cc:428 ../gtk/src/Recognizer.cc:243
+#: ../qt/src/Recognizer.cc:259
+msgid ""
+"\n"
+"[Failed to recognize page %1]\n"
+msgstr ""
+"\n"
+"[Malsukcesis rekonado de paĝo %1]\n"
+
+#: ../gtk/src/OutputEditorText.cc:458 ../gtk/src/SourceManager.cc:297
+#: ../qt/src/OutputEditorText.cc:342 ../qt/src/SourceManager.cc:269
+msgid "Select Files"
+msgstr "Elekti Dosierojn"
+
+#: ../gtk/src/OutputEditorText.cc:532 ../qt/src/OutputEditorText.cc:410
+msgid "Save Output..."
+msgstr "Konservi Eligon…"
+
+#: ../gtk/src/OutputEditorText.cc:584
+msgid "Unsaved documents"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:585 ../qt/src/OutputEditorText.cc:462
+msgid ""
+"The following documents have unsaved changes. Which documents do you want to "
+"save before proceeding?"
+msgstr ""
+
+#: ../gtk/src/RecognitionMenu.cc:100 ../qt/src/RecognitionMenu.cc:76
+msgid "No languages available"
+msgstr "Neniu lingvo estas havebla"
+
+#: ../gtk/src/RecognitionMenu.cc:100 ../qt/src/RecognitionMenu.cc:76
+msgid ""
+"No tesseract languages are available for use. Recognition will not work."
+msgstr "Neniu lingvo estas havebla por tesseract. Rekonado ne funkcios."
+
+#: ../gtk/src/RecognitionMenu.cc:153 ../qt/src/RecognitionMenu.cc:134
+msgid "Multilingual"
+msgstr "Plurlingva"
+
+#: ../gtk/src/RecognitionMenu.cc:205 ../qt/src/RecognitionMenu.cc:182
+msgid "Automatic page segmentation"
+msgstr "Aŭtomata paĝosegmentigo"
+
+#: ../gtk/src/RecognitionMenu.cc:206 ../qt/src/RecognitionMenu.cc:183
+msgid "Page segmentation with orientation and script detection"
+msgstr "Paĝosegmentigo kun divenado de orientiĝo kaj skribsistemo"
+
+#: ../gtk/src/RecognitionMenu.cc:207 ../qt/src/RecognitionMenu.cc:184
+msgid "Assume single column of text"
+msgstr "Supozi unu kolumnon de teksto"
+
+#: ../gtk/src/RecognitionMenu.cc:208 ../qt/src/RecognitionMenu.cc:185
+msgid "Assume single block of vertically aligned text"
+msgstr "Supozi unu blokon de vertikale rektigita teksto"
+
+#: ../gtk/src/RecognitionMenu.cc:209 ../qt/src/RecognitionMenu.cc:186
+msgid "Assume a single uniform block of text"
+msgstr "Supozi unu homogenan tekstan blokon"
+
+#: ../gtk/src/RecognitionMenu.cc:210 ../qt/src/RecognitionMenu.cc:187
+msgid "Assume a line of text"
+msgstr "Supozi linion de teksto"
+
+#: ../gtk/src/RecognitionMenu.cc:211 ../qt/src/RecognitionMenu.cc:188
+msgid "Assume a single word"
+msgstr "Supozi unu vorton"
+
+#: ../gtk/src/RecognitionMenu.cc:212 ../qt/src/RecognitionMenu.cc:189
+msgid "Assume a single word in a circle"
+msgstr "Supozi unu vorton en cirklo"
+
+#: ../gtk/src/RecognitionMenu.cc:213 ../qt/src/RecognitionMenu.cc:190
+msgid "Sparse text in no particular order"
+msgstr "Maldensa senorda teksto"
+
+#: ../gtk/src/RecognitionMenu.cc:214 ../qt/src/RecognitionMenu.cc:191
+msgid "Sparse text with orientation and script detection"
+msgstr "Maldensa ordo kun divenado de orientiĝo kaj skribsistemo"
+
+#: ../gtk/src/RecognitionMenu.cc:228 ../qt/src/RecognitionMenu.cc:202
+msgid "Page segmentation mode"
+msgstr "Reĝimo de paĝosegmentigo"
+
+#: ../gtk/src/RecognitionMenu.cc:232 ../qt/src/RecognitionMenu.cc:205
+msgid "Character whitelist / blacklist..."
+msgstr "Akceptolisto / rifuzolisto de signoj…"
+
+#: ../gtk/src/RecognitionMenu.cc:238 ../qt/src/RecognitionMenu.cc:210
+msgid "Manage languages..."
+msgstr "Administri lingvojn…"
+
+#: ../gtk/src/Recognizer.cc:76 ../qt/src/Recognizer.cc:90
+msgid "Overwrite existing output"
+msgstr "Anstataŭigi ekzistantan eligon"
+
+#: ../gtk/src/Recognizer.cc:77 ../qt/src/Recognizer.cc:91
+msgid "Skip processing source"
+msgstr "Preterpasi traktadon de fonto"
+
+#: ../gtk/src/Recognizer.cc:121 ../qt/src/Recognizer.cc:137
+msgid "Current selection"
+msgstr "Aktuala elekto"
+
+#: ../gtk/src/Recognizer.cc:194 ../gtk/src/Recognizer.cc:428
+#: ../qt/src/Recognizer.cc:212 ../qt/src/Recognizer.cc:442
+msgid "Recognition errors occurred"
+msgstr "Okazis eraroj pri rekonado"
+
+#: ../gtk/src/Recognizer.cc:194 ../qt/src/Recognizer.cc:212
+msgid "Failed to initialize tesseract"
+msgstr "Starto de tesseract malsukcesis"
+
+#: ../gtk/src/Recognizer.cc:218 ../qt/src/Recognizer.cc:236
+msgid "Source already recognized"
+msgstr ""
+
+#: ../gtk/src/Recognizer.cc:218 ../qt/src/Recognizer.cc:236
+msgid "One or more selected sources were already recognized. Proceed anyway?"
+msgstr ""
+
+#: ../gtk/src/Recognizer.cc:237 ../gtk/src/Recognizer.cc:351
+#: ../qt/src/Recognizer.cc:252 ../qt/src/Recognizer.cc:364
+msgid "Recognizing page %1 (%2 of %3)"
+msgstr "Rekonante paĝon %1 (la %2-an el %3)"
+
+#: ../gtk/src/Recognizer.cc:242 ../qt/src/Recognizer.cc:258
+msgid "- Page %1: failed to render page"
+msgstr "- Paĝo %1: malsukcesis bildigo de paĝo"
+
+#: ../gtk/src/Recognizer.cc:270 ../gtk/src/Recognizer.cc:298
+#: ../gtk/src/Recognizer.cc:311 ../gtk/src/Recognizer.cc:403
+#: ../qt/src/Recognizer.cc:285 ../qt/src/Recognizer.cc:313
+#: ../qt/src/Recognizer.cc:326 ../qt/src/Recognizer.cc:417
+msgid "Recognizing..."
+msgstr "Rekonante…"
+
+#: ../gtk/src/Recognizer.cc:357 ../qt/src/Recognizer.cc:370
+msgid "- %1:%2: failed to render page"
+msgstr "- %1:%2: malsukcesis bildigo de paĝo"
+
+#: ../gtk/src/Recognizer.cc:369 ../qt/src/Recognizer.cc:383
+msgid "- %1: output already exists, skipping"
+msgstr "- %1: eligo jam ekzistas, pretersaltante"
+
+#: ../gtk/src/Recognizer.cc:373 ../qt/src/Recognizer.cc:387
+msgid "- %1: failed to create output file"
+msgstr "- %1: malsukcesis kreo de eliga dosiero"
+
+#: ../gtk/src/Recognizer.cc:428 ../qt/src/Recognizer.cc:442
+msgid "The following errors occurred:"
+msgstr "Okazis la jenaj eraroj:"
+
+#: ../gtk/src/scanner/ScannerSane.cc:86 ../gtk/src/scanner/ScannerTwain.cc:287
+#: ../qt/src/scanner/ScannerSane.cc:85 ../qt/src/scanner/ScannerTwain.cc:286
+msgid "Scan canceled"
+msgstr "Nuligis skanadon"
+
+#: ../gtk/src/scanner/ScannerSane.cc:161 ../gtk/src/scanner/ScannerTwain.cc:186
+#: ../qt/src/scanner/ScannerSane.cc:159 ../qt/src/scanner/ScannerTwain.cc:178
+msgid "No scanner specified"
+msgstr "Neniu skanilo specifita"
+
+#: ../gtk/src/scanner/ScannerSane.cc:170 ../gtk/src/scanner/ScannerTwain.cc:195
+#: ../qt/src/scanner/ScannerSane.cc:168 ../qt/src/scanner/ScannerTwain.cc:187
+msgid "Unable to connect to scanner"
+msgstr "Ne povas konekti al skanilo"
+
+#: ../gtk/src/scanner/ScannerSane.cc:405 ../gtk/src/scanner/ScannerTwain.cc:266
+#: ../gtk/src/scanner/ScannerTwain.cc:291 ../qt/src/scanner/ScannerSane.cc:403
+#: ../qt/src/scanner/ScannerTwain.cc:258 ../qt/src/scanner/ScannerTwain.cc:290
+msgid "Unable to start scan"
+msgstr "Ne povas startigi skanon"
+
+#: ../gtk/src/scanner/ScannerSane.cc:413 ../gtk/src/scanner/ScannerSane.cc:463
+#: ../gtk/src/scanner/ScannerTwain.cc:317 ../qt/src/scanner/ScannerSane.cc:411
+#: ../qt/src/scanner/ScannerSane.cc:461 ../qt/src/scanner/ScannerTwain.cc:316
+msgid "Error communicating with scanner"
+msgstr "Eraro pri komunikado kun skanilo"
+
+#: ../gtk/src/scanner/ScannerSane.cc:523 ../qt/src/scanner/ScannerSane.cc:518
+msgid "Failed to save image"
+msgstr "Malsukcesis konservado de bildo"
+
+#: ../gtk/src/scanner/ScannerSane.cc:803 ../qt/src/scanner/ScannerSane.cc:798
+msgid "Operation is cancelled."
+msgstr "Operacio nuliĝis."
+
+#: ../gtk/src/scanner/ScannerSane.cc:805 ../qt/src/scanner/ScannerSane.cc:800
+msgid "Device is busy."
+msgstr "La aparato estas okupata."
+
+#: ../gtk/src/scanner/ScannerSane.cc:807 ../qt/src/scanner/ScannerSane.cc:802
+msgid "Cover is opened."
+msgstr "La kovrilo estas malfermita."
+
+#: ../gtk/src/scanner/ScannerSane.cc:809 ../qt/src/scanner/ScannerSane.cc:804
+msgid "Document feeder jammed."
+msgstr "Paperenmetilo ŝtopiĝis."
+
+#: ../gtk/src/scanner/ScannerSane.cc:811 ../qt/src/scanner/ScannerSane.cc:806
+msgid "Document feeder out of documents."
+msgstr "Paperenmetilo estas sen dokumentoj."
+
+#: ../gtk/src/scanner/ScannerSane.cc:813 ../qt/src/scanner/ScannerSane.cc:808
+msgid "Access to scanner is denied."
+msgstr "Atingo al skanilo estas malpermesata."
+
+#: ../gtk/src/SourceManager.cc:184 ../qt/src/SourceManager.cc:169
+msgid "Enter password for file '%1':"
+msgstr "Entajpu la pasvorton de la dosiero '%1':"
+
+#: ../gtk/src/SourceManager.cc:227 ../qt/src/SourceManager.cc:196
+msgid "PDF with text"
+msgstr "PDF kun teksto"
+
+#: ../gtk/src/SourceManager.cc:227 ../qt/src/SourceManager.cc:196
+msgid ""
+"The PDF file already contains text:\n"
+"%1\n"
+"Open it regardless?"
+msgstr ""
+"La PDF-dosiero jam enhavas tekston:\n"
+"%1\n"
+"Ĉu malfermi ĝin malgraŭ tio?"
+
+#: ../gtk/src/SourceManager.cc:292 ../qt/src/SourceManager.cc:268
+msgid "Images and PDFs"
+msgstr "Bildoj kaj PDF-oj"
+
+#: ../gtk/src/SourceManager.cc:303 ../qt/src/SourceManager.cc:311
+msgid "Clipboard Error"
+msgstr "Eraro pri Tondujo"
+
+#: ../gtk/src/SourceManager.cc:303 ../qt/src/SourceManager.cc:311
+msgid "Failed to read the clipboard."
+msgstr "Malsukcesis legado el tondujo."
+
+#: ../gtk/src/SourceManager.cc:307 ../qt/src/SourceManager.cc:315
+#: ../qt/src/SourceManager.cc:321
+msgid "Pasted %1"
+msgstr "Algluis %1"
+
+#: ../gtk/src/SourceManager.cc:325 ../qt/src/SourceManager.cc:339
+msgid "Screenshot Error"
+msgstr "Eraro pri Ekrankopio"
+
+#: ../gtk/src/SourceManager.cc:325 ../qt/src/SourceManager.cc:339
+msgid "Failed to take screenshot."
+msgstr "Malsukcesis ekrankopiado."
+
+#: ../gtk/src/SourceManager.cc:329 ../qt/src/SourceManager.cc:343
+msgid "Screenshot %1"
+msgstr "Ekrankopio %1"
+
+#: ../gtk/src/SourceManager.cc:335 ../qt/src/SourceManager.cc:350
+msgid "Saving image..."
+msgstr "Konservante bildon…"
+
+#: ../gtk/src/SourceManager.cc:342 ../qt/src/SourceManager.cc:363
+msgid "Cannot Write File"
+msgstr "Ne Povas Skribi sur Dosieron"
+
+#: ../gtk/src/SourceManager.cc:342 ../qt/src/SourceManager.cc:363
+msgid "Could not write to %1."
+msgstr "Ne povis skribi sur la dosieron %1."
+
+#: ../gtk/src/SourceManager.cc:381
+msgid "Delete File?"
+msgstr "Ĉu Forviŝi Dosieron?"
+
+#: ../gtk/src/SourceManager.cc:381 ../qt/src/SourceManager.cc:391
+msgid "Delete the following files?"
+msgstr "Ĉu forviŝi la jenajn dosierojn?"
+
+#: ../gtk/src/SourceManager.cc:423 ../qt/src/SourceManager.cc:468
+msgid "Open output"
+msgstr "Malfermi eligon"
+
+#: ../gtk/src/SourceManager.cc:423 ../qt/src/SourceManager.cc:468
+msgid ""
+"Both a text and a hOCR output were found. Which one do you want to open?"
+msgstr "Troviĝis kaj tekstan kaj hOCR-eligon. Kiun vi volas malfermi?"
+
+#: ../gtk/src/SourceManager.cc:504 ../qt/src/SourceManager.cc:496
+msgid "Missing File"
+msgstr "Mankanta Dosiero"
+
+#: ../gtk/src/SourceManager.cc:504 ../qt/src/SourceManager.cc:496
+msgid ""
+"The following file has been deleted or moved:\n"
+"%1"
+msgstr ""
+"La jena dosiero estis forigita aŭ movita:\n"
+"%1"
+
+#: ../gtk/src/SubstitutionsManager.cc:33 ../qt/src/SubstitutionsManager.cc:69
+msgid "Search for"
+msgstr "Serĉi"
+
+#: ../gtk/src/SubstitutionsManager.cc:34 ../qt/src/SubstitutionsManager.cc:69
+msgid "Replace with"
+msgstr "Anstataŭigi per"
+
+#: ../gtk/src/SubstitutionsManager.cc:69 ../gtk/src/SubstitutionsManager.cc:103
+#: ../qt/src/SubstitutionsManager.cc:102 ../qt/src/SubstitutionsManager.cc:139
+msgid "Substitutions List"
+msgstr "Listo de Anstataŭigoj"
+
+#: ../gtk/src/SubstitutionsManager.cc:70 ../qt/src/SubstitutionsManager.cc:102
+msgid "Open Substitutions List"
+msgstr "Malfermi Liston de Anstataŭigoj"
+
+#: ../gtk/src/SubstitutionsManager.cc:75 ../qt/src/SubstitutionsManager.cc:108
+msgid "Error Reading File"
+msgstr "Eraro pri Legado de Dosiero"
+
+#: ../gtk/src/SubstitutionsManager.cc:75 ../qt/src/SubstitutionsManager.cc:108
+msgid "Unable to read '%1'."
+msgstr "Ne povis legi la dosieron '%1'."
+
+#: ../gtk/src/SubstitutionsManager.cc:97 ../qt/src/SubstitutionsManager.cc:133
+msgid "Errors Occurred Reading File"
+msgstr "Okazis Eraroj dum Legado de Dosiero"
+
+#: ../gtk/src/SubstitutionsManager.cc:97 ../qt/src/SubstitutionsManager.cc:133
+msgid "Some entries of the substitutions list could not be read."
+msgstr "Kelkaj eroj de la listo de anstataŭigoj estis nelegeblaj."
+
+#: ../gtk/src/SubstitutionsManager.cc:104 ../qt/src/SubstitutionsManager.cc:139
+msgid "Save Substitutions List"
+msgstr "Konservi Liston de Anstataŭigoj"
+
+#: ../gtk/src/SubstitutionsManager.cc:110 ../qt/src/SubstitutionsManager.cc:145
+msgid "Error Saving File"
+msgstr "Eraro pri Konservado de Dosiero"
+
+#: ../gtk/src/SubstitutionsManager.cc:110 ../qt/src/SubstitutionsManager.cc:145
+msgid "Unable to write to '%1'."
+msgstr "Ne povis skribi sur la dosieron '%1'."
+
+#: ../gtk/src/SubstitutionsManager.cc:127 ../qt/src/SubstitutionsManager.cc:158
+msgid "Save List?"
+msgstr "Ĉu Konservi Liston?"
+
+#: ../gtk/src/SubstitutionsManager.cc:127 ../qt/src/SubstitutionsManager.cc:158
+msgid "Do you want to save the current list?"
+msgstr "Ĉu vi volas konservi la aktualan liston?"
+
+#: ../gtk/src/TessdataManager.cc:60 ../qt/src/TessdataManager.cc:70
+msgid ""
+"A session connection to the PackageKit backend is required for managing "
+"system-wide tesseract language packs, but it was not found. This service is "
+"usually provided by a software-management application such as Gnome "
+"Software. Please install software which provides the necessary PackageKit "
+"interface, use other system package management software to manage the "
+"tesseract language packs directly, or switch to using the user tessdata path "
+"in the configuration dialog."
+msgstr ""
+"Necesas sed ne troviĝis sesia konekto al la interna modulo de PackageKit por "
+"administri tutsistemajn lingvopakojn de tesseract. Ĉi tiu servo kutime estas "
+"provizata de programaradministrilo kiel Gnome Software. Bonvolu instali tian "
+"programaron, kiu provizas la necesan PackageKit-interfacon; uzu alian "
+"sisteman programaradministrilon por rekte administri la lingvopakojn de "
+"tesseract; aŭ ŝanĝu al laŭmenda dosierindiko de datendosieroj de tesseract "
+"per la agorda dialogo."
+
+#: ../gtk/src/TessdataManager.cc:65 ../qt/src/TessdataManager.cc:75
+msgid "Fetching available languages"
+msgstr "Akirante liston de haveblaj lingvoj"
+
+#: ../gtk/src/TessdataManager.cc:70 ../gtk/src/TessdataManager.cc:96
+#: ../gtk/src/TessdataManager.cc:197 ../qt/src/TessdataManager.cc:80
+#: ../qt/src/TessdataManager.cc:97 ../qt/src/TessdataManager.cc:170
+msgid "Failed to fetch list of available languages: %1"
+msgstr "Ne sukcesis akirado de listo de haveblaj lingvoj: %1"
+
+#: ../gtk/src/TessdataManager.cc:104 ../qt/src/TessdataManager.cc:107
+msgid "Parsing error: %1"
+msgstr "Sintaksa eraro: %1"
+
+#: ../gtk/src/TessdataManager.cc:235 ../qt/src/TessdataManager.cc:205
+msgid "Applying changes..."
+msgstr "Efektivigante ŝanĝojn…"
+
+#: ../gtk/src/TessdataManager.cc:297 ../qt/src/TessdataManager.cc:251
+msgid "Failed to create directory for tessdata files."
+msgstr "Malsukcesis kreo de dosierujo por datendosieroj de tesseract."
+
+#: ../gtk/src/TessdataManager.cc:306 ../qt/src/TessdataManager.cc:260
+msgid "Downloading %1..."
+msgstr "Elŝutante %s…"
+
+#: ../gtk/src/TessdataManager.cc:330
+msgid ""
+"The following files could not be downloaded or removed:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"La jenaj dosieroj ne povis esti elŝutitaj aŭ forigitaj:\n"
+"%1\n"
+"\n"
+"Kontrolu la konekton kaj dosierujajn permesojn.\n"
+"\n"
+"Konsilo: Se vi ne havas skribajn permesojn en sistemaj dosierujoj, vi povas "
+"ŝanĝi al dosierujoj de la uzanto per la agorda dialogo."
+
+#: ../gtk/src/Utils.cc:127
+msgid "Yes"
+msgstr "Jes"
+
+#: ../gtk/src/Utils.cc:130
+msgid "Yes to all"
+msgstr "Jesi pri ĉio"
+
+#: ../gtk/src/Utils.cc:136
+msgid "No"
+msgstr "Ne"
+
+#: ../gtk/src/Utils.cc:139
+msgid "No to all"
+msgstr "Nei pri ĉio"
+
+#: ../gtk/src/Utils.cc:142
+msgid "Discard"
+msgstr "Forĵeti"
+
+#: ../gtk/src/Utils.cc:145
+#, fuzzy
+msgid "Discard all"
+msgstr "Forĵeti"
+
+#: ../gtk/src/Utils.cc:148 ../qt/src/SourceManager.cc:469
+msgid "Text"
+msgstr "Teksto"
+
+#: ../gtk/src/Utils.cc:151 ../qt/src/SourceManager.cc:470
+msgid "hOCR"
+msgstr "hOCR"
+
+#: ../qt/data/AboutDialog.ui.h:1
+msgid "About gImageReader"
+msgstr "Pri gImageReader"
+
+#: ../qt/data/AboutDialog.ui.h:3
+#, fuzzy
+msgid ""
+"<html><head/><body><p>&nbsp;</p><p>A graphical frontend to tesseract-ocr</"
+"p><p><a href=\"https://github.com/manisandro/gImageReader/\">Website</a></"
+"p><p>&nbsp;</p></body></html>"
+msgstr ""
+"<html><head/><body><p>&nbsp;</p><p>Grafika fasado por tesseract-ocr</p><p><a "
+"href=\"https://github.com/manisandro/gImageReader/\">Retejo</a></p><p>&nbsp;"
+"</p></body></html>"
+
+#: ../qt/data/AboutDialog.ui.h:4
+msgid "Credits"
+msgstr "Kontribuantoj"
+
+#: ../qt/data/AboutDialog.ui.h:5
+msgid "License"
+msgstr "Permesilo"
+
+#: ../qt/data/BatchModeDialog.ui.h:4
+msgid ""
+"In batch mode, each input source is processed separately and the output "
+"saved side-by-side to the input file."
+msgstr ""
+"En amasreĝimo, ĉiu eniga fonto estos traktata aparte, kaj la eligo estos "
+"konservita apud al la eniga dosiero."
+
+#: ../qt/data/ConfigDialog.ui.h:14
+msgid "System encoding"
+msgstr "Sistema teksta enkodigo"
+
+#: ../qt/data/ConfigDialog.ui.h:15
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../qt/data/ConfigDialog.ui.h:19
+msgid "Text file encoding:"
+msgstr "Teksta enkodigo de dosiero:"
+
+#: ../qt/data/CrashHandler.ui.h:2
+#, fuzzy, no-c-format
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">The application has "
+"crashed</span></p><p>Apologies for the inconvenience. To help improve the "
+"application, please consider reporting the issue to <a href=\"mailto:"
+"manisandro@gmail.com?subject=gImageReader%20Crash\">manisandro@gmail.com</"
+"a>. Please try to describe what you were doing before the application "
+"crashed. Also, include the information below. Thank you.</p></body></html>"
+msgstr ""
+"<b>La aplikaĵo kolapsis</b>\n"
+"\n"
+"Pardonpeton pro la ĝeno. Por helpi plibonigi la aplikaĵon, bonvolu raporti "
+"la problemon al <a href=\"mailto:manisandro@gmail.com?"
+"subject=gImageReader%20Crash\">manisandro@gmail.com</a>. Bonvolu priskribi "
+"tion, kion vi estis faranta antaŭ ol la kolapso. Krome, inkluzivu la ĉi-"
+"subajn informojn. Dankon."
+
+#: ../qt/data/CrashHandler.ui.h:3
+#, fuzzy
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Tesseract has "
+"aborted</span></p><p>Tesseract (the OCR engine) has aborted while "
+"recognizing text. This may occur if the used traineddatas are corrupt or "
+"incomplatible with the version of tesseract in use, or due to a bug in "
+"tesseract.</p><p>The stacktrace below may provide additional information "
+"about where the crash occurred.</p></body></html>"
+msgstr ""
+"<b>Tesseract kolapsis</b>\n"
+"\n"
+"Tesseract (la tekstlegila modulo) kolapsis dum rekonado de teksto. Tio povas "
+"okazi se la trejnaj datenoj estas koruptitaj aŭ ne kongruaj kun la versio de "
+"tesseract, aŭ pro cimo en tesseract.\n"
+"\n"
+"La jena stakspuro eble donas pliajn informojn pri la kolapso.\n"
+
+#: ../qt/data/MainWindow.ui.h:18
+msgid "Flatbed"
+msgstr "Platlita presilo"
+
+#: ../qt/data/MainWindow.ui.h:19
+msgid "ADF Front"
+msgstr "Aŭtomata Paperenmetilo Antaŭe"
+
+#: ../qt/data/MainWindow.ui.h:20
+msgid "ADF Back"
+msgstr "Aŭtomata Paperenmetilo Reverse"
+
+#: ../qt/data/MainWindow.ui.h:21
+msgid "ADF Duplex"
+msgstr "Aŭtomata Paperenmetilo Ambaŭflanke"
+
+#: ../qt/data/MainWindow.ui.h:23
+msgid "Zoom In"
+msgstr "Enzomi"
+
+#: ../qt/data/MainWindow.ui.h:25
+msgid "Zoom Out"
+msgstr "Elzomi"
+
+#: ../qt/data/MainWindow.ui.h:27
+msgid "Normal Size"
+msgstr "Normala Grando"
+
+#: ../qt/data/MainWindow.ui.h:29
+msgid "Best Fit"
+msgstr "Aŭtomata Adapto"
+
+#: ../qt/data/MainWindow.ui.h:31
+msgid "Rotate Left"
+msgstr "Turni Maldekstren"
+
+#: ../qt/data/MainWindow.ui.h:32
+msgid "Rotate left"
+msgstr "Turni maldekstren"
+
+#: ../qt/data/MainWindow.ui.h:33
+msgid "Rotate Right"
+msgstr "Turni Dekstren"
+
+#: ../qt/data/MainWindow.ui.h:34
+msgid "Rotate right"
+msgstr "Turni dekstren"
+
+#: ../qt/data/MainWindow.ui.h:35
+msgid "Image Controls"
+msgstr "Bildoregiloj"
+
+#: ../qt/data/MainWindow.ui.h:37
+msgid "Autodetect Layout"
+msgstr "Aŭtomate diveni aranĝon"
+
+#: ../qt/data/MainWindow.ui.h:39
+msgid "Toggle Output Pane"
+msgstr "Baskuligi Eligpanelon"
+
+#: ../qt/data/PdfExportDialog.ui.h:1
+msgid "PDF Export"
+msgstr "Elporti kiel PDF-dosieron"
+
+#: ../qt/data/PdfExportDialog.ui.h:5 ../qt/data/PdfExportWidget.ui.h:4
+msgid "Backend:"
+msgstr "Interna modulo:"
+
+#: ../qt/data/PdfExportDialog.ui.h:8 ../qt/data/PdfExportWidget.ui.h:7
+msgid "Portrait"
+msgstr "Vertikala"
+
+#: ../qt/data/PdfExportDialog.ui.h:9 ../qt/data/PdfExportWidget.ui.h:8
+msgid "Landscape"
+msgstr "Horizontala"
+
+#: ../qt/src/hocr/HOCRPdfExporter.cc:311
+msgid "Failed to write to file"
+msgstr "Malsukcesis skribado sur dosiero"
+
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:296
+msgid ""
+"<html><head/><body><ul><li>PoDoFo: offers more image compression options, "
+"but does not handle complex scripts.</li><li>QPrinter: only supports JPEG "
+"compression for storing images, but supports complex scripts.</li></ul></"
+"body></html>"
+msgstr ""
+"<html><head/><body><ul><li>PoDoFo: provizas pli da opcioj pri densigo de "
+"bildoj, sed ne subenas komplikajn skribsistemojn.</li><li>QPrinter: nur "
+"subtenas JPEG-densigon por konservi bildojn, sed subtenas komplikajn "
+"skribsistemojn.</li></ul></body></html>"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:90
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:91
+msgid "Save as hOCR text"
+msgstr "Konservi kiel hOCR-tekston"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:112
+#: ../qt/src/Ui_OutputEditorText.hh:115
+msgid "Find and Replace"
+msgstr "Serĉi kaj Anstataŭigi"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:118
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:119
+#, fuzzy
+msgid "Show proofread widget"
+msgstr "Antaŭrigardi"
+
+#: ../qt/src/MainWindow.cc:624
+msgid ""
+"The following dictionary files were installed:\n"
+"%1"
+msgstr ""
+"Jen la instalitaj vortaraj dosieroj:\n"
+"%1"
+
+#: ../qt/src/OutputEditorText.cc:520 ../qt/src/SourceManager.cc:252
+msgid "No recent files"
+msgstr "Neniu ĵusa dosiero"
+
+#: ../qt/src/SourceManager.cc:391
+msgid "Delete Files"
+msgstr "Forviŝi Dosierojn"
+
+#: ../qt/src/TessdataManager.cc:281
+msgid ""
+"The following files could not be downloaded or removed:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"La jenaj dosieroj ne povis esti elŝutitaj aŭ forigitaj:\n"
+"%1\n"
+"\n"
+"Kontrolu la konekton kaj dosierujajn permesojn.\n"
+"Konsilo: Se vi ne havas skribajn permesojn en sistemaj dosierujoj, vi povas "
+"ŝanĝi al dosierujoj de la uzanto per la agorda dialogo."
+
+#: ../qt/src/Ui_MainWindow.hh:50
+msgid "Output"
+msgstr "Eligo"
+
+#: ../qt/src/Ui_MainWindow.hh:135
+msgid "OCR mode:"
+msgstr "Reĝimo de optika signorekono:"
+
+#. Sources toolbar
+#: ../qt/src/Ui_MainWindow.hh:194
+msgid "Add folder"
+msgstr "Aldoni dosierujon"
+
+#: ../qt/src/Ui_MainWindow.hh:195
+msgid "Paste"
+msgstr "Alglui"
+
+#: ../qt/src/Ui_MainWindow.hh:196
+msgid "Take Screenshot"
+msgstr "Fari Ekrankopion"
+
+#: ../qt/src/Ui_MainWindow.hh:204
+msgid "Remove Image"
+msgstr "Forigi Bildon"
+
+#: ../qt/src/Ui_MainWindow.hh:207
+msgid "Delete Image"
+msgstr "Forviŝi Bildon"
+
+#: ../qt/src/Ui_MainWindow.hh:210
+msgid "Clear List"
+msgstr "Malplenigi Liston"
+
+#: ../qt/src/Ui_OutputEditorText.hh:110
+msgid "Strip Line Breaks"
+msgstr "Forigi Linifinojn"
+
+#: ../qt/src/Ui_OutputEditorText.hh:124
+msgid "Save Output"
+msgstr "Konservi Eligon"
+
+#: ../qt/src/Ui_OutputEditorText.hh:126
+msgid "Clear Output"
+msgstr "Forviŝi Eligon"
+
+#: ../qt/src/Ui_OutputEditorText.hh:149
+msgid "Add tab"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Form"
+#~ msgstr "Dosierformo:"
+
+#~ msgid ""
+#~ "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+#~ msgstr ""
+#~ "Dosiero nomata \"% 1\" jam ekzistas. Ĉu vi certas, ke vi volas "
+#~ "anstataŭigi ĝin?"
+
+#~ msgid "Overwrite File?"
+#~ msgstr "Ĉu Anstataŭigi Dosieron?"
+
+#~ msgid "Recent"
+#~ msgstr "Ĵusaĵoj"
+
+#~ msgid "Failed to create output"
+#~ msgstr "Malsukcesis kreo de eligo"
+
+#~ msgid "Failed to create output. The returned error was: %1"
+#~ msgstr "Malsukcesis kreo de eligo. Jen la eraro: %1"
+
+#, fuzzy, no-c-format
+#~ msgid ""
+#~ "&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-"
+#~ "weight:600;&quot;&gt;The application has crashed&lt;/span&gt;&lt;/p&gt;"
+#~ "&lt;p&gt;Apologies for the inconvenience. To help improve the "
+#~ "application, please consider reporting the issue to &lt;a href=&quot;"
+#~ "mailto:manisandro@gmail.com?subject=gImageReader%20Crash&quot;&gt;"
+#~ "manisandro@gmail.com&lt;/a&gt;. Please try to describe what you were "
+#~ "doing before the application crashed. Also, include the information "
+#~ "below. Thank you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">La aplikaĵo "
+#~ "kolapsis</span></p><p>Pardonpeton pro la ĝeno. Por helpi plibonigi la "
+#~ "aplikaĵon, bonvolu raporti la problemon al <a href=\"mailto:"
+#~ "manisandro@gmail.com?subject=gImageReader%20Crash\">manisandro@gmail.com</"
+#~ "a>. Bonvolu priskribi tion, kion vi estis faranta antaŭ ol la kolapso. "
+#~ "Krome, inkluzivu la ĉi-subajn informojn. Dankon.</p></body></html>"
+
+#, fuzzy
+#~ msgid ""
+#~ "&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-"
+#~ "weight:600;&quot;&gt;Tesseract has aborted&lt;/span&gt;&lt;/p&gt;&lt;p&gt;"
+#~ "Tesseract (the OCR engine) has aborted while recognizing text. This may "
+#~ "occur if the used traineddatas are corrupt or incomplatible with the "
+#~ "version of tesseract in use, or due to a bug in tesseract.&lt;/p&gt;&lt;"
+#~ "p&gt;The stacktrace below may provide additional information about where "
+#~ "the crash occurred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Tesseract "
+#~ "kolapsis</span></p><p>Tesseract (la tekstlegila modulo) kolapsis dum "
+#~ "rekonado de teksto. Tio povas okazi se la trejnaj datenoj estas "
+#~ "koruptitaj aŭ ne kongruaj kun la versio de tesseract, aŭ pro cimo en "
+#~ "tesseract.</p><p>La jena stakspuro eble donas pliajn informojn pri la "
+#~ "kolapso.</p></body></html>"
+
+#, fuzzy
+#~ msgid ""
+#~ "&lt;small&gt;&lt;b&gt;Example:&lt;/b&gt; 1-10, 13, 14-18&lt;/small&gt;"
+#~ msgstr "<small><b>Ekzemple:</b> 1-10, 13, 14-18</small>"
+
+#, fuzzy
+#~ msgid "plain text"
+#~ msgstr "Plata teksto"
+
+#~ msgid "Multiple sources"
+#~ msgstr "Pluraj fontoj"
+
+#~ msgid ""
+#~ "\n"
+#~ "- Page %1: failed to render page"
+#~ msgstr ""
+#~ "\n"
+#~ "- Paĝo %1: malsukcesis bildigo de paĝo"
+
+#~ msgid "The following errors occurred:%1"
+#~ msgstr "La jenaj eraroj okazis: %1"
+
+#~ msgid "The following files will be deleted:%1"
+#~ msgstr "Jen la forviŝotaj dosieroj:%1"

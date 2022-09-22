@@ -1,0 +1,2617 @@
+# French translations for gImageReader package
+# Traductions françaises du paquet gImageReader.
+# Copyright (C) 2010-2016 THE GIMAGEREADER'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gImageReader package.
+#
+# Sandro Mani <manisandro@gmail.com>, 2010-2011, 2013, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 23:15+0100\n"
+"PO-Revision-Date: 2021-11-03 18:26+0000\n"
+"Last-Translator: The Cats <philosoph@snopyta.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/gimagereader/"
+"translations/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.9-dev\n"
+
+#: ../data/gimagereader.desktop.in.h:1
+msgid "OCR application"
+msgstr "Application OCR"
+
+#: ../gtk/data/appmenu.ui.h:1 ../qt/src/Ui_MainWindow.hh:169
+msgid "Redetect Languages"
+msgstr "Redétecter langues"
+
+#: ../gtk/data/appmenu.ui.h:2 ../qt/src/Ui_MainWindow.hh:172
+msgid "Manage Languages"
+msgstr "Gérer les langues"
+
+#: ../gtk/data/appmenu.ui.h:3 ../gtk/data/ConfigDialog.ui.h:1
+#: ../qt/data/ConfigDialog.ui.h:1 ../qt/src/Ui_MainWindow.hh:175
+msgid "Preferences"
+msgstr "Préférences"
+
+#: ../gtk/data/appmenu.ui.h:4 ../gtk/data/ConfigDialog.ui.h:2
+#: ../gtk/src/MainWindow.cc:523 ../qt/src/MainWindow.cc:522
+#: ../qt/src/Ui_MainWindow.hh:180
+msgid "Help"
+msgstr "Aide"
+
+#: ../gtk/data/appmenu.ui.h:5 ../qt/data/AboutDialog.ui.h:2
+#: ../qt/src/Ui_MainWindow.hh:183
+msgid "About"
+msgstr "À propos"
+
+#: ../gtk/data/appmenu.ui.h:6
+msgid "Quit"
+msgstr "Quitter"
+
+#: ../gtk/data/CharacterListDialog.ui.h:1 ../qt/data/CharacterListDialog.ui.h:1
+msgid "Character whitelist / blacklist"
+msgstr "Liste blanche / noire des caractères"
+
+#: ../gtk/data/CharacterListDialog.ui.h:2 ../qt/data/CharacterListDialog.ui.h:2
+msgid "Exclude these characters from being recognized (blacklist):"
+msgstr "Exclure ces caractères de la reconnaissance (blacklist) :"
+
+#: ../gtk/data/CharacterListDialog.ui.h:3 ../qt/data/CharacterListDialog.ui.h:3
+msgid "Enter a string of characters..."
+msgstr "Entrez une chaîne de caractères…"
+
+#: ../gtk/data/CharacterListDialog.ui.h:4 ../qt/data/CharacterListDialog.ui.h:4
+msgid "Only allow the following characters to be recognized (whitelist):"
+msgstr "Seuls les caractères suivants peuvent être reconnus (whitelist) :"
+
+#: ../gtk/data/ConfigDialog.ui.h:3 ../gtk/data/MainWindow.ui.h:49
+#: ../gtk/data/OutputEditorHOCR.ui.h:3 ../gtk/src/FileDialogs.cc:179
+#: ../gtk/src/FileDialogs.cc:194 ../gtk/src/hocr/HOCRPdfExporter.cc:547
+#: ../gtk/src/Utils.cc:124 ../qt/data/ConfigDialog.ui.h:26
+msgid "OK"
+msgstr "OK"
+
+#: ../gtk/data/ConfigDialog.ui.h:4
+msgid "Output pane orientation:"
+msgstr "Orientation de la zone de reconnaissance :"
+
+#: ../gtk/data/ConfigDialog.ui.h:5
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../gtk/data/ConfigDialog.ui.h:6
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../gtk/data/ConfigDialog.ui.h:7 ../qt/data/ConfigDialog.ui.h:18
+msgid "Query to install missing spellcheck dictionaries"
+msgstr "Proposer d'installer les dictionnaires manquants"
+
+#: ../gtk/data/ConfigDialog.ui.h:8 ../qt/data/ConfigDialog.ui.h:4
+msgid "Automatically check for new program versions"
+msgstr "Vérifier si une nouvelle version est disponible"
+
+#: ../gtk/data/ConfigDialog.ui.h:9 ../qt/data/ConfigDialog.ui.h:3
+msgid "Predefined language definitions:"
+msgstr "Définitions par défaut des langues :"
+
+#: ../gtk/data/ConfigDialog.ui.h:10 ../qt/data/ConfigDialog.ui.h:12
+msgid "Additional language definitions:"
+msgstr "Définitions de langues supplémentaires :"
+
+#: ../gtk/data/ConfigDialog.ui.h:11 ../qt/data/ConfigDialog.ui.h:20
+msgid "The prefix of the tesseract language data file"
+msgstr "Le préfixe du fichier de langue tesseract"
+
+#: ../gtk/data/ConfigDialog.ui.h:12 ../qt/data/ConfigDialog.ui.h:21
+msgid "Prefix"
+msgstr "Préfixe"
+
+#: ../gtk/data/ConfigDialog.ui.h:13 ../qt/data/ConfigDialog.ui.h:22
+msgid "The ISO 639-1 language code followed by the country code"
+msgstr "Le code de langue ISO 639-1 suivi par le code du pays"
+
+#: ../gtk/data/ConfigDialog.ui.h:14 ../qt/data/ConfigDialog.ui.h:23
+msgid "ISO Code"
+msgstr "Code ISO"
+
+#: ../gtk/data/ConfigDialog.ui.h:15 ../qt/data/ConfigDialog.ui.h:24
+msgid "The name of the language"
+msgstr "Le nom de la langue"
+
+#: ../gtk/data/ConfigDialog.ui.h:16 ../qt/data/ConfigDialog.ui.h:25
+msgid "Name"
+msgstr "Nom"
+
+#: ../gtk/data/ConfigDialog.ui.h:17 ../gtk/data/MainWindow.ui.h:48
+#: ../gtk/data/OutputEditorHOCR.ui.h:2 ../gtk/src/Acquirer.cc:34
+#: ../gtk/src/FileDialogs.cc:178 ../gtk/src/FileDialogs.cc:193
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:548 ../gtk/src/Utils.cc:154
+#: ../qt/data/ConfigDialog.ui.h:27 ../qt/data/MainWindow.ui.h:13
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../gtk/data/ConfigDialog.ui.h:18 ../qt/data/ConfigDialog.ui.h:5
+msgid "Output pane font:"
+msgstr "Police utilisée dans le panneau de reconnaissance :"
+
+#: ../gtk/data/ConfigDialog.ui.h:19 ../qt/data/ConfigDialog.ui.h:2
+msgid "Default"
+msgstr "Prédéfini"
+
+#: ../gtk/data/ConfigDialog.ui.h:20 ../qt/data/ConfigDialog.ui.h:6
+msgid "Language data locations:"
+msgstr "Positions de données de langue :"
+
+#: ../gtk/data/ConfigDialog.ui.h:21 ../qt/data/ConfigDialog.ui.h:13
+msgid "Language definitions path:"
+msgstr "Chemin du définitions des langues :"
+
+#: ../gtk/data/ConfigDialog.ui.h:22 ../qt/data/ConfigDialog.ui.h:28
+msgid "Spelling dictionaries path:"
+msgstr "Chemin du dictionnaires :"
+
+#: ../gtk/data/ConfigDialog.ui.h:23 ../qt/data/ConfigDialog.ui.h:10
+msgid "System-wide paths"
+msgstr "Système"
+
+#: ../gtk/data/ConfigDialog.ui.h:24 ../qt/data/ConfigDialog.ui.h:11
+msgid "User paths"
+msgstr "Utilisateur"
+
+#: ../gtk/data/ConfigDialog.ui.h:25 ../qt/data/ConfigDialog.ui.h:29
+msgid "Automatically open exported documents with default application"
+msgstr ""
+"Ouvrir automatiquement les documents exportés avec l'application par défaut"
+
+#: ../gtk/data/CrashHandler.ui.h:1 ../qt/src/CrashHandler.cc:38
+msgid "Regenerate backtrace"
+msgstr "Régénérer backtrace"
+
+#: ../gtk/data/CrashHandler.ui.h:3
+#, no-c-format
+msgid ""
+"<b>The application has crashed</b>\n"
+"\n"
+"Apologies for the inconvenience. To help improve the application, please "
+"consider reporting the issue to <a href=\"mailto:manisandro@gmail.com?"
+"subject=gImageReader%20Crash\">manisandro@gmail.com</a>. Please try to "
+"describe what you were doing before the application crashed. Also, include "
+"the information below. Thank you."
+msgstr ""
+"<b>L'application a cessé de fonctionner</b>\n"
+"\n"
+"Désolé pour le désagrément. Pour aider à améliorer l'application, s'il vous "
+"plait, signalez le problème à <a href=\"mailto:manisandro@gmail.com? "
+"subject=gImageReader% 20Crash\"> manisandro@gmail.com </a>. Essayez de "
+"décrire ce que vous faisiez avant le problème. Inclure aussi les "
+"informations ci-dessous. Merci."
+
+#: ../gtk/data/CrashHandler.ui.h:6
+msgid ""
+"<b>Tesseract has aborted</b>\n"
+"\n"
+"Tesseract (the OCR engine) has aborted while recognizing text. This may "
+"occur if the used traineddatas are corrupt or incomplatible with the version "
+"of tesseract in use, or due to a bug in tesseract.\n"
+"\n"
+"The stacktrace below may provide additional information about where the "
+"crash occurred.\n"
+msgstr ""
+"<b>Tesseract a avorté</b>\n"
+"\n"
+"Tesseract (le moteur d'OCR) a avorté pendant la reconnaissance de texte. "
+"Cela peut se produire si les données traineddata utilisées sont corrompues "
+"ou incompatibles avec la version de tesseract utilisée, ou en raison d'un "
+"bug dans tesseract.\n"
+"\n"
+"Le stacktrace ci-dessous peut fournir des informations supplémentaires sur "
+"l'endroit où le crash s'est produit.\n"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:1
+#: ../qt/data/HOCRBatchExportDialog.ui.h:1
+msgid "HOCR Batch Export"
+msgstr ""
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:2
+#: ../gtk/data/SubstitutionsManager.ui.h:7 ../gtk/data/TessdataManager.ui.h:2
+msgid "Apply"
+msgstr "Appliquer"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:3
+#: ../gtk/data/SubstitutionsManager.ui.h:8 ../gtk/data/TessdataManager.ui.h:3
+msgid "Close"
+msgstr "Fermer"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:4
+#: ../qt/data/HOCRBatchExportDialog.ui.h:6
+#, fuzzy
+msgid "Select source folder:"
+msgstr "Choisir le dossier…"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:5 ../gtk/data/PdfExportWidget.ui.h:5
+#: ../qt/data/HOCRBatchExportDialog.ui.h:7 ../qt/data/PdfExportDialog.ui.h:16
+#: ../qt/data/PdfExportWidget.ui.h:15
+msgid "Format:"
+msgstr "Format :"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:6
+#: ../qt/data/HOCRBatchExportDialog.ui.h:5
+msgid "Group outputs of N lowest levels:"
+msgstr ""
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:7
+#: ../qt/data/HOCRBatchExportDialog.ui.h:3
+#, fuzzy
+msgid "Input:"
+msgstr "Reconnaissance :"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:8
+#: ../qt/data/HOCRBatchExportDialog.ui.h:4
+#, fuzzy
+msgid "Output preview:"
+msgstr "Mode de sortie :"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:9
+#: ../qt/data/HOCRBatchExportDialog.ui.h:2
+#, fuzzy
+msgid "Input files"
+msgstr "Aucun fichier récent"
+
+#: ../gtk/data/HOCRBatchExportDialog.ui.h:10
+#: ../qt/data/HOCRBatchExportDialog.ui.h:8
+#, fuzzy
+msgid "Export options"
+msgstr "Autres options"
+
+#: ../gtk/data/MainWindow.ui.h:1 ../qt/data/MainWindow.ui.h:40
+msgid "Toggle output pane"
+msgstr "Montrer / cacher le panneau de reconnaissance"
+
+#: ../gtk/data/MainWindow.ui.h:2 ../qt/src/Ui_MainWindow.hh:66
+msgid "Rotate current page"
+msgstr "Pivoter page courante"
+
+#: ../gtk/data/MainWindow.ui.h:3 ../qt/src/Ui_MainWindow.hh:67
+msgid "Rotate all pages"
+msgstr "Pivoter toutes les pages"
+
+#. Remove & from some labels which designer insists in adding
+#: ../gtk/data/MainWindow.ui.h:4 ../qt/data/MainWindow.ui.h:22
+#: ../qt/src/Ui_MainWindow.hh:49
+msgid "Sources"
+msgstr "Sources"
+
+#: ../gtk/data/MainWindow.ui.h:5 ../qt/src/Ui_MainWindow.hh:201
+msgid "Add images"
+msgstr "Ajouter des images"
+
+#: ../gtk/data/MainWindow.ui.h:6 ../qt/src/Ui_MainWindow.hh:200
+msgid "Add Images"
+msgstr "Ajouter des images"
+
+#: ../gtk/data/MainWindow.ui.h:7 ../qt/src/Ui_MainWindow.hh:205
+msgid "Remove image from list"
+msgstr "Supprimer l'image de la liste"
+
+#: ../gtk/data/MainWindow.ui.h:8 ../qt/src/Ui_MainWindow.hh:208
+msgid "Delete image"
+msgstr "Supprimer image"
+
+#: ../gtk/data/MainWindow.ui.h:9 ../qt/src/Ui_MainWindow.hh:211
+msgid "Clear list"
+msgstr "Vider liste"
+
+#: ../gtk/data/MainWindow.ui.h:10 ../qt/data/MainWindow.ui.h:6
+msgid "Thumbnails"
+msgstr "Miniatures"
+
+#: ../gtk/data/MainWindow.ui.h:11 ../qt/data/MainWindow.ui.h:5
+msgid "Files"
+msgstr "Fichiers"
+
+#: ../gtk/data/MainWindow.ui.h:12 ../qt/data/MainWindow.ui.h:9
+msgid "Device:"
+msgstr "Périphérique :"
+
+#: ../gtk/data/MainWindow.ui.h:13 ../gtk/data/TessdataManager.ui.h:4
+#: ../qt/data/MainWindow.ui.h:8 ../qt/src/TessdataManager.cc:55
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: ../gtk/data/MainWindow.ui.h:14 ../qt/data/MainWindow.ui.h:10
+msgid "Output:"
+msgstr "Reconnaissance :"
+
+#: ../gtk/data/MainWindow.ui.h:15 ../qt/data/MainWindow.ui.h:14
+msgid "Mode:"
+msgstr "Mode :"
+
+#: ../gtk/data/MainWindow.ui.h:16 ../gtk/src/hocr/HOCRPdfExportWidget.cc:49
+#: ../qt/data/MainWindow.ui.h:16 ../qt/src/hocr/HOCRPdfExportWidget.cc:60
+msgid "Color"
+msgstr "Couleur"
+
+#: ../gtk/data/MainWindow.ui.h:17 ../gtk/src/hocr/HOCRPdfExportWidget.cc:52
+#: ../qt/data/MainWindow.ui.h:15 ../qt/src/hocr/HOCRPdfExportWidget.cc:61
+msgid "Grayscale"
+msgstr "Niveaux de gris"
+
+#: ../gtk/data/MainWindow.ui.h:18 ../qt/data/MainWindow.ui.h:11
+msgid "Resolution:"
+msgstr "Résolution :"
+
+#: ../gtk/data/MainWindow.ui.h:19 ../qt/data/MainWindow.ui.h:12
+msgid "Scan"
+msgstr "Scanner"
+
+#: ../gtk/data/MainWindow.ui.h:20 ../qt/data/MainWindow.ui.h:17
+msgid "Source:"
+msgstr "Source :"
+
+#: ../gtk/data/MainWindow.ui.h:21 ../qt/data/MainWindow.ui.h:7
+msgid "Acquire"
+msgstr "Acquérir"
+
+#: ../gtk/data/MainWindow.ui.h:22 ../qt/data/MainWindow.ui.h:1
+msgid "Brightness"
+msgstr "Luminosité"
+
+#: ../gtk/data/MainWindow.ui.h:23 ../qt/data/MainWindow.ui.h:2
+msgid "Contrast"
+msgstr "Contraste"
+
+#: ../gtk/data/MainWindow.ui.h:24 ../qt/data/MainWindow.ui.h:3
+msgid "Resolution"
+msgstr "Résolution"
+
+#: ../gtk/data/MainWindow.ui.h:25 ../qt/data/MainWindow.ui.h:4
+msgid "Invert colors"
+msgstr "Invertir couleurs"
+
+#: ../gtk/data/MainWindow.ui.h:26 ../qt/data/MainWindow.ui.h:24
+msgid "Zoom in"
+msgstr "Zoom avant"
+
+#: ../gtk/data/MainWindow.ui.h:27 ../qt/data/MainWindow.ui.h:26
+msgid "Zoom out"
+msgstr "Zoom arrière"
+
+#: ../gtk/data/MainWindow.ui.h:28 ../qt/data/MainWindow.ui.h:28
+msgid "Normal size"
+msgstr "Taille normale"
+
+#: ../gtk/data/MainWindow.ui.h:29 ../qt/data/MainWindow.ui.h:30
+msgid "Best fit"
+msgstr "Ajuster à la page"
+
+#: ../gtk/data/MainWindow.ui.h:30 ../qt/src/Ui_MainWindow.hh:60
+msgid "Rotate page"
+msgstr "Pivoter la page"
+
+#: ../gtk/data/MainWindow.ui.h:31 ../qt/src/Ui_MainWindow.hh:75
+msgid "Select rotation mode"
+msgstr "Mode de rotation"
+
+#: ../gtk/data/MainWindow.ui.h:32 ../gtk/data/OutputEditorHOCR.ui.h:12
+#: ../gtk/data/OutputEditorText.ui.h:15
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:72
+#: ../qt/src/Ui_OutputEditorText.hh:104
+msgid "Select insert mode"
+msgstr "Sélectionner mode d'insertion"
+
+#: ../gtk/data/MainWindow.ui.h:33 ../qt/src/Ui_MainWindow.hh:102
+msgid "Select page"
+msgstr "Sélectionner page"
+
+#: ../gtk/data/MainWindow.ui.h:34 ../qt/data/MainWindow.ui.h:36
+msgid "Image controls"
+msgstr "Régler les paramètres de l'image"
+
+#: ../gtk/data/MainWindow.ui.h:35 ../gtk/src/hocr/HOCRBatchExportDialog.cc:51
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:42 ../qt/src/MainWindow.cc:166
+msgid "Plain text"
+msgstr "Texte"
+
+#: ../gtk/data/MainWindow.ui.h:36 ../qt/src/MainWindow.cc:167
+msgid "hOCR, PDF"
+msgstr "hOCR, PDF"
+
+#: ../gtk/data/MainWindow.ui.h:37 ../qt/data/MainWindow.ui.h:38
+msgid "Autodetect layout"
+msgstr "Détecter la mise en page"
+
+#: ../gtk/data/MainWindow.ui.h:38
+msgid "<small>Recognize all</small>"
+msgstr "<small>Tout reconnaître</small>"
+
+#: ../gtk/data/MainWindow.ui.h:39
+msgid "Select language"
+msgstr "Sélectionner langue"
+
+#: ../gtk/data/MainWindow.ui.h:40 ../qt/data/MainWindow.ui.h:41
+#, fuzzy
+msgid "Batch Export"
+msgstr "Exporter"
+
+#: ../gtk/data/MainWindow.ui.h:41
+msgid "A graphical frontend to tesseract-ocr"
+msgstr "Une interface graphique pour tesseract-ocr"
+
+#: ../gtk/data/MainWindow.ui.h:42 ../qt/data/BatchModeDialog.ui.h:1
+msgid "Batch Mode"
+msgstr "Mode par lots"
+
+#: ../gtk/data/MainWindow.ui.h:43
+#, fuzzy
+msgid ""
+"<i>In batch mode, each input source is processed separately and the output "
+"saved side-by-side to the input file.</i>"
+msgstr ""
+"En mode de traitement par lots, chaque source d'entrée est traitée "
+"séparément et la sortie enregistrée côte à côte dans le fichier d'entrée."
+
+#: ../gtk/data/MainWindow.ui.h:44 ../qt/data/BatchModeDialog.ui.h:3
+msgid "Existing output:"
+msgstr "Sortie existante :"
+
+#: ../gtk/data/MainWindow.ui.h:45 ../qt/data/BatchModeDialog.ui.h:2
+msgid "Prepend page numbers to output text"
+msgstr "Ajouter des numéros de page avant le texte de sortie"
+
+#: ../gtk/data/MainWindow.ui.h:46 ../qt/data/BatchModeDialog.ui.h:5
+msgid "Autodetect page layout"
+msgstr "Détection automatique de la mise en page"
+
+#: ../gtk/data/MainWindow.ui.h:47 ../qt/data/PageRangeDialog.ui.h:1
+msgid "Page Range"
+msgstr "Pages"
+
+#: ../gtk/data/MainWindow.ui.h:50 ../qt/data/PageRangeDialog.ui.h:2
+msgid "Page range:"
+msgstr "Intervalle de pages :"
+
+#: ../gtk/data/MainWindow.ui.h:51 ../qt/data/PageRangeDialog.ui.h:3
+msgid "<small><b>Example:</b> 1-10, 13, 14-18</small>"
+msgstr "<small><b>Par exemple:</b> 1-10, 13, 14-18</small>"
+
+#: ../gtk/data/MainWindow.ui.h:52 ../qt/data/PageRangeDialog.ui.h:4
+msgid "Recognition area:"
+msgstr "Zone de reconnaissance :"
+
+#: ../gtk/data/MainWindow.ui.h:53 ../gtk/src/Recognizer.cc:121
+#: ../qt/data/PageRangeDialog.ui.h:5 ../qt/src/Recognizer.cc:137
+msgid "Entire page"
+msgstr "Page complète"
+
+#: ../gtk/data/MainWindow.ui.h:54 ../qt/data/PageRangeDialog.ui.h:6
+msgid "Autodetect"
+msgstr "Détecter automatiquement"
+
+#: ../gtk/data/MainWindow.ui.h:55 ../qt/data/PageRangeDialog.ui.h:7
+msgid "Prepend to output text:"
+msgstr "Ajouter reconnaissance :"
+
+#: ../gtk/data/MainWindow.ui.h:56 ../qt/data/PageRangeDialog.ui.h:8
+msgid "Source filename"
+msgstr "Nom de fichier d'origine"
+
+#: ../gtk/data/MainWindow.ui.h:57 ../qt/data/PageRangeDialog.ui.h:9
+msgid "Source page"
+msgstr "Page d'origine"
+
+#: ../gtk/data/MainWindow.ui.h:58 ../qt/src/SourceManager.cc:172
+msgid "Protected PDF"
+msgstr "PDF protégé"
+
+#: ../gtk/data/MainWindow.ui.h:59 ../qt/src/Recognizer.cc:71
+msgid "Current Page"
+msgstr "Page courante"
+
+#: ../gtk/data/MainWindow.ui.h:60 ../qt/src/Recognizer.cc:74
+msgid "Multiple Pages..."
+msgstr "Plusieurs pages..."
+
+#: ../gtk/data/MainWindow.ui.h:61 ../qt/src/Recognizer.cc:77
+msgid "Batch mode..."
+msgstr "Mode de traitement par lots…"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:1 ../qt/src/hocr/OutputEditorHOCR.cc:720
+msgid "Add Word"
+msgstr "Ajouter un mot"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:4 ../qt/src/hocr/OutputEditorHOCR.cc:720
+msgid "Enter word:"
+msgstr "Entrer le mot :"
+
+#. Output toolbar
+#: ../gtk/data/OutputEditorHOCR.ui.h:5 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:63
+msgid "Append new output after last page"
+msgstr "Ajouter une nouvelle sortie après la dernière page"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:6 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:64
+msgid "Insert new output before current page"
+msgstr "Insérer une nouvelle sortie avant la page actuelle"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:7 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:94
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:95
+msgid "Export to plain text"
+msgstr "Exporter au format texte"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:8 ../qt/src/hocr/Ui_OutputEditorHOCR.hh:97
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:98
+msgid "Export to PDF"
+msgstr "Exporter au format PDF"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:9
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:100
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:101
+msgid "Export to ODT"
+msgstr "Exporter au format ODT"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:10
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:76
+msgid "Append document after last page"
+msgstr "Ajouter un document après la dernière page"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:11
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:77
+msgid "Insert document before current page"
+msgstr "Insérer un document avant la page actuelle"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:13
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:85
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:86
+msgid "Open hOCR file"
+msgstr "Ouvrir fichier hOCR"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:14 ../gtk/data/OutputEditorText.ui.h:14
+#: ../qt/src/Ui_OutputEditorText.hh:125
+msgid "Save output"
+msgstr "Enregistrer la reconnaissance"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:15
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:105
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:106
+msgid "Export"
+msgstr "Exporter"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:16 ../gtk/data/OutputEditorText.ui.h:20
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:110
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:111
+#: ../qt/src/Ui_OutputEditorText.hh:127
+msgid "Clear output"
+msgstr "Supprimer la reconnaissance"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:17 ../gtk/data/OutputEditorText.ui.h:17
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:113
+#: ../qt/src/Ui_OutputEditorText.hh:116
+msgid "Find and replace"
+msgstr "Trouver et remplacer"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:18
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:115
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:116
+msgid "Show confidence values"
+msgstr "Montrer les valeurs de confiance"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:19 ../gtk/data/PdfExportWidget.ui.h:1
+#: ../qt/data/PdfExportDialog.ui.h:2 ../qt/data/PdfExportWidget.ui.h:1
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:121
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:122
+msgid "Show preview"
+msgstr "Montrer aperçu"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:20
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:160
+msgid "Next (F3)"
+msgstr "Suivant (F3)"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:21
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:161
+msgid "Previous (Shift+F3)"
+msgstr "Précédent (Shift+F3)"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:22 ../gtk/src/hocr/OutputEditorHOCR.cc:978
+#: ../qt/src/hocr/OutputEditorHOCR.cc:852
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:165
+msgid "Expand all"
+msgstr "Déplier"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:23 ../gtk/src/hocr/OutputEditorHOCR.cc:981
+#: ../qt/src/hocr/OutputEditorHOCR.cc:853
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:166
+msgid "Collapse all"
+msgstr "Replier"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:24
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:187
+msgid "Properties"
+msgstr "Propriétés"
+
+#: ../gtk/data/OutputEditorHOCR.ui.h:25
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:191
+msgid "Source"
+msgstr "Sources"
+
+#. Output insert mode
+#: ../gtk/data/OutputEditorText.ui.h:1 ../qt/src/Ui_OutputEditorText.hh:61
+msgid "Append to current text"
+msgstr "Ajouter au texte existant"
+
+#: ../gtk/data/OutputEditorText.ui.h:2 ../qt/src/Ui_OutputEditorText.hh:62
+msgid "Insert at cursor"
+msgstr "Insérer au curseur"
+
+#: ../gtk/data/OutputEditorText.ui.h:3 ../qt/src/Ui_OutputEditorText.hh:63
+msgid "Replace current text"
+msgstr "Remplacer le texte existant"
+
+#. Output postprocessing
+#: ../gtk/data/OutputEditorText.ui.h:4 ../qt/src/Ui_OutputEditorText.hh:71
+msgid "Keep line break if..."
+msgstr "Conserver les sauts de ligne si..."
+
+#: ../gtk/data/OutputEditorText.ui.h:5 ../qt/src/Ui_OutputEditorText.hh:73
+msgid "Preceded by end mark (.?!)"
+msgstr "...ils sont précédés par une marque de fin (.?!)"
+
+#: ../gtk/data/OutputEditorText.ui.h:6 ../qt/src/Ui_OutputEditorText.hh:75
+msgid "Preceded or succeeded by quote"
+msgstr "...ils sont précédés ou suivis par un guillemet"
+
+#: ../gtk/data/OutputEditorText.ui.h:7 ../qt/src/Ui_OutputEditorText.hh:77
+msgid "Other options"
+msgstr "Autres options"
+
+#: ../gtk/data/OutputEditorText.ui.h:8 ../qt/src/Ui_OutputEditorText.hh:79
+msgid "Join hyphenated words"
+msgstr "Lier les mots composés"
+
+#: ../gtk/data/OutputEditorText.ui.h:9 ../qt/src/Ui_OutputEditorText.hh:81
+msgid "Collapse whitespace"
+msgstr "Réduire les espaces"
+
+#: ../gtk/data/OutputEditorText.ui.h:10 ../qt/src/Ui_OutputEditorText.hh:83
+msgid "Preserve paragraphs"
+msgstr "Préserver paragraphes"
+
+#: ../gtk/data/OutputEditorText.ui.h:11 ../qt/src/Ui_OutputEditorText.hh:85
+msgid "Visual aids"
+msgstr "Aides visuelles"
+
+#: ../gtk/data/OutputEditorText.ui.h:12 ../qt/src/Ui_OutputEditorText.hh:87
+msgid "Draw whitespace"
+msgstr "Dessiner les espaces"
+
+#: ../gtk/data/OutputEditorText.ui.h:13
+#, fuzzy
+msgid "Open file"
+msgstr "Ouvrir fichier hOCR"
+
+#: ../gtk/data/OutputEditorText.ui.h:16 ../qt/src/Ui_OutputEditorText.hh:111
+msgid "Strip line breaks on selected text"
+msgstr "Supprimer sauts de ligne dans le texte sélectionné"
+
+#: ../gtk/data/OutputEditorText.ui.h:18 ../qt/src/Ui_OutputEditorText.hh:118
+#: ../qt/src/Ui_OutputEditorText.hh:119
+msgid "Undo"
+msgstr "Annuler"
+
+#: ../gtk/data/OutputEditorText.ui.h:19 ../qt/src/Ui_OutputEditorText.hh:121
+#: ../qt/src/Ui_OutputEditorText.hh:122
+msgid "Redo"
+msgstr "Refaire"
+
+#: ../gtk/data/OutputEditorText.ui.h:21
+msgid "New tab"
+msgstr ""
+
+#: ../gtk/data/PdfExportWidget.ui.h:2 ../qt/data/PdfExportDialog.ui.h:4
+#: ../qt/data/PdfExportWidget.ui.h:3
+msgid "Output mode:"
+msgstr "Mode de sortie :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:3
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:45
+#: ../qt/data/PdfExportDialog.ui.h:6 ../qt/data/PdfExportWidget.ui.h:5
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:40
+msgid "PDF"
+msgstr "PDF"
+
+#: ../gtk/data/PdfExportWidget.ui.h:4 ../qt/data/PdfExportDialog.ui.h:7
+#: ../qt/data/PdfExportWidget.ui.h:6
+msgid "PDF with invisible text overlay"
+msgstr "PDF avec invisible superposition de texte"
+
+#: ../gtk/data/PdfExportWidget.ui.h:6 ../qt/data/PdfExportDialog.ui.h:17
+#: ../qt/data/PdfExportWidget.ui.h:16
+msgid "Compression:"
+msgstr "Compression :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:7 ../qt/data/PdfExportDialog.ui.h:14
+#: ../qt/data/PdfExportWidget.ui.h:13
+msgid "Compression quality:"
+msgstr "Qualité de compression :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:8 ../qt/data/PdfExportDialog.ui.h:15
+#: ../qt/data/PdfExportWidget.ui.h:14
+msgid "DPI:"
+msgstr "DPI :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:9 ../qt/data/PdfExportDialog.ui.h:18
+#: ../qt/data/PdfExportWidget.ui.h:17
+msgid "Dithering algorithm:"
+msgstr "Algorithme de tramage :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:10 ../qt/data/PdfExportDialog.ui.h:13
+#: ../qt/data/PdfExportWidget.ui.h:12
+msgid "Image settings:"
+msgstr "Paramètres d'image :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:11 ../qt/data/PdfExportDialog.ui.h:25
+#: ../qt/data/PdfExportWidget.ui.h:24
+msgid "Uniformize line and word spacing"
+msgstr "Homogénéiser interligne"
+
+#: ../gtk/data/PdfExportWidget.ui.h:12 ../qt/data/PdfExportDialog.ui.h:21
+#: ../qt/data/PdfExportWidget.ui.h:20
+msgid "Override font family:"
+msgstr "Remplacer la police :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:13 ../qt/data/PdfExportDialog.ui.h:27
+#: ../qt/data/PdfExportWidget.ui.h:26
+msgid "Fallback font family:"
+msgstr "Police de remplacement :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:14 ../qt/data/PdfExportDialog.ui.h:20
+#: ../qt/data/PdfExportWidget.ui.h:19
+msgid "Override font size:"
+msgstr "Écraser les tailles de police détectés :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:15 ../qt/data/PdfExportDialog.ui.h:23
+#: ../qt/data/PdfExportWidget.ui.h:22
+msgid "Font scaling:"
+msgstr "Échelle de police :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:16 ../qt/data/PdfExportDialog.ui.h:26
+#: ../qt/data/PdfExportWidget.ui.h:25
+msgid "pt"
+msgstr "pt"
+
+#: ../gtk/data/PdfExportWidget.ui.h:17 ../qt/data/PdfExportDialog.ui.h:22
+#: ../qt/data/PdfExportWidget.ui.h:21
+msgid "Preserve spaces wider than:"
+msgstr "Préserver les espaces plus larges que :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:18 ../qt/data/PdfExportDialog.ui.h:24
+#: ../qt/data/PdfExportWidget.ui.h:23
+msgid "characters"
+msgstr "caractères"
+
+#: ../gtk/data/PdfExportWidget.ui.h:19 ../qt/data/PdfExportDialog.ui.h:28
+#: ../qt/data/PdfExportWidget.ui.h:27
+msgid "Sanitize hyphens before line breaks"
+msgstr "Corriger les traits d'union avant les sauts de ligne"
+
+#: ../gtk/data/PdfExportWidget.ui.h:20 ../qt/data/PdfExportDialog.ui.h:19
+#: ../qt/data/PdfExportWidget.ui.h:18
+msgid "Text settings:"
+msgstr "Paramètres de texte :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:21 ../qt/data/PdfExportDialog.ui.h:10
+#: ../qt/data/PdfExportWidget.ui.h:9
+msgid "Paper size:"
+msgstr "Taille du papier :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:22 ../qt/data/PdfExportDialog.ui.h:11
+#: ../qt/data/PdfExportWidget.ui.h:10
+msgid "Width"
+msgstr "Largeur"
+
+#: ../gtk/data/PdfExportWidget.ui.h:23 ../qt/data/PdfExportDialog.ui.h:12
+#: ../qt/data/PdfExportWidget.ui.h:11
+msgid "Height"
+msgstr "Hauteur"
+
+#: ../gtk/data/PdfExportWidget.ui.h:24 ../qt/data/PdfExportDialog.ui.h:29
+#: ../qt/data/PdfExportWidget.ui.h:28
+msgid "Treat image sources as having true DPI:"
+msgstr "Traiter les sources d'images comme ayant un DPI :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:25 ../qt/data/PdfExportDialog.ui.h:3
+#: ../qt/data/PdfExportWidget.ui.h:2
+msgid "Basic"
+msgstr "Basique"
+
+#: ../gtk/data/PdfExportWidget.ui.h:26 ../qt/data/PdfExportDialog.ui.h:31
+#: ../qt/data/PdfExportWidget.ui.h:30
+msgid "PDF version:"
+msgstr "Version PDF :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:27 ../qt/data/PdfExportDialog.ui.h:33
+#: ../qt/data/PdfExportWidget.ui.h:32
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:28 ../qt/data/PdfExportDialog.ui.h:34
+#: ../qt/data/PdfExportWidget.ui.h:33
+msgid "Confirm password:"
+msgstr "Confirmer le mot de passe :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:29 ../qt/data/PdfExportDialog.ui.h:32
+#: ../qt/data/PdfExportWidget.ui.h:31
+msgid "Encryption (optional):"
+msgstr "Chiffrement (facultatif) :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:30 ../qt/data/PdfExportDialog.ui.h:36
+#: ../qt/data/PdfExportWidget.ui.h:35
+msgid "Author:"
+msgstr "Auteur :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:31 ../qt/data/PdfExportDialog.ui.h:38
+#: ../qt/data/PdfExportWidget.ui.h:37
+msgid "Title:"
+msgstr "Titre :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:32 ../qt/data/PdfExportDialog.ui.h:40
+#: ../qt/data/PdfExportWidget.ui.h:39
+msgid "Subject:"
+msgstr "Sujet :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:33 ../qt/data/PdfExportDialog.ui.h:37
+#: ../qt/data/PdfExportWidget.ui.h:36
+msgid "Creator:"
+msgstr "Créateur :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:34 ../qt/data/PdfExportDialog.ui.h:39
+#: ../qt/data/PdfExportWidget.ui.h:38
+msgid "Producer:"
+msgstr "Producteur :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:35 ../qt/data/PdfExportDialog.ui.h:41
+#: ../qt/data/PdfExportWidget.ui.h:40
+msgid "Keywords:"
+msgstr "Mots-clés :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:36 ../qt/data/PdfExportDialog.ui.h:35
+#: ../qt/data/PdfExportWidget.ui.h:34
+msgid "Additional information (optional):"
+msgstr "Informations supplémentaires (facultatif) :"
+
+#: ../gtk/data/PdfExportWidget.ui.h:37 ../qt/data/PdfExportDialog.ui.h:42
+#: ../qt/data/PdfExportWidget.ui.h:41
+msgid "Import from current source"
+msgstr "Importer à partir de la source actuelle"
+
+#: ../gtk/data/PdfExportWidget.ui.h:38 ../qt/data/PdfExportDialog.ui.h:30
+#: ../qt/data/PdfExportWidget.ui.h:29
+msgid "Advanced"
+msgstr "Avancé"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:1 ../qt/data/SearchReplaceFrame.ui.h:4
+msgid "Find"
+msgstr "Trouver"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:2 ../qt/data/SearchReplaceFrame.ui.h:2
+msgid "Replace"
+msgstr "Remplacer"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:3 ../qt/data/SearchReplaceFrame.ui.h:3
+msgid "Replace all"
+msgstr "Remplacer tous"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:4 ../qt/data/SearchReplaceFrame.ui.h:5
+msgid "Find previous"
+msgstr "Trouver précédente"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:5 ../qt/data/SearchReplaceFrame.ui.h:6
+msgid "Find next"
+msgstr "Trouver suivante"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:6 ../qt/data/SearchReplaceFrame.ui.h:7
+msgid "Match case"
+msgstr "Sensible aux majuscules et minuscules"
+
+#: ../gtk/data/SearchReplaceFrame.ui.h:7
+#: ../gtk/data/SubstitutionsManager.ui.h:1 ../qt/data/SearchReplaceFrame.ui.h:1
+#: ../qt/src/SubstitutionsManager.cc:36
+msgid "Substitutions"
+msgstr "Substitutions"
+
+#: ../gtk/data/SelectionMenu.ui.h:1 ../qt/src/DisplayerToolSelect.cc:239
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../gtk/data/SelectionMenu.ui.h:2 ../qt/src/DisplayerToolSelect.cc:225
+msgid "Order:"
+msgstr "Ordre :"
+
+#: ../gtk/data/SelectionMenu.ui.h:3 ../gtk/src/hocr/DisplayerToolHOCR.cc:29
+#: ../qt/src/DisplayerToolSelect.cc:240 ../qt/src/hocr/DisplayerToolHOCR.cc:31
+msgid "Recognize"
+msgstr "Reconnaître"
+
+#: ../gtk/data/SelectionMenu.ui.h:4 ../qt/src/DisplayerToolSelect.cc:241
+msgid "Recognize to clipboard"
+msgstr "Reconnaître et coller dans le passe-papiers"
+
+#: ../gtk/data/SelectionMenu.ui.h:5 ../qt/src/DisplayerToolSelect.cc:242
+msgid "Save as image"
+msgstr "Enregistrer image"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:2 ../qt/src/SubstitutionsManager.cc:38
+#: ../qt/src/SubstitutionsManager.cc:39 ../qt/src/Ui_OutputEditorText.hh:57
+msgid "Open"
+msgstr "Ouvrir"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:3 ../gtk/src/Utils.cc:133
+#: ../qt/src/SubstitutionsManager.cc:41 ../qt/src/SubstitutionsManager.cc:42
+msgid "Save"
+msgstr "Enregistrer"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:4 ../qt/src/SubstitutionsManager.cc:44
+#: ../qt/src/SubstitutionsManager.cc:45
+msgid "Clear"
+msgstr "Vider"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:5 ../qt/data/ConfigDialog.ui.h:16
+#: ../qt/src/SubstitutionsManager.cc:47 ../qt/src/SubstitutionsManager.cc:48
+msgid "Add"
+msgstr "Ajouter"
+
+#: ../gtk/data/SubstitutionsManager.ui.h:6
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:974 ../qt/data/ConfigDialog.ui.h:17
+#: ../qt/src/hocr/OutputEditorHOCR.cc:849 ../qt/src/SubstitutionsManager.cc:50
+#: ../qt/src/SubstitutionsManager.cc:51
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ../gtk/data/TessdataManager.ui.h:1 ../qt/src/TessdataManager.cc:45
+msgid "Tessdata Manager"
+msgstr "Gestionnaire tessdata"
+
+#: ../gtk/data/TessdataManager.ui.h:5 ../qt/src/TessdataManager.cc:47
+msgid "Manage installed languages:"
+msgstr "Gérer les langues installées :"
+
+#: ../gtk/src/Acquirer.cc:79 ../qt/src/Acquirer.cc:70
+msgid "scan.png"
+msgstr "scan.png"
+
+#: ../gtk/src/Acquirer.cc:91 ../qt/src/Acquirer.cc:85
+msgid "Images"
+msgstr "Images"
+
+#: ../gtk/src/Acquirer.cc:92 ../qt/src/Acquirer.cc:86
+msgid "Choose Output Filename..."
+msgstr "Choisir un nom pour le fichier de reconnaissance..."
+
+#: ../gtk/src/Acquirer.cc:106 ../qt/src/Acquirer.cc:100
+msgid "Failed to initialize the scanning backend."
+msgstr "Impossible d'initialiser le scanner."
+
+#: ../gtk/src/Acquirer.cc:115 ../qt/src/Acquirer.cc:106
+msgid "Scan failed"
+msgstr "Erreur de scanner"
+
+#: ../gtk/src/Acquirer.cc:133 ../qt/src/Acquirer.cc:122
+msgid "No scanners were detected."
+msgstr "Aucun scanner n'a été détecté."
+
+#: ../gtk/src/Acquirer.cc:150 ../gtk/src/Acquirer.cc:167
+#: ../qt/src/Acquirer.cc:136 ../qt/src/Acquirer.cc:153
+msgid "Starting scan..."
+msgstr "Démarrer le scan..."
+
+#: ../gtk/src/Acquirer.cc:163 ../qt/src/Acquirer.cc:149
+msgid "Opening device..."
+msgstr "Ouverture du dispositif..."
+
+#: ../gtk/src/Acquirer.cc:165 ../qt/src/Acquirer.cc:151
+msgid "Setting options..."
+msgstr "Régler les options..."
+
+#: ../gtk/src/Acquirer.cc:169 ../qt/src/Acquirer.cc:155
+msgid "Getting parameters..."
+msgstr "Obtention des paramètres…"
+
+#: ../gtk/src/Acquirer.cc:171 ../qt/src/Acquirer.cc:157
+msgid "Transferring data..."
+msgstr "Transfert de données..."
+
+#: ../gtk/src/Acquirer.cc:178 ../qt/src/Acquirer.cc:164
+msgid "Canceling scan..."
+msgstr "Annulation de scan..."
+
+#: ../gtk/src/Config.cc:50 ../gtk/src/Config.cc:60
+#: ../qt/data/ConfigDialog.ui.h:7
+msgid "Filename prefix"
+msgstr "Préfixe nom fichier"
+
+#: ../gtk/src/Config.cc:51 ../gtk/src/Config.cc:61
+#: ../qt/data/ConfigDialog.ui.h:8
+msgid "Code"
+msgstr "Code"
+
+#: ../gtk/src/Config.cc:52 ../gtk/src/Config.cc:62
+#: ../qt/data/ConfigDialog.ui.h:9
+msgid "Native name"
+msgstr "Nom natif"
+
+#: ../gtk/src/Config.cc:119 ../qt/src/Config.cc:104
+msgid "Script"
+msgstr "Script"
+
+#: ../gtk/src/CrashHandler.cc:25 ../gtk/src/CrashHandler.cc:41
+#: ../qt/src/CrashHandler.cc:36
+msgid "Crash Handler"
+msgstr "Gestionnaire de crash"
+
+#: ../gtk/src/CrashHandler.cc:43 ../qt/src/CrashHandler.cc:31
+msgid "Your work has been saved under <b>%1</b>."
+msgstr "Votre travail a été enregistré sous <b>%1</b>."
+
+#: ../gtk/src/CrashHandler.cc:45 ../qt/src/CrashHandler.cc:33
+msgid "There was no unsaved work."
+msgstr "Il n'y avait pas de travail non enregistré."
+
+#: ../gtk/src/CrashHandler.cc:106 ../qt/src/CrashHandler.cc:62
+msgid "Failed to obtain backtrace. Is GDB installed?"
+msgstr "Impossible d'obtenir le backtrace. GDB est-il installé ?"
+
+#: ../gtk/src/Displayer.cc:254 ../qt/src/Displayer.cc:200
+msgid "Failed to load image"
+msgstr "Échec à l'ouverture de l'image"
+
+#: ../gtk/src/Displayer.cc:254 ../qt/src/Displayer.cc:200
+msgid ""
+"The file might not be an image or be corrupt:\n"
+"%1"
+msgstr ""
+"Le fichier pourrait ne pas être une image ou être corrompu:\n"
+"%1"
+
+#: ../gtk/src/Displayer.cc:770 ../qt/src/Displayer.cc:605
+msgid "Page %1"
+msgstr "Page %1"
+
+#: ../gtk/src/DisplayerToolSelect.cc:138 ../qt/src/DisplayerToolSelect.cc:135
+msgid "PNG Images"
+msgstr "Images PNG"
+
+#: ../gtk/src/DisplayerToolSelect.cc:139 ../qt/src/DisplayerToolSelect.cc:135
+msgid "Save Selection Image"
+msgstr "Enregistrer sélection"
+
+#: ../gtk/src/DisplayerToolSelect.cc:139 ../qt/src/DisplayerToolSelect.cc:135
+msgid "selection.png"
+msgstr "selection.png"
+
+#: ../gtk/src/DisplayerToolSelect.cc:146 ../qt/src/DisplayerToolSelect.cc:142
+msgid "Recognize all"
+msgstr "Reconnaître tout"
+
+#: ../gtk/src/DisplayerToolSelect.cc:146 ../qt/src/DisplayerToolSelect.cc:142
+msgid "Recognize selection"
+msgstr "Reconnaître la sélection"
+
+#: ../gtk/src/DisplayerToolSelect.cc:186 ../qt/src/DisplayerToolSelect.cc:182
+msgid "Performing layout analysis"
+msgstr "Exécution l'analyse de mise en page"
+
+#: ../gtk/src/FileTreeModel.cc:62 ../qt/src/FileTreeModel.cc:49
+msgid "Temporary files"
+msgstr ""
+
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:48
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:41
+msgid "ODT"
+msgstr ""
+
+#: ../gtk/src/hocr/HOCRBatchExportDialog.cc:106 ../gtk/src/SourceManager.cc:268
+#: ../qt/src/hocr/HOCRBatchExportDialog.cc:73 ../qt/src/SourceManager.cc:279
+msgid "Select folder..."
+msgstr "Choisir le dossier…"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:68 ../qt/src/hocr/HOCRDocument.cc:71
+msgid "No suggestions"
+msgstr "Pas de suggestions"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:74 ../qt/src/hocr/HOCRDocument.cc:75
+msgid "Add to dictionary"
+msgstr "Ajouter au dictionnaire"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:80 ../qt/src/hocr/HOCRDocument.cc:79
+msgid "Ignore word"
+msgstr "Ignorer mot"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:800 ../gtk/src/hocr/HOCRDocument.cc:839
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:351 ../qt/src/hocr/HOCRDocument.cc:692
+#: ../qt/src/hocr/HOCRDocument.cc:729 ../qt/src/hocr/OutputEditorHOCR.cc:312
+msgid "Page"
+msgstr "Page"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:802 ../qt/src/hocr/HOCRDocument.cc:694
+msgid "Text block"
+msgstr "Bloc de texte"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:804 ../gtk/src/hocr/OutputEditorHOCR.cc:357
+#: ../qt/src/hocr/HOCRDocument.cc:696 ../qt/src/hocr/OutputEditorHOCR.cc:314
+msgid "Paragraph"
+msgstr "Paragraphe"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:806 ../qt/src/hocr/HOCRDocument.cc:698
+msgid "Textline"
+msgstr "Ligne de texte"
+
+#: ../gtk/src/hocr/HOCRDocument.cc:810 ../qt/src/hocr/HOCRDocument.cc:702
+msgid "Graphic"
+msgstr "Graphique"
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:63 ../gtk/src/hocr/HOCROdtExporter.cc:328
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:129
+#: ../gtk/src/hocr/HOCRTextExporter.cc:31 ../qt/src/hocr/HOCROdtExporter.cc:49
+#: ../qt/src/hocr/HOCRPdfExporter.cc:137 ../qt/src/hocr/HOCRTextExporter.cc:34
+msgid "Export failed"
+msgstr "Exportation a échoué"
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:63 ../gtk/src/hocr/HOCROdtExporter.cc:328
+#: ../qt/src/hocr/HOCROdtExporter.cc:49
+msgid "The ODT export failed: unable to write output file."
+msgstr "L'export ODT a échoué : impossible d'écrire le fichier de sortie."
+
+#: ../gtk/src/hocr/HOCROdtExporter.cc:322 ../qt/src/hocr/HOCROdtExporter.cc:242
+msgid "Exporting to ODT..."
+msgstr "Exporter au format ODT..."
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:70 ../qt/src/hocr/HOCRPdfExporter.cc:80
+msgid "The operation was cancelled"
+msgstr "L'opération a été annulée"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:117 ../qt/src/hocr/HOCRPdfExporter.cc:126
+msgid "Failed to render page %1"
+msgstr "Impossible de rendre la page %1"
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:124 ../qt/src/hocr/HOCRPdfExporter.cc:133
+msgid "Exporting to PDF..."
+msgstr "Exporter au format PDF..."
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:129 ../qt/src/hocr/HOCRPdfExporter.cc:137
+msgid "The PDF export failed: %1."
+msgstr "L'exportation PDF a échoué : %1."
+
+#: ../gtk/src/hocr/HOCRPdfExporter.cc:397 ../qt/src/hocr/HOCRPdfExporter.cc:428
+msgid "The PDF library could not load the font '%1'."
+msgstr "La bibliothèque PDF ne supporte pas la police sélectionnée '%1'."
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:55
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:62
+msgid "Monochrome"
+msgstr "Monochrome"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:64
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:64
+msgid "Threshold (closest color)"
+msgstr "Seuil (couleur la plus proche)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:67
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:65
+msgid "Diffuse"
+msgstr "Diffus"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:76
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:66
+msgid "Zip (lossless)"
+msgstr "Zip (sans perte)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:80
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:67
+msgid "CCITT Group 4 (lossless)"
+msgstr "CCITT Group 4 (sans perte)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:84
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:68
+msgid "Jpeg (lossy)"
+msgstr "Jpeg (perte)"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:97
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:74
+msgid "Same as source"
+msgstr "Identique à la source"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:100
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:75
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:114
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:71
+msgid "cm"
+msgstr "cm"
+
+#: ../gtk/src/hocr/HOCRPdfExportWidget.cc:117
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:72
+msgid "in"
+msgstr "dans"
+
+#: ../gtk/src/hocr/HOCRTextExporter.cc:31 ../qt/src/hocr/HOCRTextExporter.cc:34
+msgid "The text export failed: unable to write output file."
+msgstr ""
+"L'exportation de texte a échoué: impossible d'écrire le fichier de sortie."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:354
+#: ../qt/src/hocr/OutputEditorHOCR.cc:313
+msgid "Block"
+msgstr "Bloc"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:360
+#: ../qt/src/hocr/OutputEditorHOCR.cc:315
+msgid "Line"
+msgstr "Ligne"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:363
+#: ../qt/src/hocr/OutputEditorHOCR.cc:316
+msgid "Word"
+msgstr "Mot"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:366
+#: ../qt/src/hocr/OutputEditorHOCR.cc:317
+msgid "Misspelled word"
+msgstr "Mot mal orthographié"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:369
+#: ../qt/src/hocr/OutputEditorHOCR.cc:318
+#, fuzzy
+msgid "Low confidence word"
+msgstr "Montrer les valeurs de confiance"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:538
+#: ../qt/src/hocr/OutputEditorHOCR.cc:420
+msgid ""
+"The following pages could not be processed:\n"
+"%1"
+msgstr ""
+"Les pages suivants n'ont pas pu être processées:\n"
+"%1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:421
+msgid "Recognition errors"
+msgstr "Erreurs de reconnaissance"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:706
+#: ../qt/src/hocr/OutputEditorHOCR.cc:180
+#: ../qt/src/hocr/OutputEditorHOCR.cc:621
+#: ../qt/src/hocr/OutputEditorHOCR.cc:633
+msgid "Multiple values"
+msgstr "Plusieurs valeurs"
+
+#. Merging allowed
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:901
+#: ../qt/src/hocr/OutputEditorHOCR.cc:781
+msgid "Merge"
+msgstr "Fusionner"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:908
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:966
+#: ../qt/src/hocr/OutputEditorHOCR.cc:783
+#: ../qt/src/hocr/OutputEditorHOCR.cc:847
+msgid "Split from parent"
+msgstr "Séparé du parent"
+
+#. Swapping allowed
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:918
+#: ../qt/src/hocr/OutputEditorHOCR.cc:787
+msgid "Swap"
+msgstr "Échanger"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:941
+#: ../qt/src/hocr/OutputEditorHOCR.cc:832
+msgid "Add graphic region"
+msgstr "Ajouter région graphique"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:944
+#: ../qt/src/hocr/OutputEditorHOCR.cc:833
+msgid "Add text block"
+msgstr "Ajouter un bloc de texte"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:948
+#: ../qt/src/hocr/OutputEditorHOCR.cc:835
+msgid "Add paragraph"
+msgstr "Ajouter un paragraphe"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:952
+#: ../qt/src/hocr/OutputEditorHOCR.cc:837
+msgid "Add line"
+msgstr "Ajouter une ligne"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:956
+#: ../qt/src/hocr/OutputEditorHOCR.cc:839
+msgid "Add word"
+msgstr "Ajouter un mot"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1015
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1098
+#: ../qt/src/hocr/OutputEditorHOCR.cc:914
+#: ../qt/src/hocr/OutputEditorHOCR.cc:990
+msgid "hOCR HTML Files"
+msgstr "Fichiers HTML hOCR"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1016
+#: ../qt/src/hocr/OutputEditorHOCR.cc:914
+msgid "Open hOCR File"
+msgstr "Ouvrir fichier hOCR"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1064 ../gtk/src/OutputEditorText.cc:466
+#: ../gtk/src/OutputEditorText.cc:516 ../gtk/src/SourceManager.cc:170
+#: ../qt/src/hocr/OutputEditorHOCR.cc:954 ../qt/src/OutputEditorText.cc:394
+#: ../qt/src/SourceManager.cc:154
+msgid ""
+"The following files could not be opened:\n"
+"%1"
+msgstr ""
+"Les fichiers suivants n'ont pas pu être ouvert :\n"
+"%1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1067
+#: ../qt/src/hocr/OutputEditorHOCR.cc:957
+msgid ""
+"The following files are not valid hOCR HTML:\n"
+"%1"
+msgstr ""
+"Le fichier ne semble pas contenir de code HTML hOCR valide :\n"
+"%1"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1070 ../gtk/src/OutputEditorText.cc:467
+#: ../gtk/src/OutputEditorText.cc:517 ../gtk/src/SourceManager.cc:170
+#: ../qt/src/hocr/OutputEditorHOCR.cc:960 ../qt/src/OutputEditorText.cc:394
+#: ../qt/src/SourceManager.cc:154
+msgid "Unable to open files"
+msgstr "Impossible d'ouvrir les fichiers"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1095
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1161
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1197
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1227
+#: ../qt/src/hocr/OutputEditorHOCR.cc:987
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1049
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1083
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1112
+msgid "output"
+msgstr "Reconnaissance"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1099
+#: ../qt/src/hocr/OutputEditorHOCR.cc:990
+msgid "Save hOCR Output..."
+msgstr "Enregistrer output hOCR..."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1106 ../gtk/src/OutputEditorText.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:997 ../qt/src/OutputEditorText.cc:417
+msgid "Failed to save output"
+msgstr "Échec de l'enregistrement de la reconnaissance"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1106 ../gtk/src/OutputEditorText.cc:539
+#: ../qt/src/hocr/OutputEditorHOCR.cc:997 ../qt/src/OutputEditorText.cc:417
+msgid "Check that you have writing permissions in the selected folder."
+msgstr ""
+"Vérifiez que vous avez l'autorisation d'écriture dans le dossier sélectionné."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1164
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1052
+msgid "OpenDocument Text Documents"
+msgstr "Documents de texte OpenDocument"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1165
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1052
+msgid "Save ODT Output..."
+msgstr "Enregistrer output ODT..."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1202
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1088
+msgid "PDF Files"
+msgstr "Fichiers PDF"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1203
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1088
+msgid "Save PDF Output..."
+msgstr "Enregistrer output PDF..."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1208
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1093
+msgid "Invalid Output"
+msgstr "Fichier export invalide"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1208
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1093
+msgid "Cannot overwrite a file which is a source image of this document."
+msgstr ""
+"Impossible d'écraser un fichier qui est une image source de ce document."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1230 ../gtk/src/OutputEditorText.cc:457
+#: ../gtk/src/OutputEditorText.cc:531 ../qt/src/hocr/OutputEditorHOCR.cc:1115
+#: ../qt/src/OutputEditorText.cc:342 ../qt/src/OutputEditorText.cc:410
+msgid "Text Files"
+msgstr "Fichiers texte"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1231
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1115
+msgid "Save Text Output..."
+msgstr "Enregistrer la sortie de texte..."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1247
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1134
+msgid "Output not saved"
+msgstr "Reconnaissance non enregistrée"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1247
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1134
+msgid "Save output before proceeding?"
+msgstr "Enregistrer la reconnaissance avant de continuer ?"
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1367 ../gtk/src/OutputEditorText.cc:357
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1232 ../qt/src/OutputEditorText.cc:253
+msgid "Replacing..."
+msgstr "Remplacement en cours..."
+
+#: ../gtk/src/hocr/OutputEditorHOCR.cc:1392 ../gtk/src/OutputEditorText.cc:373
+#: ../qt/src/hocr/OutputEditorHOCR.cc:1255 ../qt/src/OutputEditorText.cc:265
+msgid "Applying substitutions..."
+msgstr "Application les substitutions..."
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:243
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:230
+msgid "Keyboard shortcuts"
+msgstr "Raccourcis clavier"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:264
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:242
+msgid "Lines before:"
+msgstr "Lignes avant :"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:272
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:256
+msgid "Lines after:"
+msgstr "Lignes après :"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:529
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:457
+msgid ""
+"<table><tr><td>Tab</td><td>Next field</td></tr><tr><td>Shift+Tab</"
+"td><td>Previous field</td></tr><tr><td>Down</td><td>Next line</td></"
+"tr><tr><td>Up</td><td>Previous line</td></tr><tr><td>Ctrl+Space</"
+"td><td>Spelling suggestions</td></tr><tr><td>Ctrl+Enter</td><td>Add word to "
+"dictionary</td></tr><tr><td>Ctrl+B</td><td>Toggle bold</td></"
+"tr><tr><td>Ctrl+I</td><td>Toggle italic</td></tr><tr><td>Ctrl+D</"
+"td><td>Divide word at cursor position</td></tr><tr><td>Ctrl+M</td><td>Merge "
+"with previous word</td></tr><tr><td>Ctrl+Shift+M</td><td>Merge with next "
+"word</td></tr><tr><td>Ctrl+Delete</td><td>Delete word</td></"
+"tr><tr><td>Ctrl+{Left,Right}</td><td>Adjust left bounding box edge</td></"
+"tr><tr><td>Ctrl+Shift+{Left,Right}</td><td>Adjust right bounding box edge</"
+"td></tr><tr><td>Ctrl+{Up,Down}</td><td>Adjust top bounding box edge</td></"
+"tr><tr><td>Ctrl+Shift+{Up,Down}</td><td>Adjust bottom bounding box edge</"
+"td></tr><tr><td>Ctrl++</td><td>Increase font size</td></tr><tr><td>Ctrl+-</"
+"td><td>Decrease font size</td></tr></table>"
+msgstr ""
+"<table> <tr> <td> Tab</td><td>Champ suivant</td></tr><tr><td>Maj+Tab</"
+"td><td>Champ précédent</td></tr><tr><td>Down</td><td>Ligne suivante</td></"
+"tr><tr><td>Up</td><td>Ligne précédente</td></tr><tr>[X18 3X]Ctrl+Espace</"
+"td><td>Suggestions d’orthographe</td></tr><tr><td>Ctrl+Entrée</"
+"td><td>Ajouter un mot au dictionnaire</td></tr><tr><td>Ctrl+B</td><td>Gras</"
+"td></tr><tr><td>Ctrl+I</td><td>Italique</td></tr><tr><td>Ctrl+D</"
+"td><td>Diviser le mot à la position du curseur</td></tr><tr><td>Ctrl+M</"
+"td><td>Fusionner avec le mot précédent</td></tr><tr><td>Ctrl+Maj+M</"
+"td><td>Fusionner avec le mot suivant</td></tr><tr><td>Ctrl+Suppr</"
+"td><td>Supprimer le mot</td></tr><tr><td>Ctrl+{Gauche,Droite}</"
+"td><td>Ajuster le bord du cadre de sélection gauche</td></"
+"tr><tr><td>Ctrl+Maj+{Gauche, Droite}</td><td>Ajuster le bord du cadre de "
+"sélection droit</td></tr><tr><td>Ctrl+{Haut,Bas}</td><td>Ajuster le bord du "
+"cadre de sélection supérieur</td></tr><tr><td>Ctrl+Maj+{Haut,Bas}</"
+"td><td>Ajuster le bord du cadre de sélection inférieur</td></tr><tr><td>Ctrl+"
+"+</td><td>Augmenter la taille de la police</td></tr><tr><td>Ctrl+-</"
+"td><td>Diminuer la taille de la police</td></tr></table>"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:556
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:478
+msgid "Keyboard Shortcuts"
+msgstr "Raccourcis clavier"
+
+#: ../gtk/src/hocr/wip_proofreadwidget/HOCRProofReadWidget.cc:571
+#: ../qt/src/hocr/HOCRProofReadWidget.cc:493
+msgid "Confidence: %1"
+msgstr "Confiance : %1"
+
+#: ../gtk/src/MainWindow.cc:135 ../qt/src/MainWindow.cc:342
+msgid "Using tesseract"
+msgstr "Compilé avec tesseract"
+
+#: ../gtk/src/MainWindow.cc:184 ../qt/src/MainWindow.cc:209
+msgid "Select an image to begin..."
+msgstr "Ouvrir une image pour commencer..."
+
+#: ../gtk/src/MainWindow.cc:329 ../qt/src/MainWindow.cc:325
+msgid "Multiple sources (%1)"
+msgstr "Plusieurs sources (%1)"
+
+#: ../gtk/src/MainWindow.cc:331 ../qt/src/MainWindow.cc:327
+msgid "Ready"
+msgstr "Prêt"
+
+#: ../gtk/src/MainWindow.cc:483 ../qt/src/MainWindow.cc:464
+msgid "New version"
+msgstr "Nouvelle version"
+
+#: ../gtk/src/MainWindow.cc:483 ../qt/src/MainWindow.cc:464
+msgid "gImageReader %1 is available"
+msgstr "gImageReader %1 est disponible"
+
+#: ../gtk/src/MainWindow.cc:484 ../qt/src/MainWindow.cc:465
+msgid "Download"
+msgstr "Télécharger"
+
+#: ../gtk/src/MainWindow.cc:485 ../qt/src/MainWindow.cc:466
+msgid "Changelog"
+msgstr "Nouvelles"
+
+#: ../gtk/src/MainWindow.cc:486 ../qt/src/MainWindow.cc:467
+msgid "Don't notify again"
+msgstr "Ne plus demander"
+
+#: ../gtk/src/MainWindow.cc:507 ../qt/src/MainWindow.cc:515
+msgid "Don't show again"
+msgstr "Ne plus demander"
+
+#: ../gtk/src/MainWindow.cc:508 ../gtk/src/MainWindow.cc:521
+#: ../qt/src/MainWindow.cc:516
+msgid "Install"
+msgstr "Installer"
+
+#: ../gtk/src/MainWindow.cc:528 ../qt/src/MainWindow.cc:528
+msgid "Spelling dictionary missing"
+msgstr "Dictionnaire manquant"
+
+#: ../gtk/src/MainWindow.cc:528 ../qt/src/MainWindow.cc:528
+msgid "The spellcheck dictionary for %1 is not installed"
+msgstr ""
+"Le dictionnaire de vérification orthographique pour '%1' n'est pas installé"
+
+#: ../gtk/src/MainWindow.cc:535 ../gtk/src/MainWindow.cc:564
+#: ../qt/src/MainWindow.cc:534
+msgid "Installing spelling dictionary for '%1'"
+msgstr "Installation de dictionnaire de vérification orthographique pour '%1'"
+
+#: ../gtk/src/MainWindow.cc:556 ../gtk/src/MainWindow.cc:577
+#: ../gtk/src/MainWindow.cc:585 ../gtk/src/MainWindow.cc:633
+#: ../gtk/src/MainWindow.cc:638 ../gtk/src/TessdataManager.cc:60
+#: ../gtk/src/TessdataManager.cc:70 ../gtk/src/TessdataManager.cc:339
+#: ../qt/src/MainWindow.cc:553 ../qt/src/MainWindow.cc:566
+#: ../qt/src/MainWindow.cc:575 ../qt/src/MainWindow.cc:621
+#: ../qt/src/MainWindow.cc:626 ../qt/src/TessdataManager.cc:70
+#: ../qt/src/TessdataManager.cc:80 ../qt/src/TessdataManager.cc:288
+msgid "Error"
+msgstr "Erreur"
+
+#: ../gtk/src/MainWindow.cc:556 ../qt/src/MainWindow.cc:553
+msgid "Failed to install spelling dictionary: %1"
+msgstr ""
+"Impossible d'installer le dictionnaire de vérification orthographique: %1"
+
+#: ../gtk/src/MainWindow.cc:577 ../qt/src/MainWindow.cc:566
+msgid "Failed to create directory for spelling dictionaries."
+msgstr ""
+"Impossible de créer le répertoire pour les dictionnaires d'orthographe."
+
+#: ../gtk/src/MainWindow.cc:585 ../qt/src/MainWindow.cc:575
+msgid "Could not read %1: %2."
+msgstr "Impossible lire %1: %2."
+
+#: ../gtk/src/MainWindow.cc:612 ../qt/src/MainWindow.cc:601
+msgid "Downloading '%1'..."
+msgstr "Téléchargement de '%1'..."
+
+#: ../gtk/src/MainWindow.cc:633 ../qt/src/MainWindow.cc:621
+msgid ""
+"The following dictionaries could not be downloaded:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"Les fichiers suivants ne peuvent pas être téléchargés ou supprimés:\n"
+"%1\n"
+"\n"
+"Vérifiez la connexion et les autorisations de dossier.\n"
+"\n"
+"Remarque: Si vous n'avez pas les droits d'écriture dans les dossiers "
+"système, vous pouvez passer aux chemins du utilisateur dans le dialogue des "
+"préférences."
+
+#: ../gtk/src/MainWindow.cc:636 ../qt/src/MainWindow.cc:624
+msgid "Dictionaries installed"
+msgstr "Dictionnaires orthographiques installés"
+
+#: ../gtk/src/MainWindow.cc:636
+msgid ""
+"The following dictionaries were installed:\n"
+"%1"
+msgstr ""
+"Les dictionnaires suivants ont été installés:\n"
+"%1"
+
+#: ../gtk/src/MainWindow.cc:638 ../qt/src/MainWindow.cc:626
+msgid "No spelling dictionaries found for '%1'."
+msgstr "Pas de dictionnaires orthographiques trouvés pour '%1'."
+
+#: ../gtk/src/OutputEditorText.cc:38 ../qt/src/OutputEditorText.cc:42
+msgid "Page: %1\n"
+msgstr "Page : %1\n"
+
+#: ../gtk/src/OutputEditorText.cc:129
+#, fuzzy
+msgid "Close document"
+msgstr "Document"
+
+#: ../gtk/src/OutputEditorText.cc:133
+#, fuzzy
+msgid "Untitled %1"
+msgstr "Collée %1"
+
+#: ../gtk/src/OutputEditorText.cc:188 ../qt/src/OutputEditorText.cc:156
+#, fuzzy
+msgid "Document not saved"
+msgstr "Reconnaissance non enregistrée"
+
+#: ../gtk/src/OutputEditorText.cc:188 ../qt/src/OutputEditorText.cc:156
+#, fuzzy
+msgid "Save document before proceeding?"
+msgstr "Enregistrer la reconnaissance avant de continuer ?"
+
+#: ../gtk/src/OutputEditorText.cc:298 ../qt/src/OutputEditorText.cc:238
+msgid "Stripping line breaks..."
+msgstr "Suppression des sauts de ligne…"
+
+#: ../gtk/src/OutputEditorText.cc:309
+msgid "No highlight"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:329
+msgid "Highlight mode"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:334
+msgid "Check spelling"
+msgstr "Vérifier l'orthographe"
+
+#: ../gtk/src/OutputEditorText.cc:364 ../qt/src/OutputEditorText.cc:256
+msgid "%1 occurrences replaced"
+msgstr ""
+
+#: ../gtk/src/OutputEditorText.cc:412 ../qt/src/OutputEditorText.cc:301
+msgid "File: %1"
+msgstr "Fichier: %1"
+
+#: ../gtk/src/OutputEditorText.cc:415 ../qt/src/OutputEditorText.cc:304
+msgid "Page: %1"
+msgstr "Page: %1"
+
+#: ../gtk/src/OutputEditorText.cc:428 ../gtk/src/Recognizer.cc:243
+#: ../qt/src/Recognizer.cc:259
+msgid ""
+"\n"
+"[Failed to recognize page %1]\n"
+msgstr ""
+"\n"
+"[Echec de reconnaissance page %1]\n"
+
+#: ../gtk/src/OutputEditorText.cc:458 ../gtk/src/SourceManager.cc:297
+#: ../qt/src/OutputEditorText.cc:342 ../qt/src/SourceManager.cc:269
+msgid "Select Files"
+msgstr "Choisir fichiers"
+
+#: ../gtk/src/OutputEditorText.cc:532 ../qt/src/OutputEditorText.cc:410
+msgid "Save Output..."
+msgstr "Enregistrer la reconnaissance..."
+
+#: ../gtk/src/OutputEditorText.cc:584
+#, fuzzy
+msgid "Unsaved documents"
+msgstr "Document"
+
+#: ../gtk/src/OutputEditorText.cc:585 ../qt/src/OutputEditorText.cc:462
+msgid ""
+"The following documents have unsaved changes. Which documents do you want to "
+"save before proceeding?"
+msgstr ""
+
+#: ../gtk/src/RecognitionMenu.cc:100 ../qt/src/RecognitionMenu.cc:76
+msgid "No languages available"
+msgstr "Aucune langue disponible"
+
+#: ../gtk/src/RecognitionMenu.cc:100 ../qt/src/RecognitionMenu.cc:76
+msgid ""
+"No tesseract languages are available for use. Recognition will not work."
+msgstr ""
+"Aucun fichier langue n'étant disponible pour Tesseract, la reconnaissance ne "
+"fonctionnera pas."
+
+#: ../gtk/src/RecognitionMenu.cc:153 ../qt/src/RecognitionMenu.cc:134
+msgid "Multilingual"
+msgstr "Multilingue"
+
+#: ../gtk/src/RecognitionMenu.cc:205 ../qt/src/RecognitionMenu.cc:182
+msgid "Automatic page segmentation"
+msgstr "Segmentation automatique des pages"
+
+#: ../gtk/src/RecognitionMenu.cc:206 ../qt/src/RecognitionMenu.cc:183
+msgid "Page segmentation with orientation and script detection"
+msgstr "Segmentation des pages avec détection de orientation et de script"
+
+#: ../gtk/src/RecognitionMenu.cc:207 ../qt/src/RecognitionMenu.cc:184
+msgid "Assume single column of text"
+msgstr "Supposer une seule colonne de texte"
+
+#: ../gtk/src/RecognitionMenu.cc:208 ../qt/src/RecognitionMenu.cc:185
+msgid "Assume single block of vertically aligned text"
+msgstr "Supposer un seul bloc de texte aligné verticalement"
+
+#: ../gtk/src/RecognitionMenu.cc:209 ../qt/src/RecognitionMenu.cc:186
+msgid "Assume a single uniform block of text"
+msgstr "Supposer un seul bloc de texte uniforme"
+
+#: ../gtk/src/RecognitionMenu.cc:210 ../qt/src/RecognitionMenu.cc:187
+msgid "Assume a line of text"
+msgstr "Supposer une ligne de texte"
+
+#: ../gtk/src/RecognitionMenu.cc:211 ../qt/src/RecognitionMenu.cc:188
+msgid "Assume a single word"
+msgstr "Supposer un seul mot"
+
+#: ../gtk/src/RecognitionMenu.cc:212 ../qt/src/RecognitionMenu.cc:189
+msgid "Assume a single word in a circle"
+msgstr "Supposer un seul mot dans un cercle"
+
+#: ../gtk/src/RecognitionMenu.cc:213 ../qt/src/RecognitionMenu.cc:190
+msgid "Sparse text in no particular order"
+msgstr "Texte distribué sans ordre particulier"
+
+#: ../gtk/src/RecognitionMenu.cc:214 ../qt/src/RecognitionMenu.cc:191
+msgid "Sparse text with orientation and script detection"
+msgstr "Texte distribué avec détection de orientation et de script"
+
+#: ../gtk/src/RecognitionMenu.cc:228 ../qt/src/RecognitionMenu.cc:202
+msgid "Page segmentation mode"
+msgstr "Mode de segmentation des pages"
+
+#: ../gtk/src/RecognitionMenu.cc:232 ../qt/src/RecognitionMenu.cc:205
+msgid "Character whitelist / blacklist..."
+msgstr "Whitelist / blacklist des caractères..."
+
+#: ../gtk/src/RecognitionMenu.cc:238 ../qt/src/RecognitionMenu.cc:210
+msgid "Manage languages..."
+msgstr "Gérer langues..."
+
+#: ../gtk/src/Recognizer.cc:76 ../qt/src/Recognizer.cc:90
+msgid "Overwrite existing output"
+msgstr "Écraser la sortie existante"
+
+#: ../gtk/src/Recognizer.cc:77 ../qt/src/Recognizer.cc:91
+msgid "Skip processing source"
+msgstr "Ignorer la source de traitement"
+
+#: ../gtk/src/Recognizer.cc:121 ../qt/src/Recognizer.cc:137
+msgid "Current selection"
+msgstr "Sélection courante"
+
+#: ../gtk/src/Recognizer.cc:194 ../gtk/src/Recognizer.cc:428
+#: ../qt/src/Recognizer.cc:212 ../qt/src/Recognizer.cc:442
+msgid "Recognition errors occurred"
+msgstr "Des erreurs de reconnaissances sont apparues"
+
+#: ../gtk/src/Recognizer.cc:194 ../qt/src/Recognizer.cc:212
+msgid "Failed to initialize tesseract"
+msgstr "Échec de démarrage de tesseract"
+
+#: ../gtk/src/Recognizer.cc:218 ../qt/src/Recognizer.cc:236
+msgid "Source already recognized"
+msgstr ""
+
+#: ../gtk/src/Recognizer.cc:218 ../qt/src/Recognizer.cc:236
+msgid "One or more selected sources were already recognized. Proceed anyway?"
+msgstr ""
+
+#: ../gtk/src/Recognizer.cc:237 ../gtk/src/Recognizer.cc:351
+#: ../qt/src/Recognizer.cc:252 ../qt/src/Recognizer.cc:364
+msgid "Recognizing page %1 (%2 of %3)"
+msgstr "Reconnaissance page %1 (%2 de %3)"
+
+#: ../gtk/src/Recognizer.cc:242 ../qt/src/Recognizer.cc:258
+msgid "- Page %1: failed to render page"
+msgstr "- Page %1 : erreur de rendu"
+
+#: ../gtk/src/Recognizer.cc:270 ../gtk/src/Recognizer.cc:298
+#: ../gtk/src/Recognizer.cc:311 ../gtk/src/Recognizer.cc:403
+#: ../qt/src/Recognizer.cc:285 ../qt/src/Recognizer.cc:313
+#: ../qt/src/Recognizer.cc:326 ../qt/src/Recognizer.cc:417
+msgid "Recognizing..."
+msgstr "Reconnaissance en cours..."
+
+#: ../gtk/src/Recognizer.cc:357 ../qt/src/Recognizer.cc:370
+msgid "- %1:%2: failed to render page"
+msgstr "- Page %1 : erreur de rendu"
+
+#: ../gtk/src/Recognizer.cc:369 ../qt/src/Recognizer.cc:383
+msgid "- %1: output already exists, skipping"
+msgstr "-% 1 : la sortie existe déjà, source ignorée"
+
+#: ../gtk/src/Recognizer.cc:373 ../qt/src/Recognizer.cc:387
+msgid "- %1: failed to create output file"
+msgstr "- %1 : échec de la création de sortie"
+
+#: ../gtk/src/Recognizer.cc:428 ../qt/src/Recognizer.cc:442
+msgid "The following errors occurred:"
+msgstr "Les erreurs suivantes sont survenues :"
+
+#: ../gtk/src/scanner/ScannerSane.cc:86 ../gtk/src/scanner/ScannerTwain.cc:287
+#: ../qt/src/scanner/ScannerSane.cc:85 ../qt/src/scanner/ScannerTwain.cc:286
+msgid "Scan canceled"
+msgstr "Scan annulé"
+
+#: ../gtk/src/scanner/ScannerSane.cc:161 ../gtk/src/scanner/ScannerTwain.cc:186
+#: ../qt/src/scanner/ScannerSane.cc:159 ../qt/src/scanner/ScannerTwain.cc:178
+msgid "No scanner specified"
+msgstr "Aucun scanner spécifié"
+
+#: ../gtk/src/scanner/ScannerSane.cc:170 ../gtk/src/scanner/ScannerTwain.cc:195
+#: ../qt/src/scanner/ScannerSane.cc:168 ../qt/src/scanner/ScannerTwain.cc:187
+msgid "Unable to connect to scanner"
+msgstr "Impossible de se connecter au scanner"
+
+#: ../gtk/src/scanner/ScannerSane.cc:405 ../gtk/src/scanner/ScannerTwain.cc:266
+#: ../gtk/src/scanner/ScannerTwain.cc:291 ../qt/src/scanner/ScannerSane.cc:403
+#: ../qt/src/scanner/ScannerTwain.cc:258 ../qt/src/scanner/ScannerTwain.cc:290
+msgid "Unable to start scan"
+msgstr "Impossible de commencer le scan"
+
+#: ../gtk/src/scanner/ScannerSane.cc:413 ../gtk/src/scanner/ScannerSane.cc:463
+#: ../gtk/src/scanner/ScannerTwain.cc:317 ../qt/src/scanner/ScannerSane.cc:411
+#: ../qt/src/scanner/ScannerSane.cc:461 ../qt/src/scanner/ScannerTwain.cc:316
+msgid "Error communicating with scanner"
+msgstr "Impossible de communiquer avec le scanner"
+
+#: ../gtk/src/scanner/ScannerSane.cc:523 ../qt/src/scanner/ScannerSane.cc:518
+msgid "Failed to save image"
+msgstr "Impossible d'enregistrer l'image"
+
+#: ../gtk/src/scanner/ScannerSane.cc:803 ../qt/src/scanner/ScannerSane.cc:798
+msgid "Operation is cancelled."
+msgstr "L'opération est annulée."
+
+#: ../gtk/src/scanner/ScannerSane.cc:805 ../qt/src/scanner/ScannerSane.cc:800
+msgid "Device is busy."
+msgstr "L'appareil est occupé."
+
+#: ../gtk/src/scanner/ScannerSane.cc:807 ../qt/src/scanner/ScannerSane.cc:802
+msgid "Cover is opened."
+msgstr "Le capot est ouvert."
+
+#: ../gtk/src/scanner/ScannerSane.cc:809 ../qt/src/scanner/ScannerSane.cc:804
+msgid "Document feeder jammed."
+msgstr "Le chargeur de documents est bloqué."
+
+#: ../gtk/src/scanner/ScannerSane.cc:811 ../qt/src/scanner/ScannerSane.cc:806
+msgid "Document feeder out of documents."
+msgstr "Il n'y a plus de documents dans le chargeur de documents."
+
+#: ../gtk/src/scanner/ScannerSane.cc:813 ../qt/src/scanner/ScannerSane.cc:808
+msgid "Access to scanner is denied."
+msgstr "L'accès au scanner est refusé."
+
+#: ../gtk/src/SourceManager.cc:184 ../qt/src/SourceManager.cc:169
+msgid "Enter password for file '%1':"
+msgstr "Entrer le mot de passe pour le fichier « %1 » :"
+
+#: ../gtk/src/SourceManager.cc:227 ../qt/src/SourceManager.cc:196
+msgid "PDF with text"
+msgstr "PDF avec texte"
+
+#: ../gtk/src/SourceManager.cc:227 ../qt/src/SourceManager.cc:196
+msgid ""
+"The PDF file already contains text:\n"
+"%1\n"
+"Open it regardless?"
+msgstr ""
+"Ces fichiers PDF contiennent déjà du texte :\n"
+"%1\n"
+"L'ouvrir quand même ?"
+
+#: ../gtk/src/SourceManager.cc:292 ../qt/src/SourceManager.cc:268
+msgid "Images and PDFs"
+msgstr "Images et PDFs"
+
+#: ../gtk/src/SourceManager.cc:303 ../qt/src/SourceManager.cc:311
+msgid "Clipboard Error"
+msgstr "Erreur de presse-papiers"
+
+#: ../gtk/src/SourceManager.cc:303 ../qt/src/SourceManager.cc:311
+msgid "Failed to read the clipboard."
+msgstr "Impossible de lire le presse-papiers."
+
+#: ../gtk/src/SourceManager.cc:307 ../qt/src/SourceManager.cc:315
+#: ../qt/src/SourceManager.cc:321
+msgid "Pasted %1"
+msgstr "Collée %1"
+
+#: ../gtk/src/SourceManager.cc:325 ../qt/src/SourceManager.cc:339
+msgid "Screenshot Error"
+msgstr "Échec de la capture d'écran"
+
+#: ../gtk/src/SourceManager.cc:325 ../qt/src/SourceManager.cc:339
+msgid "Failed to take screenshot."
+msgstr "Échec de la capture d'écran."
+
+#: ../gtk/src/SourceManager.cc:329 ../qt/src/SourceManager.cc:343
+msgid "Screenshot %1"
+msgstr "Capture d'écran %1"
+
+#: ../gtk/src/SourceManager.cc:335 ../qt/src/SourceManager.cc:350
+msgid "Saving image..."
+msgstr "Enregistrement de l'image..."
+
+#: ../gtk/src/SourceManager.cc:342 ../qt/src/SourceManager.cc:363
+msgid "Cannot Write File"
+msgstr "Impossible écrire fichier"
+
+#: ../gtk/src/SourceManager.cc:342 ../qt/src/SourceManager.cc:363
+msgid "Could not write to %1."
+msgstr "Impossible écrire à %1."
+
+#: ../gtk/src/SourceManager.cc:381
+msgid "Delete File?"
+msgstr "Supprimer fichier ?"
+
+#: ../gtk/src/SourceManager.cc:381 ../qt/src/SourceManager.cc:391
+msgid "Delete the following files?"
+msgstr "Supprimer les fichiers suivants ?"
+
+#: ../gtk/src/SourceManager.cc:423 ../qt/src/SourceManager.cc:468
+msgid "Open output"
+msgstr "Ouvrir le résultat"
+
+#: ../gtk/src/SourceManager.cc:423 ../qt/src/SourceManager.cc:468
+msgid ""
+"Both a text and a hOCR output were found. Which one do you want to open?"
+msgstr ""
+"Un texte et une sortie hOCR ont été trouvés. Lequel voulez-vous ouvrir ?"
+
+#: ../gtk/src/SourceManager.cc:504 ../qt/src/SourceManager.cc:496
+msgid "Missing File"
+msgstr "Fichier manquant"
+
+#: ../gtk/src/SourceManager.cc:504 ../qt/src/SourceManager.cc:496
+msgid ""
+"The following file has been deleted or moved:\n"
+"%1"
+msgstr ""
+"Le fichier suivant a été supprimé ou déplacé:\n"
+"%1"
+
+#: ../gtk/src/SubstitutionsManager.cc:33 ../qt/src/SubstitutionsManager.cc:69
+msgid "Search for"
+msgstr "Rechercher"
+
+#: ../gtk/src/SubstitutionsManager.cc:34 ../qt/src/SubstitutionsManager.cc:69
+msgid "Replace with"
+msgstr "Remplacer par"
+
+#: ../gtk/src/SubstitutionsManager.cc:69 ../gtk/src/SubstitutionsManager.cc:103
+#: ../qt/src/SubstitutionsManager.cc:102 ../qt/src/SubstitutionsManager.cc:139
+msgid "Substitutions List"
+msgstr "Liste substitutions"
+
+#: ../gtk/src/SubstitutionsManager.cc:70 ../qt/src/SubstitutionsManager.cc:102
+msgid "Open Substitutions List"
+msgstr "Ouvrir liste de substitutions"
+
+#: ../gtk/src/SubstitutionsManager.cc:75 ../qt/src/SubstitutionsManager.cc:108
+msgid "Error Reading File"
+msgstr "Impossible lire le fichier"
+
+#: ../gtk/src/SubstitutionsManager.cc:75 ../qt/src/SubstitutionsManager.cc:108
+msgid "Unable to read '%1'."
+msgstr "Impossible de lire '%1'."
+
+#: ../gtk/src/SubstitutionsManager.cc:97 ../qt/src/SubstitutionsManager.cc:133
+msgid "Errors Occurred Reading File"
+msgstr "Des erreurs sont survenues"
+
+#: ../gtk/src/SubstitutionsManager.cc:97 ../qt/src/SubstitutionsManager.cc:133
+msgid "Some entries of the substitutions list could not be read."
+msgstr ""
+"Certaines entrées de la liste des substitutions ne peuvent pas être lues."
+
+#: ../gtk/src/SubstitutionsManager.cc:104 ../qt/src/SubstitutionsManager.cc:139
+msgid "Save Substitutions List"
+msgstr "Enregistrer liste de substitutions"
+
+#: ../gtk/src/SubstitutionsManager.cc:110 ../qt/src/SubstitutionsManager.cc:145
+msgid "Error Saving File"
+msgstr "Impossible d'enregistrer le fichier"
+
+#: ../gtk/src/SubstitutionsManager.cc:110 ../qt/src/SubstitutionsManager.cc:145
+msgid "Unable to write to '%1'."
+msgstr "Impossible d'enregistrer '%1'."
+
+#: ../gtk/src/SubstitutionsManager.cc:127 ../qt/src/SubstitutionsManager.cc:158
+msgid "Save List?"
+msgstr "Enregistrer la liste ?"
+
+#: ../gtk/src/SubstitutionsManager.cc:127 ../qt/src/SubstitutionsManager.cc:158
+msgid "Do you want to save the current list?"
+msgstr "Voulez-vous enregistrer la liste actuelle ?"
+
+#: ../gtk/src/TessdataManager.cc:60 ../qt/src/TessdataManager.cc:70
+msgid ""
+"A session connection to the PackageKit backend is required for managing "
+"system-wide tesseract language packs, but it was not found. This service is "
+"usually provided by a software-management application such as Gnome "
+"Software. Please install software which provides the necessary PackageKit "
+"interface, use other system package management software to manage the "
+"tesseract language packs directly, or switch to using the user tessdata path "
+"in the configuration dialog."
+msgstr ""
+"Une connexion de session au backend PackageKit est nécessaire pour gérer les "
+"packs linguistiques tesseract à l'échelle du système, mais elle n'a pas été "
+"trouvée. Ce service est généralement fourni par une application de gestion "
+"de logiciels telle que Gnome Software. Veuillez installer un logiciel qui "
+"fournit l'interface PackageKit nécessaire, utiliser un autre logiciel de "
+"gestion des paquets système pour gérer directement les paquets de langue "
+"tesseract, ou passer à l'utilisation du chemin d'accès aux données d'essai "
+"de l'utilisateur dans la boîte de dialogue de configuration."
+
+#: ../gtk/src/TessdataManager.cc:65 ../qt/src/TessdataManager.cc:75
+msgid "Fetching available languages"
+msgstr "Téléchargement de la liste des langues disponibles"
+
+#: ../gtk/src/TessdataManager.cc:70 ../gtk/src/TessdataManager.cc:96
+#: ../gtk/src/TessdataManager.cc:197 ../qt/src/TessdataManager.cc:80
+#: ../qt/src/TessdataManager.cc:97 ../qt/src/TessdataManager.cc:170
+msgid "Failed to fetch list of available languages: %1"
+msgstr "Impossible de télécharger la liste des langues disponibles: %1"
+
+#: ../gtk/src/TessdataManager.cc:104 ../qt/src/TessdataManager.cc:107
+msgid "Parsing error: %1"
+msgstr "Erreur syntaxique: %1"
+
+#: ../gtk/src/TessdataManager.cc:235 ../qt/src/TessdataManager.cc:205
+msgid "Applying changes..."
+msgstr "Application des modifications..."
+
+#: ../gtk/src/TessdataManager.cc:297 ../qt/src/TessdataManager.cc:251
+msgid "Failed to create directory for tessdata files."
+msgstr "Impossible de créer le répertoire pour les fichiers tessdata."
+
+#: ../gtk/src/TessdataManager.cc:306 ../qt/src/TessdataManager.cc:260
+msgid "Downloading %1..."
+msgstr "Téléchargement de %1..."
+
+#: ../gtk/src/TessdataManager.cc:330
+msgid ""
+"The following files could not be downloaded or removed:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"Les fichiers suivants ne peuvent pas être téléchargés ou supprimés:\n"
+"%1\n"
+"\n"
+"Vérifiez la connexion et les autorisations de dossier.\n"
+"\n"
+"Remarque: Si vous n'avez pas les droits d'écriture dans les dossiers "
+"système, vous pouvez passer aux chemins du utilisateur dans le dialogue des "
+"préférences."
+
+#: ../gtk/src/Utils.cc:127
+msgid "Yes"
+msgstr "Oui"
+
+#: ../gtk/src/Utils.cc:130
+msgid "Yes to all"
+msgstr "Oui à tout"
+
+#: ../gtk/src/Utils.cc:136
+msgid "No"
+msgstr "Non"
+
+#: ../gtk/src/Utils.cc:139
+msgid "No to all"
+msgstr "Non à tout"
+
+#: ../gtk/src/Utils.cc:142
+msgid "Discard"
+msgstr "Jeter"
+
+#: ../gtk/src/Utils.cc:145
+#, fuzzy
+msgid "Discard all"
+msgstr "Jeter"
+
+#: ../gtk/src/Utils.cc:148 ../qt/src/SourceManager.cc:469
+msgid "Text"
+msgstr "Texte"
+
+#: ../gtk/src/Utils.cc:151 ../qt/src/SourceManager.cc:470
+msgid "hOCR"
+msgstr "hOCR"
+
+#: ../qt/data/AboutDialog.ui.h:1
+msgid "About gImageReader"
+msgstr "À propos de gImageReader"
+
+#: ../qt/data/AboutDialog.ui.h:3
+#, fuzzy
+msgid ""
+"<html><head/><body><p>&nbsp;</p><p>A graphical frontend to tesseract-ocr</"
+"p><p><a href=\"https://github.com/manisandro/gImageReader/\">Website</a></"
+"p><p>&nbsp;</p></body></html>"
+msgstr ""
+"<html><head/><body><p>&nbsp;</p><p>Une interface graphique pour tesseract-"
+"ocr</p><p><a href=\"https://github.com/manisandro/gImageReader/\">Website</"
+"a></p><p>&nbsp;</p></body></html>"
+
+#: ../qt/data/AboutDialog.ui.h:4
+msgid "Credits"
+msgstr "Crédits"
+
+#: ../qt/data/AboutDialog.ui.h:5
+msgid "License"
+msgstr "Licence"
+
+#: ../qt/data/BatchModeDialog.ui.h:4
+msgid ""
+"In batch mode, each input source is processed separately and the output "
+"saved side-by-side to the input file."
+msgstr ""
+"En mode de traitement par lots, chaque source d'entrée est traitée "
+"séparément et la sortie enregistrée côte à côte dans le fichier d'entrée."
+
+#: ../qt/data/ConfigDialog.ui.h:14
+msgid "System encoding"
+msgstr "Codage du système"
+
+#: ../qt/data/ConfigDialog.ui.h:15
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../qt/data/ConfigDialog.ui.h:19
+msgid "Text file encoding:"
+msgstr "Encodage du fichier texte :"
+
+#: ../qt/data/CrashHandler.ui.h:2
+#, no-c-format
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">The application has "
+"crashed</span></p><p>Apologies for the inconvenience. To help improve the "
+"application, please consider reporting the issue to <a href=\"mailto:"
+"manisandro@gmail.com?subject=gImageReader%20Crash\">manisandro@gmail.com</"
+"a>. Please try to describe what you were doing before the application "
+"crashed. Also, include the information below. Thank you.</p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">L'application a "
+"cessé de fonctionner</span></p><p>Désolé pour le désagrément. Pour aider à "
+"améliorer l'application, s'il vous plait signalez le problème à <a "
+"href=\"mailto:manisandro@gmail.com? subject=gImageReader% 20Crash\"> "
+"manisandro@gmail.com </a>. Essayez de décrire ce que vous faisiez avant le "
+"problème. Inclure aussi les informations ci-dessous. Merci.</p></body></html>"
+
+#: ../qt/data/CrashHandler.ui.h:3
+#, fuzzy
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Tesseract has "
+"aborted</span></p><p>Tesseract (the OCR engine) has aborted while "
+"recognizing text. This may occur if the used traineddatas are corrupt or "
+"incomplatible with the version of tesseract in use, or due to a bug in "
+"tesseract.</p><p>The stacktrace below may provide additional information "
+"about where the crash occurred.</p></body></html>"
+msgstr ""
+"<b>Tesseract a avorté</b>\n"
+"\n"
+"Tesseract (le moteur d'OCR) a avorté pendant la reconnaissance de texte. "
+"Cela peut se produire si les données traineddata utilisées sont corrompues "
+"ou incompatibles avec la version de tesseract utilisée, ou en raison d'un "
+"bug dans tesseract.\n"
+"\n"
+"Le stacktrace ci-dessous peut fournir des informations supplémentaires sur "
+"l'endroit où le crash s'est produit.\n"
+
+#: ../qt/data/MainWindow.ui.h:18
+msgid "Flatbed"
+msgstr "Scanner à plat"
+
+#: ../qt/data/MainWindow.ui.h:19
+msgid "ADF Front"
+msgstr "ADF face avant"
+
+#: ../qt/data/MainWindow.ui.h:20
+msgid "ADF Back"
+msgstr "ADF partie arrière"
+
+#: ../qt/data/MainWindow.ui.h:21
+msgid "ADF Duplex"
+msgstr "ADF duplex"
+
+#: ../qt/data/MainWindow.ui.h:23
+msgid "Zoom In"
+msgstr "Zoom Avant"
+
+#: ../qt/data/MainWindow.ui.h:25
+msgid "Zoom Out"
+msgstr "Zoom Arrière"
+
+#: ../qt/data/MainWindow.ui.h:27
+msgid "Normal Size"
+msgstr "Taille Normale"
+
+#: ../qt/data/MainWindow.ui.h:29
+msgid "Best Fit"
+msgstr "Ajuster à la page"
+
+#: ../qt/data/MainWindow.ui.h:31
+msgid "Rotate Left"
+msgstr "Tourner à dans le sens anti-horaire"
+
+#: ../qt/data/MainWindow.ui.h:32
+msgid "Rotate left"
+msgstr "Tourner à dans le sens anti-horaire"
+
+#: ../qt/data/MainWindow.ui.h:33
+msgid "Rotate Right"
+msgstr "Tourner dans le sens horaire"
+
+#: ../qt/data/MainWindow.ui.h:34
+msgid "Rotate right"
+msgstr "Tourner dans le sens horaire"
+
+#: ../qt/data/MainWindow.ui.h:35
+msgid "Image Controls"
+msgstr "Régler les paramètres de l'image"
+
+#: ../qt/data/MainWindow.ui.h:37
+msgid "Autodetect Layout"
+msgstr "Détecter la mise en page"
+
+#: ../qt/data/MainWindow.ui.h:39
+msgid "Toggle Output Pane"
+msgstr "Montrer / cacher le panneau de reconnaissance"
+
+#: ../qt/data/PdfExportDialog.ui.h:1
+msgid "PDF Export"
+msgstr "Exportation PDF"
+
+#: ../qt/data/PdfExportDialog.ui.h:5 ../qt/data/PdfExportWidget.ui.h:4
+msgid "Backend:"
+msgstr "Arrière-plan :"
+
+#: ../qt/data/PdfExportDialog.ui.h:8 ../qt/data/PdfExportWidget.ui.h:7
+msgid "Portrait"
+msgstr "Portrait"
+
+#: ../qt/data/PdfExportDialog.ui.h:9 ../qt/data/PdfExportWidget.ui.h:8
+msgid "Landscape"
+msgstr "Paysage"
+
+#: ../qt/src/hocr/HOCRPdfExporter.cc:311
+msgid "Failed to write to file"
+msgstr "Impossible écrire le fichier"
+
+#: ../qt/src/hocr/HOCRPdfExportWidget.cc:296
+msgid ""
+"<html><head/><body><ul><li>PoDoFo: offers more image compression options, "
+"but does not handle complex scripts.</li><li>QPrinter: only supports JPEG "
+"compression for storing images, but supports complex scripts.</li></ul></"
+"body></html>"
+msgstr ""
+"<html><head/><body><ul><li>PoDoFo : offre plus d'options de compression "
+"d'image mais ne gère pas les scripts complexes. </li><li>QPrinter : prend "
+"uniquement en charge la compression JPEG pour le stockage d'images mais "
+"prend en charge scripts complexes. </li></ul></body></html>"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:90
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:91
+msgid "Save as hOCR text"
+msgstr "Enregistrer sous forme de texte hOCR"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:112
+#: ../qt/src/Ui_OutputEditorText.hh:115
+msgid "Find and Replace"
+msgstr "Trouver et remplacer"
+
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:118
+#: ../qt/src/hocr/Ui_OutputEditorHOCR.hh:119
+#, fuzzy
+msgid "Show proofread widget"
+msgstr "Montrer aperçu"
+
+#: ../qt/src/MainWindow.cc:624
+msgid ""
+"The following dictionary files were installed:\n"
+"%1"
+msgstr ""
+"Les dictionnaires suivants ont été installés:\n"
+"%1"
+
+#: ../qt/src/OutputEditorText.cc:520 ../qt/src/SourceManager.cc:252
+msgid "No recent files"
+msgstr "Aucun fichier récent"
+
+#: ../qt/src/SourceManager.cc:391
+msgid "Delete Files"
+msgstr "Supprimer les fichiers"
+
+#: ../qt/src/TessdataManager.cc:281
+msgid ""
+"The following files could not be downloaded or removed:\n"
+"%1\n"
+"\n"
+"Check the connectivity and directory permissions.\n"
+"Hint: If you don't have write permissions in system folders, you can switch "
+"to user paths in the settings dialog."
+msgstr ""
+"Les fichiers suivants ne peuvent pas être téléchargés ou supprimés :\n"
+"%1\n"
+"\n"
+"Vérifiez la connexion et les autorisations de dossier.\n"
+"Note : si vous n'avez pas les droits d'écriture dans les dossiers système, "
+"vous pouvez passer aux chemins d'accès utilisateur dans la boîte de dialogue "
+"des paramètres."
+
+#: ../qt/src/Ui_MainWindow.hh:50
+msgid "Output"
+msgstr "Reconnaissance"
+
+#: ../qt/src/Ui_MainWindow.hh:135
+msgid "OCR mode:"
+msgstr "Mode OCR :"
+
+#. Sources toolbar
+#: ../qt/src/Ui_MainWindow.hh:194
+msgid "Add folder"
+msgstr "Ajouter un dossier"
+
+#: ../qt/src/Ui_MainWindow.hh:195
+msgid "Paste"
+msgstr "Coller"
+
+#: ../qt/src/Ui_MainWindow.hh:196
+msgid "Take Screenshot"
+msgstr "Capture d'écran"
+
+#: ../qt/src/Ui_MainWindow.hh:204
+msgid "Remove Image"
+msgstr "Supprimer l'image de la liste"
+
+#: ../qt/src/Ui_MainWindow.hh:207
+msgid "Delete Image"
+msgstr "Supprimer image"
+
+#: ../qt/src/Ui_MainWindow.hh:210
+msgid "Clear List"
+msgstr "Vider liste"
+
+#: ../qt/src/Ui_OutputEditorText.hh:110
+msgid "Strip Line Breaks"
+msgstr "Supprimer sauts de ligne"
+
+#: ../qt/src/Ui_OutputEditorText.hh:124
+msgid "Save Output"
+msgstr "Enregistrer la reconnaissance"
+
+#: ../qt/src/Ui_OutputEditorText.hh:126
+msgid "Clear Output"
+msgstr "Supprimer la reconnaissance"
+
+#: ../qt/src/Ui_OutputEditorText.hh:149
+msgid "Add tab"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Form"
+#~ msgstr "Format :"
+
+#~ msgid ""
+#~ "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+#~ msgstr ""
+#~ "Un fichier nommé \"% 1\" existe déjà. Êtes-vous sûr de vouloir le "
+#~ "remplacer ?"
+
+#~ msgid "Overwrite File?"
+#~ msgstr "Remplacer fichier ?"
+
+#, fuzzy
+#~ msgid "New document %1"
+#~ msgstr "Document"
+
+#~ msgid "Recent"
+#~ msgstr "Fichiers Récents"
+
+#~ msgid "Failed to create output"
+#~ msgstr "Échec de la création de sortie"
+
+#~ msgid "Failed to create output. The returned error was: %1"
+#~ msgstr "Échec de la création de sortie. L'erreur retournée était : %1"
+
+#, no-c-format
+#~ msgid ""
+#~ "&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-"
+#~ "weight:600;&quot;&gt;The application has crashed&lt;/span&gt;&lt;/p&gt;"
+#~ "&lt;p&gt;Apologies for the inconvenience. To help improve the "
+#~ "application, please consider reporting the issue to &lt;a href=&quot;"
+#~ "mailto:manisandro@gmail.com?subject=gImageReader%20Crash&quot;&gt;"
+#~ "manisandro@gmail.com&lt;/a&gt;. Please try to describe what you were "
+#~ "doing before the application crashed. Also, include the information "
+#~ "below. Thank you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#~ msgstr ""
+#~ "&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-"
+#~ "weight:600;&quot;&gt;L'application a cessé de fonctionner&lt;/span&gt; "
+#~ "&lt;/p&gt;&lt;p&gt;Désolé pour le désagrément. Pour aider à améliorer "
+#~ "l'application, s'il vous plait signalez le problème à &lt;a href=&quot;"
+#~ "mailto:manisandro@gmail.com?subject=gImageReader%20Crash&quot;&gt;"
+#~ "manisandro@gmail.com&lt;/a&gt;. Essayez de décrire ce que vous faisiez "
+#~ "avant le problème. Inclure aussi les informations ci-dessous. Merci.&lt;/"
+#~ "p&gt;&lt;/body&gt;&lt;/html&gt; "
+
+#, fuzzy
+#~ msgid ""
+#~ "&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-"
+#~ "weight:600;&quot;&gt;Tesseract has aborted&lt;/span&gt;&lt;/p&gt;&lt;p&gt;"
+#~ "Tesseract (the OCR engine) has aborted while recognizing text. This may "
+#~ "occur if the used traineddatas are corrupt or incomplatible with the "
+#~ "version of tesseract in use, or due to a bug in tesseract.&lt;/p&gt;&lt;"
+#~ "p&gt;The stacktrace below may provide additional information about where "
+#~ "the crash occurred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Tesseract a "
+#~ "avorté</span></p><p>Tesseract (le moteur d'OCR) a avorté pendant la "
+#~ "reconnaissance de texte. Cela peut se produire si les données traineddata "
+#~ "utilisées sont corrompues ou incompatibles avec la version de tesseract "
+#~ "utilisée, ou en raison d'un bug dans tesseract.</p><p>Le stacktrace ci-"
+#~ "dessous peut fournir des informations supplémentaires sur l'endroit où le "
+#~ "crash s'est produit.</p></body></html>"
+
+#, fuzzy
+#~ msgid ""
+#~ "&lt;small&gt;&lt;b&gt;Example:&lt;/b&gt; 1-10, 13, 14-18&lt;/small&gt;"
+#~ msgstr "<small><b>Par exemple:</b> 1-10, 13, 14-18</small>"
+
+#~ msgid "Multiple sources"
+#~ msgstr "Plusieurs sources"
+
+#~ msgid ""
+#~ "\n"
+#~ "- Page %1: failed to render page"
+#~ msgstr ""
+#~ "\n"
+#~ "- Page %1: erreur de rendering"
+
+#~ msgid "The following errors occurred:%1"
+#~ msgstr "Les erreurs suivantes sont survenues:%1"
+
+#~ msgid "The following files will be deleted:%1"
+#~ msgstr "Les fichiers suivant seront supprimés:%1"
+
+#~ msgid "Failed to open file"
+#~ msgstr "Impossible ouvrir le fichier"
+
+#~ msgid "The file could not be opened: %1."
+#~ msgstr "Le fichier n'a pas pu être ouvert: %1."
+
+#~ msgid "Invalid hOCR file"
+#~ msgstr "Fichier hOCR invalide"
+
+#~ msgid "<b>The application has crashed</b>"
+#~ msgstr "<b>L'application a cessé de fonctionner</b>"
+
+#~ msgid ""
+#~ "Tesseract crashed with the following message:\n"
+#~ "\n"
+#~ "%1\n"
+#~ "\n"
+#~ "This typically happens for one of the following reasons:\n"
+#~ "- Outdated traineddata files are used.\n"
+#~ "- Auxiliary language data files are missing.\n"
+#~ "- Corrupt language data files.\n"
+#~ "\n"
+#~ "Make sure your language data files are valid and compatible with "
+#~ "tesseract %2."
+#~ msgstr ""
+#~ "Tesseract écrasé avec le message suivant: \n"
+#~ "\n"
+#~ "%1\n"
+#~ "\n"
+#~ "Cela se produit généralement pour une des raisons suivantes:\n"
+#~ "- Des fichiers traineddata obsolètes sont utilisés.\n"
+#~ "- Les fichiers de données linguistiques auxiliaires manquent.\n"
+#~ "- Des fichiers de données linguistiques sont corrompus.\n"
+#~ "\n"
+#~ "Assurez-vous que vos fichiers de données linguistiques sont valides et "
+#~ "compatibles avec tesseract2%."
+
+#~ msgid "Could not read %1: %2"
+#~ msgstr "Impossible lire %1: %2"
+
+#~ msgid "gImageReader"
+#~ msgstr "gImageReader"
+
+#~ msgid "Document font:"
+#~ msgstr "Police:"
+
+#~ msgid "Scale:"
+#~ msgstr "Echelle:"
+
+#~ msgid "Errors occurred"
+#~ msgstr "Des erreurs sont apparues"
+
+#~ msgid ""
+#~ "The following pages could not be rendered:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Les pages suivantes n'ont pas pu être lues:\n"
+#~ "%1"
+
+#~ msgid "substitution_list.txt"
+#~ msgstr "liste_substitutions.txt"
+
+#~ msgid "Detect script and orientation"
+#~ msgstr "Détecter script et orientation"
+
+#~ msgid ""
+#~ "PackageKit is required for managing tesseract language packs, but it was "
+#~ "not found. Please use the system package management software to manage "
+#~ "the tesseract language packs."
+#~ msgstr ""
+#~ "PackageKit est nécessaire pour gérer les packs linguistiques de "
+#~ "tesseract, mais il n'a pas été trouvé. S'il vous plaît utilisez "
+#~ "l'application de gestion des paquets du système pour gérer les packs "
+#~ "linguistiques tesseract."
+
+#~ msgid ""
+#~ "\n"
+#~ "\tFailed to initialize tesseract"
+#~ msgstr ""
+#~ "\n"
+#~ "\tImpossible d'initialiser tesseract"
+
+#~ msgid "So&urces"
+#~ msgstr "Sources"
+
+#~ msgid "&Output"
+#~ msgstr "Reconnaissance"
+
+#~ msgid "To recognize specific areas, drag rectangles over them."
+#~ msgstr ""
+#~ "Pour reconnaître des régions spécifiques, tracer des rectangles par "
+#~ "glisser-déplacer."
+
+#~ msgid "Rendering image..."
+#~ msgstr "Restitution de l'image..."
+
+#~ msgid "en_US"
+#~ msgstr "fr_FR"
+
+#, fuzzy
+#~ msgid "So&amp;urces"
+#~ msgstr "Sources"
+
+#, fuzzy
+#~ msgid "&amp;Output"
+#~ msgstr "reconnaissance"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuration"

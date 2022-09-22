@@ -1,0 +1,52 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="angle">../../data/icons/angle.png</file>
+        <file alias="autolayout">../../data/icons/autolayout.png</file>
+        <file alias="brightness">../../data/icons/brightness.png</file>
+        <file alias="contrast">../../data/icons/contrast.png</file>
+        <file alias="controls">../../data/icons/controls.png</file>
+        <file alias="filtering">../../data/icons/filtering.png</file>
+        <file alias="ins_append">../../data/icons/ins_append.png</file>
+        <file alias="ins_cursor">../../data/icons/ins_cursor.png</file>
+        <file alias="ins_replace">../../data/icons/ins_replace.png</file>
+        <file alias="ins_hocr_append">../../data/icons/ins_hocr_append.png</file>
+        <file alias="ins_hocr_before">../../data/icons/ins_hocr_before.png</file>
+        <file alias="ins_hocr_replace">../../data/icons/ins_hocr_replace.png</file>
+        <file alias="page">../../data/icons/page.png</file>
+        <file alias="resolution">../../data/icons/resolution.png</file>
+        <file alias="stripcrlf">../../data/icons/stripcrlf.png</file>
+        <file alias="logo_48">../../data/icons/48x48/gimagereader.png</file>
+        <file alias="logo_128">../../data/icons/128x128/gimagereader.png</file>
+        <file alias="logo_256">../../data/icons/256x256/gimagereader.png</file>
+        <file alias="select">../../data/icons/select.png</file>
+        <file alias="item_block">../../data/icons/item_block.png</file>
+        <file alias="item_line">../../data/icons/item_line.png</file>
+        <file alias="item_page">../../data/icons/item_page.png</file>
+        <file alias="item_par">../../data/icons/item_par.png</file>
+        <file alias="item_word">../../data/icons/item_word.png</file>
+        <file alias="item_halftone">../../data/icons/item_halftone.png</file>
+        <file alias="rotate_page">../../data/icons/rotate_page.png</file>
+        <file alias="rotate_pages">../../data/icons/rotate_pages.png</file>
+        <file alias="wconf">../../data/icons/wconf.png</file>
+        <file alias="landscape">../../data/icons/landscape.png</file>
+        <file alias="portrait">../../data/icons/portrait.png</file>
+        <file alias="collapse">../../data/icons/collapse.png</file>
+        <file alias="expand">../../data/icons/expand.png</file>
+        <file alias="thumbnail">../../data/icons/thumbnail.png</file>
+        <file alias="proofread">../../data/icons/proofread.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>extra-theme-icons/application-pdf.png</file>
+        <file>extra-theme-icons/applications-education-language.png</file>
+        <file>extra-theme-icons/dialog-cancel.png</file>
+        <file>extra-theme-icons/dialog-close.png</file>
+        <file>extra-theme-icons/dialog-ok.png</file>
+        <file>extra-theme-icons/document-edit.png</file>
+        <file>extra-theme-icons/document-export.png</file>
+        <file>extra-theme-icons/document-preview.png</file>
+        <file>extra-theme-icons/help-hint.png</file>
+        <file>extra-theme-icons/object-order-front.png</file>
+        <file>extra-theme-icons/text-plain.png</file>
+        <file>extra-theme-icons/folder-open.png</file>
+    </qresource>
+</RCC>

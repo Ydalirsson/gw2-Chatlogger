@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="imageSubstitutions">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">text-editor-symbolic</property>
+  </object>
+  <object class="GtkBox" id="boxSearchreplace">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <!-- n-columns=3 n-rows=2 -->
+      <object class="GtkGrid" id="gridFindreplace">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="row-spacing">2</property>
+        <property name="column-spacing">2</property>
+        <child>
+          <object class="GtkEntry" id="entrySearch">
+            <property name="width-request">10</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="margin-left">4</property>
+            <property name="margin-right">2</property>
+            <property name="hexpand">True</property>
+            <property name="invisible-char">●</property>
+            <property name="width-chars">2</property>
+            <property name="placeholder-text" translatable="yes">Find</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entryReplace">
+            <property name="width-request">10</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="margin-left">4</property>
+            <property name="margin-right">2</property>
+            <property name="hexpand">True</property>
+            <property name="invisible-char">●</property>
+            <property name="width-chars">2</property>
+            <property name="placeholder-text" translatable="yes">Replace</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="buttonReplace">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Replace</property>
+            <property name="margin-left">2</property>
+            <property name="margin-right">2</property>
+            <child>
+              <object class="GtkImage" id="imageReplace">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixel-size">16</property>
+                <property name="icon-name">edit-find-replace-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left-attach">1</property>
+            <property name="top-attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="buttonReplaceall">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Replace all</property>
+            <property name="margin-left">2</property>
+            <property name="margin-right">4</property>
+            <child>
+              <object class="GtkImage" id="imageReplaceall">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixel-size">16</property>
+                <property name="icon-name">error-correct-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left-attach">2</property>
+            <property name="top-attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="buttonSearchprev">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Find previous</property>
+            <property name="margin-left">2</property>
+            <property name="margin-right">4</property>
+            <child>
+              <object class="GtkImage" id="imageSearchprev">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixel-size">16</property>
+                <property name="icon-name">go-up-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left-attach">2</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="buttonSearchnext">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Find next</property>
+            <property name="margin-left">2</property>
+            <property name="margin-right">2</property>
+            <child>
+              <object class="GtkImage" id="imageSearchnext">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixel-size">16</property>
+                <property name="icon-name">go-down-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkCheckButton" id="checkbuttonMatchcase">
+        <property name="label" translatable="yes">Match case</property>
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="receives-default">False</property>
+        <property name="margin-left">5</property>
+        <property name="margin-right">5</property>
+        <property name="xalign">0</property>
+        <property name="draw-indicator">True</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="buttonSubstitutions">
+        <property name="label" translatable="yes">Substitutions</property>
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="receives-default">True</property>
+        <property name="image">imageSubstitutions</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
+  </object>
+</interface>
