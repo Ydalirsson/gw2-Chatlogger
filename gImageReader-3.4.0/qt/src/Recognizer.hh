@@ -60,7 +60,7 @@ private:
 	QDialog* m_pagesDialog;
 	Ui::PageRangeDialog m_pagesDialogUi;
 	QDialog* m_batchDialog;
-	Ui::BatchModeDialog m_batchDialogUi;
+        Ui::BatchModeDialog m_batchDialogUi;
 	QString m_modeLabel;
 	QString m_langLabel;
 

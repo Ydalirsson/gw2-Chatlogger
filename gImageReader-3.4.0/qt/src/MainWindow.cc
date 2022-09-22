@@ -159,8 +159,7 @@ MainWindow::MainWindow(const QStringList& files)
 	m_idleWidgets.append(ui.toolButtonRecognize);
 
 	ui.comboBoxOCRMode->addItem(_("Plain text"), OutputModeText);
-	ui.comboBoxOCRMode->addItem(_("hOCR, PDF"), OutputModeHOCR);
-	ui.comboBoxOCRMode->setCurrentIndex(-1);
+    ui.comboBoxOCRMode->setCurrentIndex(-1);
 
 	connect(ui.actionRedetectLanguages, &QAction::triggered, m_recognitionMenu, &RecognitionMenu::rebuild);
 	connect(ui.actionManageLanguages, &QAction::triggered, this, &MainWindow::manageLanguages);

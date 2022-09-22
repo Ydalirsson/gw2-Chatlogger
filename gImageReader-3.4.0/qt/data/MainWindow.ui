@@ -272,7 +272,6 @@
    <addaction name="separator"/>
    <addaction name="actionAutodetectLayout"/>
    <addaction name="actionToggleOutputPane"/>
-   <addaction name="actionBatchExport"/>
   </widget>
   <widget class="QDockWidget" name="dockWidgetSources">
    <property name="features">
@@ -556,18 +555,6 @@
    </property>
    <property name="toolTip">
     <string>Toggle output pane</string>
-   </property>
-  </action>
-  <action name="actionBatchExport">
-   <property name="icon">
-    <iconset theme="document-export">
-     <normaloff>.</normaloff>.</iconset>
-   </property>
-   <property name="text">
-    <string>Batch Export</string>
-   </property>
-   <property name="toolTip">
-    <string>Batch Export</string>
    </property>
   </action>
  </widget>
