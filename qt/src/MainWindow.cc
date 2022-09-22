@@ -40,14 +40,10 @@
 #undef USE_STD_NAMESPACE
 
 #include "MainWindow.hh"
-#include "Acquirer.hh"
 #include "ConfigSettings.hh"
 #include "Displayer.hh"
 #include "DisplayerToolSelect.hh"
-#include "DisplayerToolHOCR.hh"
-#include "HOCRBatchExportDialog.hh"
 #include "OutputEditorText.hh"
-#include "OutputEditorHOCR.hh"
 #include "RecognitionMenu.hh"
 #include "Recognizer.hh"
 #include "SourceManager.hh"
@@ -139,7 +135,6 @@ MainWindow::MainWindow(const QStringList& files)
 	ui.setupUi(this);
 
 	m_config = new Config(this);
-	m_acquirer = new Acquirer(ui);
 	m_displayer = new Displayer(ui);
 	m_recognitionMenu = new RecognitionMenu(this);
 	m_recognizer = new Recognizer(ui);
@@ -173,13 +168,11 @@ MainWindow::MainWindow(const QStringList& files)
 	connect(ui.actionHelp, &QAction::triggered, this, [this] { showHelp(); });
 	connect(ui.actionAbout, &QAction::triggered, this, &MainWindow::showAbout);
 	connect(ui.actionImageControls, &QAction::toggled, ui.widgetImageControls, &QWidget::setVisible);
-	connect(m_acquirer, &Acquirer::scanPageAvailable, m_sourceManager, [this](const QString & source) { m_sourceManager->addSource(source); });
 	connect(m_sourceManager, &SourceManager::sourceChanged, this, &MainWindow::onSourceChanged);
 	connect(ui.actionToggleOutputPane, &QAction::toggled, ui.dockWidgetOutput, &QDockWidget::setVisible);
 	connect(ui.comboBoxOCRMode, qOverload<int>(&QComboBox::currentIndexChanged), this, [this] { setOutputMode(static_cast<OutputMode>(ui.comboBoxOCRMode->currentData().toInt())); });
 	connect(m_recognitionMenu, &RecognitionMenu::languageChanged, this, &MainWindow::languageChanged);
 	connect(ui.actionAutodetectLayout, &QAction::triggered, m_displayer, &Displayer::autodetectOCRAreas);
-	connect(ui.actionBatchExport, &QAction::triggered, this, &MainWindow::batchExport);
 
 	ADD_SETTING(VarSetting<QByteArray>("wingeom"));
 	ADD_SETTING(VarSetting<QByteArray>("winstate"));
@@ -238,17 +231,10 @@ MainWindow::MainWindow(const QStringList& files)
 		}
 	}
 	m_sourceManager->addSources(otherFiles);
-	if(!hocrFiles.isEmpty()) {
-		if(setOutputMode(OutputModeHOCR)) {
-			static_cast<OutputEditorHOCR*>(m_outputEditor)->open(OutputEditorHOCR::InsertMode::Append, hocrFiles);
-			ui.dockWidgetOutput->setVisible(true);
-		}
-	}
 }
 
 MainWindow::~MainWindow() {
 	m_versionWatcher.waitForFinished();
-	delete m_acquirer;
 	delete m_outputEditor;
 	delete m_sourceManager;
 	m_displayer->setTool(nullptr);
@@ -393,8 +379,6 @@ bool MainWindow::setOutputMode(OutputMode mode) {
 			m_displayerTool = new DisplayerToolSelect(m_displayer);
 			m_outputEditor = new OutputEditorText();
 		} else { /*if(mode == OutputModeHOCR)*/
-			m_displayerTool = new DisplayerToolHOCR(m_displayer);
-			m_outputEditor = new OutputEditorHOCR(static_cast<DisplayerToolHOCR*>(m_displayerTool));
 		}
 		ui.actionAutodetectLayout->setVisible(m_displayerTool->allowAutodetectOCRAreas());
 		m_displayer->setTool(m_displayerTool);
@@ -628,9 +612,4 @@ void MainWindow::dictionaryAutoinstall() {
 			}
 		}
 	}
-}
-
-void MainWindow::batchExport() {
-	HOCRBatchExportDialog dialog;
-	dialog.exec();
 }

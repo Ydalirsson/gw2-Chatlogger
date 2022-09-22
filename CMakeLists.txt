@@ -190,21 +190,18 @@ ENDIF()
 
 INCLUDE_DIRECTORIES(
   ${CMAKE_SOURCE_DIR}/${srcdir}/src/
-  ${CMAKE_SOURCE_DIR}/${srcdir}/src/hocr/
 )
 
 # Files
 # sort lists to avoid dependency on readdir() order and make build reproducible
 FILE(GLOB gimagereader_SRCS
   ${srcdir}/src/*.cc
-  ${srcdir}/src/hocr/*.cc
   common/*.cc
 )
 LIST(SORT gimagereader_SRCS)
 
 FILE(GLOB gimagereader_HDRS
   ${srcdir}/src/*.hh
-  ${srcdir}/src/hocr/*.hh
   common/*.hh)
 LIST(SORT gimagereader_HDRS)
 
@@ -218,14 +215,6 @@ IF("${srcdir}" STREQUAL "qt")
     FILE(GLOB gimagereader_RESOURCES qt/data/*.qrc)
     LIST(SORT gimagereader_RESOURCES)
 ENDIF()
-IF(UNIX)
-    LIST(APPEND gimagereader_SRCS ${srcdir}/src/scanner/ScannerSane.cc)
-    LIST(APPEND gimagereader_HDRS ${srcdir}/src/scanner/ScannerSane.hh)
-ELSE(UNIX)
-    LIST(APPEND gimagereader_SRCS ${srcdir}/src/scanner/ScannerTwain.cc)
-    LIST(APPEND gimagereader_HDRS ${srcdir}/src/scanner/ScannerTwain.hh)
-ENDIF(UNIX)
-
 
 # Generate resources
 IF("${srcdir}" STREQUAL "gtk")
