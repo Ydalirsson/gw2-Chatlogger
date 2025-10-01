@@ -8,11 +8,18 @@
 #include <tesseract/baseapi.h>
 #include <tesseract/ocrclass.h>
 #include <leptonica/allheaders.h>
+#include "optionsTab.h"
+
 
 gw2chatlogger::gw2chatlogger(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+
+    auto* optionsTab = new OptionsTab(this);
+
+    // Füge es dem TabWidget hinzu
+    ui.tabWidget->addTab(optionsTab, "Options");
 
     connect(ui.selectImagesBtn, &QPushButton::clicked, this, [this]() {
         QStringList files = QFileDialog::getOpenFileNames(this, "Select Images", "", "Images (*.png *.jpg *.jpeg *.bmp)");
