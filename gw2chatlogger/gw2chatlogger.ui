@@ -418,6 +418,57 @@
       </layout>
      </widget>
     </widget>
+    <widget class="QWidget" name="tabBatchOCR">
+ <attribute name="title">
+  <string>Batch OCR</string>
+ </attribute>
+ <widget class="QPushButton" name="selectImagesBtn">
+  <property name="geometry">
+   <rect>
+    <x>10</x>
+    <y>10</y>
+    <width>120</width>
+    <height>30</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Select Images</string>
+  </property>
+ </widget>
+ <widget class="QListWidget" name="imageListWidget">
+  <property name="geometry">
+   <rect>
+    <x>10</x>
+    <y>50</y>
+    <width>300</width>
+    <height>400</height>
+   </rect>
+  </property>
+ </widget>
+ <widget class="QPushButton" name="startBatchOcrBtn">
+  <property name="geometry">
+   <rect>
+    <x>320</x>
+    <y>50</y>
+    <width>120</width>
+    <height>30</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Start Batch OCR</string>
+  </property>
+ </widget>
+ <widget class="QTextEdit" name="ocrResultTextEdit">
+  <property name="geometry">
+   <rect>
+    <x>320</x>
+    <y>90</y>
+    <width>400</width>
+    <height>360</height>
+   </rect>
+  </property>
+ </widget>
+</widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

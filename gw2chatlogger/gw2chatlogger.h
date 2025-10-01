@@ -13,5 +13,6 @@ public:
 
 private:
     Ui::gw2chatloggerClass ui;
+    QString runTesseract(const QString& imagePath);
 };
 

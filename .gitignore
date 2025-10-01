@@ -1,5 +1,7 @@
 OpenCL/
 tessdata/
+tessdata_fast/
+tessdata_best/
 tesseract-include/
 Tesseract-OCR/
 x64/
