@@ -214,6 +214,17 @@ PublishScripts/
 *.nuget.props
 *.nuget.targets
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+models/
+
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
