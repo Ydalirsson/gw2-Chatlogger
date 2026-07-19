@@ -1,29 +1,18 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.utils.hooks import collect_submodules, collect_data_files
 import os
 
 block_cipher = None
 
-hiddenimports = []
-for name in ("easyocr", "torch", "torchvision", "pywinctl"):
-    hiddenimports += collect_submodules(name)
-
 datas = []
-for name in ("easyocr",):
-    datas += collect_data_files(name)
-
 if os.path.isfile("icon.ico"):
     datas.append(("icon.ico", "."))
 
-if os.path.isdir("models"):
-    datas.append(("models", "models"))
-
 analysis = Analysis(
-    ["gw2chatlogger_app/main.py"],
+    ["run.py"],
     pathex=["."],
     binaries=[],
     datas=datas,
-    hiddenimports=hiddenimports,
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

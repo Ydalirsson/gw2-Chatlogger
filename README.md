@@ -1,93 +1,90 @@
-# GW2 Chat Logger (Python)
+# GW2 Chat Logger
 
-## About
-This is a Python rewrite of the GW2 Chat Logger. It captures the Guild Wars 2 chat area, stores images per session, and runs offline OCR with EasyOCR when you process a session folder. The UI is built with PySide6.
+Logs **Guild Wars 2 party/squad chat** as clean text via the
+[arcdps](https://www.deltaconnected.com/arcdps/) **unofficial_extras** API — no
+screenshots, no OCR. It has two parts:
 
-## Features
-- Record, stop, and capture screenshots from a selected chat box area
-- Store images per session folder
-- Process a session folder with OCR and de-duplication of recent lines
-- Options for capture area, speed, languages, and session base folder
-- Offline OCR (local models)
+1. **An arcdps addon** (`addon/`) that runs inside the game and appends every
+   party/squad chat message to `gw2chatlogger.jsonl`.
+2. **A PySide6 viewer** (`src/`) that tails that file and shows the chat live,
+   colour-coded by channel. Runs natively on Windows and Linux.
 
-## Requirements
-- Linux (tested conceptually; Wayland may restrict screen capture)
-- Python 3.10 to 3.12 recommended
-- System packages for PySide6 and OpenGL if needed by your distro
+> ### Coverage
+> unofficial_extras only exposes **party/squad chat (+ the NPC channel)**.
+> Map, whisper, guild and say chat are **not** available through this API — that is
+> a hard limitation of the data source, not of this tool. If you need those
+> channels, this approach cannot provide them.
 
-## Setup
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+## How it works
+
+```
+GW2 (Windows or Proton) → arcdps → unofficial_extras → addon (chat callback)
+   → appends JSONL to  <GW2>/bin64/gw2chatlogger.jsonl
+   → PySide6 viewer tails the file → live, colour-coded display
 ```
 
-If you do not have CPU wheels for PyTorch, follow the official PyTorch install instructions for your distro.
+Because GW2 is a Windows game, the addon is **always a Windows DLL** (on Linux it
+runs inside the Proton/Wine process). The viewer is plain Python and runs natively
+on either OS.
 
-## Run
+## 1. Build & install the addon
+
+Prerequisites in-game: **arcdps** and the **unofficial_extras** addon.
+
+See [`addon/README.md`](addon/README.md) for details. In short, on Fedora:
+
 ```bash
+sudo dnf install mingw64-gcc-c++ mingw64-binutils cmake
+cd addon
+cmake -B build -DCMAKE_TOOLCHAIN_FILE=toolchain-mingw64.cmake -DCMAKE_BUILD_TYPE=Release
+cmake --build build          # -> build/arcdps_gw2chatlogger.dll
+```
+
+Copy `arcdps_gw2chatlogger.dll` into the GW2 `bin64` folder next to arcdps
+(Windows: `…\Guild Wars 2\bin64\`; Linux/Proton: the same `bin64` inside your GW2
+install, e.g. `~/.steam/steam/steamapps/common/Guild Wars 2/bin64/`).
+
+## 2. Run the viewer
+
+Only dependency is PySide6.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 python -m src
 ```
 
-## Dev: Auto-Restart (Hot Reload)
-Because this is a PySide GUI app, true hot-reload isn't reliable. The best option is auto-restart on file changes.
+In **Options**, set the path to `gw2chatlogger.jsonl` — the **Find GW2 install**
+button probes the common Steam/Proton/Lutris locations for you. The **Live** tab
+then shows chat as it arrives; toggle Party/Squad, autoscroll, or clear.
 
-### Option A: watchfiles (recommended)
+## Try it without the game
+
+You do not need GW2 running to test the viewer:
+
 ```bash
-pip install watchfiles
-python -m watchfiles "python -m src" src
+# terminal 1 — the viewer, pointed at a scratch file
+python -m src            # Options → Browse → /tmp/gw2chat.jsonl
+
+# terminal 2 — fake the addon
+python addon/tools/fake_writer.py /tmp/gw2chat.jsonl
 ```
 
-### Option B: watchdog
-```bash
-pip install watchdog
-watchmedo auto-restart --directory=src --pattern="*.py" --recursive -- python -m src
-```
+Lines should appear live in the Live tab, colour-coded, and honour the channel
+filters.
 
-## How to use
-### Control tab
-- Record: start continuous capture (screenshots only)
-- Stop: end capture
-- Try: run a single capture and show OCR output
-- Set Chat Box Area: draw a rectangle on the primary screen
-- New Session Folder: create a new session folder
-- Initialize OCR: downloads and prepares EasyOCR models (first run can take a while)
+## Build a standalone viewer executable
 
-### Logger View tab
-- Shows OCR output from Try and capture status messages
-
-### Options tab
-- Chat area X1/Y1/X2/Y2
-- Screenshots per minute
-- Languages (German, English)
-- Session base folder
-- Use GPU (if available) for OCR
-- OCR quality (Fast / Balanced / Accurate)
-- Active window title and optional active-window check
-
-### Session OCR tab
-- Select a session folder and run OCR on all images
-- Outputs `chatlog.txt` inside the session folder
-
-## OCR models and offline mode
-EasyOCR downloads model files on first use and stores them locally. To stay offline after that, pre-download the models once while online. The models are stored in the app data directory under `models/`.
-
-## Build with PyInstaller
-Install build tools:
 ```bash
 pip install -r requirements-dev.txt
+pyinstaller gw2chatlogger.spec   # -> dist/gw2chatlogger
 ```
 
-Build:
-```bash
-pyinstaller gw2chatlogger.spec
-```
+## Notes for Linux / Proton
 
-The executable is created in `dist/`. If you want to bundle pre-downloaded EasyOCR models, copy the `models/` folder next to the spec file before running PyInstaller.
-
-## Notes for Linux
-- Active window detection relies on `pywinctl`. If it does not work on your desktop environment, disable the active window check in Options.
-- Screen capture might require X11 permissions. On Wayland, use an X11 session or disable sandbox restrictions.
-
-## Legacy sources
-The original C++/Qt sources are still in `gw2chatlogger/` but are no longer used by the Python version.
+- The addon runs inside the Wine process but writes into the GW2 `bin64` folder,
+  which lives under `steamapps/common/…` and is directly readable from Linux — the
+  viewer reads it there without touching the Wine prefix.
+- If **Find GW2 install** does not locate the file, point **Browse** at
+  `<your GW2 install>/bin64/gw2chatlogger.jsonl` manually.
