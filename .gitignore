@@ -415,3 +415,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Claude Code local settings (keep local, do not push)
+.claude/
