@@ -48,3 +48,12 @@ class Settings:
 
     def set_visible_channels(self, channels: List[str]) -> None:
         self._settings.setValue("view/channels", list(channels))
+
+    def session_dir(self) -> str:
+        value = self._settings.value("session/dir")
+        if value:
+            return str(value)
+        return str(Path.home())
+
+    def set_session_dir(self, path: str) -> None:
+        self._settings.setValue("session/dir", str(path))

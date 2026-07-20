@@ -1,35 +1,40 @@
-import html
+from datetime import datetime
+from pathlib import Path
 
 from PySide6 import QtCore, QtGui, QtWidgets
 
 from .paths import find_wine_prefix_logs
 from .settings import Settings, ALL_CHANNELS
 from .log_reader import ChatLogReader
-
-
-CHANNEL_COLORS = {
-    "Party": "#4aa3ff",
-    "Squad": "#3fbf6f",
-    "Unknown": "#999999",
-}
-TIME_COLOR = "#888888"
-BROADCAST_COLOR = "#f0a030"
-
-
-def _time_hm(recv_time: str) -> str:
-    # recv_time is "YYYY-MM-DDTHH:MM:SS"; show HH:MM.
-    if len(recv_time) >= 16 and recv_time[10] == "T":
-        return recv_time[11:16]
-    return recv_time
+from .session import SessionRecorder
+from .formatting import format_html, CHANNEL_COLORS
 
 
 class LiveTab(QtWidgets.QWidget):
-    def __init__(self, settings: Settings, parent=None) -> None:
+    """Live monitor of incoming chat, plus the session-recording controls.
+
+    The view always shows what arrives (the "control" window). Recording is a
+    separate, user-driven action: it writes new messages to a chosen .txt while
+    active and does not touch the live display.
+    """
+
+    def __init__(self, settings: Settings, recorder: SessionRecorder, parent=None) -> None:
         super().__init__(parent)
         self._settings = settings
+        self._recorder = recorder
         self._entries = []  # keep everything so filter toggles can re-render
         self._visible = set(settings.visible_channels())
 
+        # -- session controls --------------------------------------------
+        self.record_button = QtWidgets.QPushButton()
+        self.record_button.clicked.connect(self._toggle_record)
+        self.session_status = QtWidgets.QLabel()
+        self.session_status.setTextInteractionFlags(QtCore.Qt.TextSelectableByMouse)
+        session_row = QtWidgets.QHBoxLayout()
+        session_row.addWidget(self.record_button)
+        session_row.addWidget(self.session_status, 1)
+
+        # -- live view ----------------------------------------------------
         self.view = QtWidgets.QTextEdit()
         self.view.setReadOnly(True)
         self.view.setLineWrapMode(QtWidgets.QTextEdit.WidgetWidth)
@@ -56,15 +61,19 @@ class LiveTab(QtWidgets.QWidget):
         filter_row.addWidget(clear_button)
 
         layout = QtWidgets.QVBoxLayout(self)
+        layout.addLayout(session_row)
         layout.addLayout(filter_row)
         layout.addWidget(self.view, 1)
+
+        self._recorder.changed.connect(self._update_session_status)
+        self._update_session_status()
 
     # -- entries -----------------------------------------------------------
 
     def add_entry(self, entry: dict) -> None:
         self._entries.append(entry)
         if self._passes_filter(entry):
-            self.view.append(self._format_html(entry))
+            self.view.append(format_html(entry))
             self._scroll_to_end_if_wanted()
 
     def _passes_filter(self, entry: dict) -> bool:
@@ -73,34 +82,68 @@ class LiveTab(QtWidgets.QWidget):
             channel = "Unknown"
         return channel in self._visible
 
-    def _format_html(self, entry: dict) -> str:
-        channel = entry.get("channel", "Unknown")
-        color = CHANNEL_COLORS.get(channel, CHANNEL_COLORS["Unknown"])
-        time_str = _time_hm(str(entry.get("recv_time", "")))
-        character = entry.get("character") or entry.get("account") or "?"
-        text = entry.get("text") or ""
-
-        tag = channel
-        subgroup = entry.get("subgroup")
-        if channel == "Squad" and subgroup is not None:
-            tag = f"Squad·{subgroup}"
-
-        esc = html.escape
-        parts = [
-            f'<span style="color:{TIME_COLOR}">[{esc(time_str)}]</span> ',
-        ]
-        if entry.get("broadcast"):
-            parts.append(f'<span style="color:{BROADCAST_COLOR}">★</span> ')
-        parts.append(
-            f'<span style="color:{color};font-weight:bold">[{esc(tag)}] {esc(str(character))}:</span> '
-        )
-        parts.append(f'<span>{esc(str(text))}</span>')
-        return "".join(parts)
-
     def _scroll_to_end_if_wanted(self) -> None:
         if self.autoscroll.isChecked():
             bar = self.view.verticalScrollBar()
             bar.setValue(bar.maximum())
+
+    # -- session recording -------------------------------------------------
+
+    def _toggle_record(self) -> None:
+        if self._recorder.is_recording():
+            self._stop_record()
+        else:
+            self._start_record()
+
+    def _start_record(self) -> None:
+        default_name = f"gw2chat_session_{datetime.now():%Y%m%d_%H%M%S}.txt"
+        start = str(Path(self._settings.session_dir()) / default_name)
+        path, _ = QtWidgets.QFileDialog.getSaveFileName(
+            self, "Session speichern unter", start, "Textdatei (*.txt);;Alle Dateien (*)"
+        )
+        if not path:
+            return
+        if not Path(path).suffix:
+            path += ".txt"
+        if self._recorder.start(path):
+            self._settings.set_session_dir(str(Path(path).parent))
+
+    def _stop_record(self) -> None:
+        count = self._recorder.count()
+        path = self._recorder.path()
+        box = QtWidgets.QMessageBox(self)
+        box.setWindowTitle("Aufnahme beenden")
+        box.setIcon(QtWidgets.QMessageBox.Question)
+        box.setText("Aufnahme beenden?")
+        box.setInformativeText(f"{count} Nachrichten aufgezeichnet\n{path}")
+        keep = box.addButton("Behalten", QtWidgets.QMessageBox.AcceptRole)
+        discard = box.addButton("Verwerfen", QtWidgets.QMessageBox.DestructiveRole)
+        box.addButton("Abbrechen", QtWidgets.QMessageBox.RejectRole)
+        box.setDefaultButton(keep)
+        box.exec()
+        clicked = box.clickedButton()
+        if clicked not in (keep, discard):
+            return  # cancelled — keep recording
+        self._recorder.stop(discard=(clicked is discard))
+
+    def _update_session_status(self) -> None:
+        if self._recorder.is_recording():
+            self.record_button.setText("■  Aufnahme beenden")
+            self.record_button.setStyleSheet("font-weight: bold;")
+            path = self._recorder.path()
+            started = self._recorder.started_at()
+            since = started.strftime("%H:%M") if started else "?"
+            name = path.name if path else "?"
+            self.session_status.setText(
+                f'<span style="color:#e05555">●</span> Aufnahme → <b>{name}</b>'
+                f" · {self._recorder.count()} Nachrichten · seit {since}"
+            )
+        else:
+            self.record_button.setText("●  Aufnahme starten")
+            self.record_button.setStyleSheet("")
+            self.session_status.setText(
+                '<span style="color:#888">Keine Aufnahme aktiv</span>'
+            )
 
     # -- filters / clear ---------------------------------------------------
 
@@ -113,7 +156,7 @@ class LiveTab(QtWidgets.QWidget):
         self.view.clear()
         for entry in self._entries:
             if self._passes_filter(entry):
-                self.view.append(self._format_html(entry))
+                self.view.append(format_html(entry))
         self._scroll_to_end_if_wanted()
 
     def _clear(self) -> None:
@@ -144,8 +187,9 @@ class OptionsTab(QtWidgets.QWidget):
 
         help_text = QtWidgets.QLabel(
             "This viewer tails the log written by the arcdps 'gw2chatlogger' addon.\n"
-            "Point it at 'gw2chatlogger.jsonl' next to arcdps in your GW2 bin64 folder.\n"
-            "Coverage is party/squad chat only (unofficial_extras limitation)."
+            "Point it at 'gw2chatlogger.jsonl' next to arcdps (bin64, or your addon\n"
+            "manager's addons folder). Coverage is party/squad chat only "
+            "(unofficial_extras limitation)."
         )
         help_text.setWordWrap(True)
         help_text.setStyleSheet("color: #888;")
@@ -186,7 +230,7 @@ class OptionsTab(QtWidgets.QWidget):
                 self,
                 "GW2 install",
                 "No 'gw2chatlogger.jsonl' found in the common GW2 install locations.\n"
-                "Use Browse to select it manually (it sits next to arcdps in bin64).",
+                "Use Browse to select it manually (it sits next to arcdps).",
             )
 
 
@@ -197,8 +241,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.settings = Settings()
         self.reader = ChatLogReader(self.settings.log_path())
+        self.recorder = SessionRecorder(self)
 
-        self.live_tab = LiveTab(self.settings)
+        self.live_tab = LiveTab(self.settings, self.recorder)
         self.options_tab = OptionsTab(self.settings)
 
         tabs = QtWidgets.QTabWidget()
@@ -209,13 +254,26 @@ class MainWindow(QtWidgets.QMainWindow):
         self.status = self.statusBar()
         self._update_status()
 
+        # Feed both the live view and (when active) the recorder.
         self.reader.entry_received.connect(self.live_tab.add_entry)
+        self.reader.entry_received.connect(self.recorder.on_entry)
         self.reader.error.connect(self._on_reader_error)
+        self.recorder.error.connect(self._on_reader_error)
         self.options_tab.path_changed.connect(self._on_path_changed)
 
         self.reader.start(from_beginning=True)
 
     def _on_path_changed(self, path: str) -> None:
+        if self.recorder.is_recording():
+            QtWidgets.QMessageBox.warning(
+                self,
+                "Aufnahme läuft",
+                "Bitte beende erst die laufende Aufnahme, bevor du die Quelldatei "
+                "wechselst — sonst würde die komplette neue Datei in die Aufnahme "
+                "geschrieben.",
+            )
+            self.options_tab.path_edit.setText(str(self.reader.path() or ""))
+            return
         self.settings.set_log_path(path)
         self.reader.set_path(path)
         self.live_tab._clear()
@@ -232,5 +290,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.status.showMessage(f"{state}: {path}")
 
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:
+        # Never lose a running session: finalize (keep) it on exit.
+        if self.recorder.is_recording():
+            self.recorder.stop()
         self.reader.stop()
         super().closeEvent(event)
