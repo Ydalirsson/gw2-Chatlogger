@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -13,9 +14,10 @@ from .formatting import format_html, CHANNEL_COLORS
 class LiveTab(QtWidgets.QWidget):
     """Live monitor of incoming chat, plus the session-recording controls.
 
-    The view always shows what arrives (the "control" window). Recording is a
-    separate, user-driven action: it writes new messages to a chosen .txt while
-    active and does not touch the live display.
+    The view always shows what arrives (the "control" window), with the full
+    timestamp and channel. Recording is a separate, user-driven action: it writes
+    new messages to a chosen .txt while active, keeping only the fields the user
+    ticked below.
     """
 
     def __init__(self, settings: Settings, recorder: SessionRecorder, parent=None) -> None:
@@ -34,6 +36,25 @@ class LiveTab(QtWidgets.QWidget):
         session_row.addWidget(self.record_button)
         session_row.addWidget(self.session_status, 1)
 
+        # Which fields a recording keeps (the live view always shows everything).
+        self.inc_time = QtWidgets.QCheckBox("Zeitstempel")
+        self.inc_time.setChecked(settings.record_include_time())
+        self.inc_time.setToolTip("Zeitstempel [HH:MM] mit in die Aufnahme schreiben")
+        self.inc_time.stateChanged.connect(
+            lambda: self._settings.set_record_include_time(self.inc_time.isChecked())
+        )
+        self.inc_channel = QtWidgets.QCheckBox("Kanal")
+        self.inc_channel.setChecked(settings.record_include_channel())
+        self.inc_channel.setToolTip("Kanal-Tag [Party]/[Squad] mit in die Aufnahme schreiben")
+        self.inc_channel.stateChanged.connect(
+            lambda: self._settings.set_record_include_channel(self.inc_channel.isChecked())
+        )
+        fields_row = QtWidgets.QHBoxLayout()
+        fields_row.addWidget(QtWidgets.QLabel("In die Aufnahme:"))
+        fields_row.addWidget(self.inc_time)
+        fields_row.addWidget(self.inc_channel)
+        fields_row.addStretch(1)
+
         # -- live view ----------------------------------------------------
         self.view = QtWidgets.QTextEdit()
         self.view.setReadOnly(True)
@@ -41,7 +62,7 @@ class LiveTab(QtWidgets.QWidget):
 
         self._channel_boxes = {}
         filter_row = QtWidgets.QHBoxLayout()
-        filter_row.addWidget(QtWidgets.QLabel("Show:"))
+        filter_row.addWidget(QtWidgets.QLabel("Anzeigen:"))
         for channel in ALL_CHANNELS:
             box = QtWidgets.QCheckBox(channel)
             box.setChecked(channel in self._visible)
@@ -55,13 +76,15 @@ class LiveTab(QtWidgets.QWidget):
         self.autoscroll.stateChanged.connect(
             lambda: self._settings.set_autoscroll(self.autoscroll.isChecked())
         )
-        clear_button = QtWidgets.QPushButton("Clear")
+        clear_button = QtWidgets.QPushButton("Leeren")
+        clear_button.setToolTip("Nur die Live-Anzeige leeren (Puffer & Aufnahmen bleiben)")
         clear_button.clicked.connect(self._clear)
         filter_row.addWidget(self.autoscroll)
         filter_row.addWidget(clear_button)
 
         layout = QtWidgets.QVBoxLayout(self)
         layout.addLayout(session_row)
+        layout.addLayout(fields_row)
         layout.addLayout(filter_row)
         layout.addWidget(self.view, 1)
 
@@ -105,7 +128,11 @@ class LiveTab(QtWidgets.QWidget):
             return
         if not Path(path).suffix:
             path += ".txt"
-        if self._recorder.start(path):
+        if self._recorder.start(
+            path,
+            include_time=self.inc_time.isChecked(),
+            include_channel=self.inc_channel.isChecked(),
+        ):
             self._settings.set_session_dir(str(Path(path).parent))
 
     def _stop_record(self) -> None:
@@ -127,7 +154,11 @@ class LiveTab(QtWidgets.QWidget):
         self._recorder.stop(discard=(clicked is discard))
 
     def _update_session_status(self) -> None:
-        if self._recorder.is_recording():
+        recording = self._recorder.is_recording()
+        # The chosen fields are fixed when a session starts.
+        self.inc_time.setEnabled(not recording)
+        self.inc_channel.setEnabled(not recording)
+        if recording:
             self.record_button.setText("■  Aufnahme beenden")
             self.record_button.setStyleSheet("font-weight: bold;")
             path = self._recorder.path()
@@ -172,10 +203,13 @@ class OptionsTab(QtWidgets.QWidget):
         self._settings = settings
 
         self.path_edit = QtWidgets.QLineEdit(str(settings.log_path()))
-        browse_button = QtWidgets.QPushButton("Browse")
+        browse_button = QtWidgets.QPushButton("Durchsuchen")
         browse_button.clicked.connect(self._browse)
-        find_button = QtWidgets.QPushButton("Find GW2 install")
+        find_button = QtWidgets.QPushButton("GW2 finden")
         find_button.clicked.connect(self._find)
+        clear_buffer_button = QtWidgets.QPushButton("Puffer leeren")
+        clear_buffer_button.setToolTip("Die flüchtige Zwischendatei jetzt auf 0 Bytes setzen")
+        clear_buffer_button.clicked.connect(self._clear_buffer)
 
         path_row = QtWidgets.QHBoxLayout()
         path_row.addWidget(self.path_edit, 1)
@@ -183,20 +217,28 @@ class OptionsTab(QtWidgets.QWidget):
         path_row.addWidget(find_button)
 
         form = QtWidgets.QFormLayout()
-        form.addRow("Chat log file", path_row)
+        form.addRow("Live-Puffer (JSONL)", path_row)
 
         help_text = QtWidgets.QLabel(
-            "This viewer tails the log written by the arcdps 'gw2chatlogger' addon.\n"
-            "Point it at 'gw2chatlogger.jsonl' next to arcdps (bin64, or your addon\n"
-            "manager's addons folder). Coverage is party/squad chat only "
-            "(unofficial_extras limitation)."
+            "Diese Datei ist ein flüchtiger Zwischenspeicher — kein Protokoll: das "
+            "arcdps-Addon hängt hier laufend die Roh-Nachrichten als JSON an. Sie ist "
+            "NICHT dein lesbarer, gespeicherter Chat.\n"
+            "Zum dauerhaften Sichern nutze im Live-Tab „Aufnahme starten“ — das schreibt "
+            "ein sauberes .txt an einen Ort deiner Wahl. Der Puffer darf jederzeit geleert "
+            "werden; das Addon legt ihn bei der nächsten Nachricht selbst neu an.\n"
+            "Abdeckung: nur Party-/Squad-Chat (unofficial_extras-Limit)."
         )
         help_text.setWordWrap(True)
         help_text.setStyleSheet("color: #888;")
 
+        buffer_row = QtWidgets.QHBoxLayout()
+        buffer_row.addWidget(clear_buffer_button)
+        buffer_row.addStretch(1)
+
         layout = QtWidgets.QVBoxLayout(self)
         layout.addLayout(form)
         layout.addWidget(help_text)
+        layout.addLayout(buffer_row)
         layout.addStretch(1)
 
         self.path_edit.editingFinished.connect(self._commit_path)
@@ -209,7 +251,7 @@ class OptionsTab(QtWidgets.QWidget):
     def _browse(self) -> None:
         start_dir = str(self._settings.log_path().parent)
         path, _ = QtWidgets.QFileDialog.getOpenFileName(
-            self, "Select chat log file", start_dir, "Chat log (*.jsonl);;All files (*)"
+            self, "Zwischendatei wählen", start_dir, "JSONL-Puffer (*.jsonl);;Alle Dateien (*)"
         )
         if path:
             self.path_edit.setText(path)
@@ -223,15 +265,37 @@ class OptionsTab(QtWidgets.QWidget):
             if len(found) > 1:
                 others = "\n".join(str(p) for p in found)
                 QtWidgets.QMessageBox.information(
-                    self, "GW2 install", f"Found several log files:\n\n{others}\n\nUsing the first."
+                    self, "GW2 gefunden",
+                    f"Mehrere Puffer-Dateien gefunden:\n\n{others}\n\nNutze die erste.",
                 )
         else:
             QtWidgets.QMessageBox.information(
                 self,
-                "GW2 install",
-                "No 'gw2chatlogger.jsonl' found in the common GW2 install locations.\n"
-                "Use Browse to select it manually (it sits next to arcdps).",
+                "GW2 finden",
+                "Keine 'gw2chatlogger.jsonl' an den üblichen GW2-Orten gefunden.\n"
+                "Wähle sie über „Durchsuchen“ (sie liegt neben arcdps im addons-/bin64-Ordner).",
             )
+
+    def _clear_buffer(self) -> None:
+        path = self._settings.log_path()
+        if not path.exists():
+            QtWidgets.QMessageBox.information(
+                self, "Puffer leeren", "Es gibt aktuell keine Pufferdatei zum Leeren."
+            )
+            return
+        reply = QtWidgets.QMessageBox.question(
+            self,
+            "Puffer leeren",
+            f"Den flüchtigen Live-Puffer wirklich auf 0 setzen?\n\n{path}\n\n"
+            "Gespeicherte Aufnahmen (.txt) sind davon NICHT betroffen. Das Addon füllt "
+            "den Puffer bei der nächsten Nachricht neu.",
+        )
+        if reply != QtWidgets.QMessageBox.Yes:
+            return
+        try:
+            os.truncate(path, 0)
+        except OSError as exc:
+            QtWidgets.QMessageBox.warning(self, "Puffer leeren", f"Konnte nicht leeren:\n{exc}")
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -248,7 +312,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         tabs = QtWidgets.QTabWidget()
         tabs.addTab(self.live_tab, "Live")
-        tabs.addTab(self.options_tab, "Options")
+        tabs.addTab(self.options_tab, "Optionen")
         self.setCentralWidget(tabs)
 
         self.status = self.statusBar()
@@ -281,12 +345,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self._update_status()
 
     def _on_reader_error(self, message: str) -> None:
-        self.status.showMessage(f"Reader error: {message}", 5000)
+        self.status.showMessage(f"Lese-Fehler: {message}", 5000)
 
     def _update_status(self) -> None:
         path = self.reader.path()
         exists = path is not None and path.exists()
-        state = "watching" if exists else "waiting for file"
+        state = "beobachte" if exists else "warte auf Datei"
         self.status.showMessage(f"{state}: {path}")
 
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:

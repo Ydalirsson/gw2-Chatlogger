@@ -33,13 +33,22 @@ def channel_tag(entry: dict) -> str:
     return tag
 
 
-def format_text(entry: dict) -> str:
-    """One plain-text transcript line, e.g. '[22:15] ★ [Squad·2] Alaric: stack'."""
-    time_str = time_hm(str(entry.get("recv_time", "")))
+def format_text(entry: dict, include_time: bool = True, include_channel: bool = True) -> str:
+    """One plain-text transcript line, e.g. '[22:15] ★ [Squad·2] Alaric: stack'.
+
+    include_time / include_channel control whether the [HH:MM] timestamp and the
+    [channel] tag are written. The broadcast ★ and 'name: text' are always kept.
+    """
+    prefix = []
+    if include_time:
+        prefix.append(f"[{time_hm(str(entry.get('recv_time', '')))}]")
+    if entry.get("broadcast"):
+        prefix.append("★")
+    if include_channel:
+        prefix.append(f"[{channel_tag(entry)}]")
     character = entry.get("character") or entry.get("account") or "?"
-    text = entry.get("text") or ""
-    star = "★ " if entry.get("broadcast") else ""
-    return f"[{time_str}] {star}[{channel_tag(entry)}] {character}: {text}"
+    prefix.append(f"{character}: {entry.get('text') or ''}")
+    return " ".join(prefix)
 
 
 def format_html(entry: dict) -> str:

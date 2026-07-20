@@ -57,3 +57,15 @@ class Settings:
 
     def set_session_dir(self, path: str) -> None:
         self._settings.setValue("session/dir", str(path))
+
+    def record_include_time(self) -> bool:
+        return _to_bool(self._settings.value("record/include_time", True), True)
+
+    def set_record_include_time(self, enabled: bool) -> None:
+        self._settings.setValue("record/include_time", bool(enabled))
+
+    def record_include_channel(self) -> bool:
+        return _to_bool(self._settings.value("record/include_channel", True), True)
+
+    def set_record_include_channel(self, enabled: bool) -> None:
+        self._settings.setValue("record/include_channel", bool(enabled))

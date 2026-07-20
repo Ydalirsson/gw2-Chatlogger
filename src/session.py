@@ -7,7 +7,8 @@ always current because each line is flushed the moment it arrives, so a crash
 (of the game or the viewer) can never lose more than nothing.
 
 Format and destination are fixed by the user's choice: a clean .txt transcript,
-its path picked per session. Ending a session offers keep-or-discard.
+its path picked per session. include_time / include_channel choose which fields
+each line keeps. Ending a session offers keep-or-discard.
 """
 import os
 from datetime import datetime
@@ -28,6 +29,8 @@ class SessionRecorder(QtCore.QObject):
         self._fh = None
         self._count = 0
         self._started_at = None
+        self._include_time = True
+        self._include_channel = True
 
     # -- state -------------------------------------------------------------
 
@@ -45,8 +48,9 @@ class SessionRecorder(QtCore.QObject):
 
     # -- lifecycle ---------------------------------------------------------
 
-    def start(self, path) -> bool:
-        """Open `path` for appending and begin recording. Returns success."""
+    def start(self, path, include_time: bool = True, include_channel: bool = True) -> bool:
+        """Open `path` for appending and begin recording. include_time/include_channel
+        choose which fields the transcript keeps. Returns success."""
         self.stop()  # finalize any previous session first
         p = Path(path)
         try:
@@ -59,11 +63,17 @@ class SessionRecorder(QtCore.QObject):
             self.error.emit(f"Kann Session-Datei nicht öffnen: {exc}")
             return False
 
+        self._include_time = include_time
+        self._include_channel = include_channel
         self._path = p
         self._count = 0
         self._started_at = datetime.now()
+        fields = ", ".join(
+            label for label, on in (("Zeit", include_time), ("Kanal", include_channel)) if on
+        ) or "nur Name + Text"
         self._write_raw(
-            f"# GW2 Chat Logger — Session gestartet {self._started_at:%Y-%m-%d %H:%M:%S}\n"
+            f"# GW2 Chat Logger — Session gestartet {self._started_at:%Y-%m-%d %H:%M:%S}"
+            f" (Felder: {fields})\n"
         )
         self.changed.emit()
         return True
@@ -97,7 +107,8 @@ class SessionRecorder(QtCore.QObject):
         """Slot for ChatLogReader.entry_received; writes only while recording."""
         if self._fh is None:
             return
-        if self._write_raw(format_text(entry) + "\n"):
+        line = format_text(entry, self._include_time, self._include_channel)
+        if self._write_raw(line + "\n"):
             self._count += 1
             self.changed.emit()
 
